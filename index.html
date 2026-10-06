@@ -21,37 +21,37 @@
 <section class="auth-gate" id="authGate" aria-label="Accès PsyLab">
   <div class="auth-gate-inner">
     <div class="auth-intro">
-      <div class="eyebrow">PSYLAB · CLINICAL PSYCHIATRY TRAINING</div>
-      <h1>Un compte. Plusieurs Labs. Un seul parcours.</h1>
-      <p>Créez votre profil PsyLab pour accéder aux cours, sauvegarder votre progression, débloquer vos trophées et participer aux classements pédagogiques.</p>
-      <div class="auth-course-preview">
-        <div class="preview-live"><span>◐</span><div><b>BipolarLab</b><small>Disponible · N1 + N2</small></div></div>
-        <div><span>◇</span><div><b>PsychosisLab</b><small>En préparation</small></div></div>
-        <div><span>↻</span><div><b>TOCLab / OCDLab</b><small>En préparation</small></div></div>
-        <div><span>+</span><div><b>Autres Labs</b><small>Ajoutés progressivement</small></div></div>
+      <div class="eyebrow">PSYLAB · FORMATION CLINIQUE EN PSYCHIATRIE</div>
+      <h1>Apprendre par la clinique. Progresser par le raisonnement.</h1>
+      <p>Un compte unique pour retrouver vos cours, votre progression, vos trophées et vos classements sur tous vos appareils.</p>
+      <div class="auth-points">
+        <span><b>BipolarLab</b> disponible</span>
+        <span>Progression synchronisée</span>
+        <span>Nouveaux Labs ajoutés progressivement</span>
       </div>
-      <div class="auth-axone-line"><span class="mini-axone">Ψ</span><span>Dr Axone : « Je garde le tableau de bord. Vous, gardez votre mot de passe. »</span></div>
+      <div class="auth-axone-line"><span class="mini-axone">Ψ</span><span>Dr Axone : « Votre dossier est prêt. À vous de jouer. »</span></div>
     </div>
     <div class="auth-card">
       <div class="auth-card-brand"><span class="brand-mark">Ψ</span><div><b>PsyLab</b><small>Accès résident</small></div></div>
+      <div class="auth-card-copy"><h2>Bienvenue</h2><p>Connectez-vous pour reprendre votre parcours, ou créez votre compte en quelques secondes.</p></div>
       <div class="auth-switch">
-        <button type="button" class="active" data-gate-pane-btn="signup">Créer un compte</button>
-        <button type="button" data-gate-pane-btn="login">Se connecter</button>
+        <button type="button" class="active" data-gate-pane-btn="login">Se connecter</button>
+        <button type="button" data-gate-pane-btn="signup">Créer un compte</button>
       </div>
-      <div class="gate-pane active" data-gate-pane="signup">
+      <div class="gate-pane active" data-gate-pane="login">
+        <label>E-mail<input id="gateLoginEmail" type="email" autocomplete="email" placeholder="vous@exemple.com"></label>
+        <label>Mot de passe<input id="gateLoginPassword" type="password" autocomplete="current-password" placeholder="Votre mot de passe"></label>
+        <button class="gate-primary" id="gateLoginBtn" type="button">Entrer dans PsyLab</button>
+      </div>
+      <div class="gate-pane" data-gate-pane="signup">
         <label>Pseudonyme<input id="gateSignupPseudo" maxlength="32" autocomplete="nickname" placeholder="Votre pseudo public"></label>
         <label>Promotion / groupe <span>(facultatif)</span><input id="gateSignupCohort" maxlength="24" placeholder="Ex. RES2027"></label>
         <label>E-mail<input id="gateSignupEmail" type="email" autocomplete="email" placeholder="vous@exemple.com"></label>
         <label>Mot de passe<input id="gateSignupPassword" type="password" autocomplete="new-password" placeholder="8 caractères minimum"></label>
         <button class="gate-primary" id="gateSignupBtn" type="button">Créer mon compte PsyLab</button>
       </div>
-      <div class="gate-pane" data-gate-pane="login">
-        <label>E-mail<input id="gateLoginEmail" type="email" autocomplete="email"></label>
-        <label>Mot de passe<input id="gateLoginPassword" type="password" autocomplete="current-password"></label>
-        <button class="gate-primary" id="gateLoginBtn" type="button">Entrer dans PsyLab</button>
-      </div>
       <div class="gate-message" id="gateMessage">Connexion sécurisée via PsyLab.</div>
-      <div class="gate-privacy">Le classement affiche uniquement votre pseudonyme et, si vous le renseignez, votre promotion.</div>
+      <div class="gate-privacy">Votre e-mail reste privé. Le classement affiche uniquement votre pseudonyme et, si vous le renseignez, votre promotion.</div>
     </div>
   </div>
 </section>
@@ -96,15 +96,6 @@
  <div class="course-grid" id="courseGrid"></div>
 </section>
 
-<section class="wrap architecture-note">
- <div><div class="eyebrow dark" data-i18n="architecture_kicker">ARCHITECTURE V50</div><h2 data-i18n="architecture_title">Pensée pour grandir sans reconstruire le site.</h2></div>
- <div class="architecture-grid">
-  <div><b>1</b><span data-i18n="arch_1">Un seul compte et une seule authentification.</span></div>
-  <div><b>2</b><span data-i18n="arch_2">Une progression indépendante pour chaque cours.</span></div>
-  <div><b>3</b><span data-i18n="arch_3">Classements globaux, par cours et par promotion.</span></div>
-  <div><b>4</b><span data-i18n="arch_4">Interface prête pour FR / EN sans doubler les comptes.</span></div>
- </div>
-</section>
 </main>
 
 <div class="modal-backdrop" id="accountModal" aria-hidden="true">
