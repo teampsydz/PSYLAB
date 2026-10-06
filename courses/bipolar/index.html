@@ -572,6 +572,7 @@ textarea{width:100%;min-height:92px;resize:vertical;border:1px solid #cdd7d4;bac
 .psylab-platform-note{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#7bcfc4;margin-left:7px}
 @media(max-width:650px){.psylab-home-btn{padding:7px 9px}.psylab-home-btn{font-size:0}.psylab-home-btn::after{content:'←';font-size:16px}}
 </style>
+<style>html:not(.psylab-authenticated) body{visibility:hidden}</style>
 </head>
 <body id="top">
 <header class="top"><div class="topin">
@@ -5791,6 +5792,7 @@ setTimeout(()=>{v48ReadyForReveal=false;updateTrophies();updateAxoneStage();inst
 
 <script src="../../psylab-config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../../auth-guard.js"></script>
 <script>
 /* ===== V49 : cloud optionnel + classement ===== */
 const BPLAB_V49={client:null,user:null,profile:null,progress:null,syncTimer:null,syncMuted:false,lastMetric:'global',cohortOnly:false,initialHandled:false};
