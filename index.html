@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b3038">
+<title>PsyLab V50 — Clinical Psychiatry Training</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="platform-brand" href="./"><span class="brand-mark">Ψ</span><span><b>PsyLab</b><small>Clinical Psychiatry Training</small></span></a>
+    <div class="top-actions">
+      <div class="lang-switch" aria-label="Language"><button type="button" data-lang="fr" class="active">FR</button><button type="button" data-lang="en">EN</button></div>
+      <button class="account-chip" id="accountChip" type="button"><span class="status-dot"></span><span id="accountLabel">Mode local</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+ <div class="hero-inner">
+   <div class="hero-copy">
+    <div class="eyebrow" data-i18n="eyebrow">UNE PLATEFORME · PLUSIEURS LABS</div>
+    <h1 data-i18n="hero_title">Apprendre la psychiatrie en raisonnant.</h1>
+    <p data-i18n="hero_text">Un seul compte, plusieurs cours, une progression commune et des classements pédagogiques. BipolarLab devient le premier laboratoire de PsyLab.</p>
+    <div class="hero-actions"><a class="primary-btn" href="courses/bipolar/index.html" data-i18n="continue_bipolar">Continuer BipolarLab</a><button class="secondary-btn" id="openLeaderboard" type="button" data-i18n="leaderboard">Classements</button></div>
+   </div>
+   <div class="axone-stage" id="axoneStage">
+     <div class="axone-orbit orbit-a"></div><div class="axone-orbit orbit-b"></div>
+     <svg class="axone-svg" viewBox="0 0 260 260" role="img" aria-label="Dr Axone">
+       <g class="dendrites" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round">
+        <path d="M107 81 C86 54 64 43 47 37 M84 105 C55 98 38 91 24 75 M85 139 C55 148 39 165 28 184 M110 167 C91 196 83 215 79 234 M148 78 C164 47 184 33 205 27 M169 105 C198 91 220 91 238 98 M172 142 C202 154 218 174 230 198 M145 171 C158 202 174 219 194 235"/>
+       </g>
+       <circle class="axon-body" cx="128" cy="126" r="57"/>
+       <g class="eyes"><circle cx="108" cy="118" r="5"/><circle cx="148" cy="118" r="5"/></g>
+       <path class="mouth" d="M110 144 Q128 154 146 144" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+       <g class="loupe" transform="translate(167 153)"><circle cx="0" cy="0" r="21" fill="none" stroke="currentColor" stroke-width="7"/><path d="M16 16 L38 38" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></g>
+     </svg>
+     <div class="axone-bubble" id="axoneBubble" data-i18n="axone_default">« Un cours à la fois. Une compétence à la fois. »</div>
+   </div>
+ </div>
+</section>
+
+<section class="dashboard wrap">
+ <div class="section-title-row"><div><div class="eyebrow dark" data-i18n="dashboard_kicker">TABLEAU DE BORD</div><h2 id="welcomeTitle">Votre parcours</h2></div><div class="global-score"><small data-i18n="psy_score">PsyScore</small><b id="globalScore">—</b></div></div>
+ <div class="stats-grid">
+   <div class="stat-card"><span data-i18n="courses_started">Cours commencés</span><b id="coursesStarted">0</b></div>
+   <div class="stat-card"><span data-i18n="trophies">Trophées</span><b id="totalTrophies">0</b></div>
+   <div class="stat-card"><span data-i18n="rank_global">Rang général</span><b id="globalRank">—</b></div>
+   <div class="stat-card"><span data-i18n="cohort">Promotion</span><b id="cohortStat">—</b></div>
+ </div>
+</section>
+
+<section class="wrap course-section">
+ <div class="section-title-row"><div><div class="eyebrow dark" data-i18n="labs_kicker">MES LABS</div><h2 data-i18n="labs_title">Cours de psychiatrie</h2></div><div class="catalog-note" data-i18n="catalog_note">Une plateforme, autant de cours que nécessaire.</div></div>
+ <div class="course-grid" id="courseGrid"></div>
+</section>
+
+<section class="wrap architecture-note">
+ <div><div class="eyebrow dark" data-i18n="architecture_kicker">ARCHITECTURE V50</div><h2 data-i18n="architecture_title">Pensée pour grandir sans reconstruire le site.</h2></div>
+ <div class="architecture-grid">
+  <div><b>1</b><span data-i18n="arch_1">Un seul compte et une seule authentification.</span></div>
+  <div><b>2</b><span data-i18n="arch_2">Une progression indépendante pour chaque cours.</span></div>
+  <div><b>3</b><span data-i18n="arch_3">Classements globaux, par cours et par promotion.</span></div>
+  <div><b>4</b><span data-i18n="arch_4">Interface prête pour FR / EN sans doubler les comptes.</span></div>
+ </div>
+</section>
+</main>
+
+<div class="modal-backdrop" id="accountModal" aria-hidden="true">
+ <section class="modal-card large">
+  <div class="modal-head"><div><div class="eyebrow dark">PSYLAB · CLOUD</div><h2 data-i18n="account_title">Compte & synchronisation</h2></div><button class="icon-btn" data-close="accountModal">×</button></div>
+  <div class="modal-tabs"><button class="active" data-pane-btn="login" data-i18n="login">Connexion</button><button data-pane-btn="signup" data-i18n="signup">Créer un compte</button><button data-pane-btn="profile" data-i18n="profile">Profil</button></div>
+  <div class="pane active" data-pane="login"><label>E-mail<input id="loginEmail" type="email" autocomplete="email"></label><label data-i18n-label="password">Mot de passe<input id="loginPassword" type="password" autocomplete="current-password"></label><button class="primary-btn full" id="loginBtn" type="button" data-i18n="login_btn">Se connecter</button></div>
+  <div class="pane" data-pane="signup"><label data-i18n-label="pseudo">Pseudonyme<input id="signupPseudo" maxlength="32"></label><label data-i18n-label="cohort_optional">Promotion / groupe (facultatif)<input id="signupCohort" maxlength="24"></label><label>E-mail<input id="signupEmail" type="email" autocomplete="email"></label><label data-i18n-label="password">Mot de passe<input id="signupPassword" type="password" autocomplete="new-password"></label><button class="primary-btn full" id="signupBtn" type="button" data-i18n="signup_btn">Créer mon compte</button></div>
+  <div class="pane" data-pane="profile"><div class="profile-card"><div class="profile-avatar">Ψ</div><div><b id="profileName">Mode local</b><span id="profileEmail">—</span></div></div><label data-i18n-label="pseudo">Pseudonyme<input id="profilePseudo" maxlength="32"></label><label data-i18n-label="cohort">Promotion<input id="profileCohort" maxlength="24"></label><div class="row-actions"><button class="secondary-btn" id="saveProfileBtn" type="button" data-i18n="save">Enregistrer</button><button class="danger-btn" id="logoutBtn" type="button" data-i18n="logout">Déconnexion</button></div></div>
+  <div class="cloud-message" id="cloudMessage">Mode local. Configurez Supabase pour activer les comptes.</div>
+ </section>
+</div>
+
+<div class="modal-backdrop" id="leaderboardModal" aria-hidden="true">
+ <section class="modal-card leaderboard-modal">
+  <div class="modal-head"><div><div class="eyebrow dark">PSYLAB · RANKING</div><h2 data-i18n="leaderboard">Classements</h2></div><button class="icon-btn" data-close="leaderboardModal">×</button></div>
+  <div class="leader-tabs"><button class="active" data-leader="global" data-i18n="global">Global</button><button data-leader="bipolar">BipolarLab</button><button data-leader="cohort" data-i18n="my_cohort">Ma promotion</button></div>
+  <div id="leaderboardBox" class="leaderboard-box"><div class="empty-state" data-i18n="login_for_rank">Connectez-vous pour afficher le classement.</div></div>
+  <p class="privacy-note" data-i18n="rank_note">Classement pédagogique, pseudonymisé et non certificatif.</p>
+ </section>
+</div>
+
+<script src="./psylab-config.js"></script>
+<script src="./course-catalog.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./app.js"></script>
+</body>
+</html>
