@@ -5,7 +5,7 @@ window.PSYLAB_CONFIG = {
   platformName: "PsyLab",
   url: "https://wvtwnnxgdvvikfbgmmfk.supabase.co/rest/v1/
 ",
-  anonKey: "sb_publishable_Otb2-V_2j7dvSnJJDYKPQA_if0q0Nm-
+  Publishable key: "sb_publishable_Otb2-V_2j7dvSnJJDYKPQA_if0q0Nm-
 "
 };
 
