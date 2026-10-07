@@ -593,13 +593,13 @@ textarea{width:100%;min-height:92px;resize:vertical;border:1px solid #cdd7d4;bac
 .lang-course-switch{display:inline-flex;gap:2px;border:1px solid rgba(255,255,255,.22);border-radius:10px;overflow:hidden}.lang-course-switch a{color:#cde2df;text-decoration:none;padding:7px 8px;font-size:10px;font-weight:950}.lang-course-switch a.active{background:white;color:#123f47}
 @media(max-width:760px){.mobile-bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:90;height:66px;background:rgba(255,253,249,.98);border-top:1px solid #d5dfdc;display:grid;grid-template-columns:repeat(4,1fr);padding:5px max(6px,env(safe-area-inset-left)) calc(5px + env(safe-area-inset-bottom));box-shadow:0 -8px 28px rgba(12,46,54,.08)}.mobile-bottom-nav a,.mobile-bottom-nav button{border:0;background:transparent;text-decoration:none;color:#31545a;display:grid;place-items:center;align-content:center;gap:2px;font-size:9px;font-weight:850}.mobile-bottom-nav b{font-size:20px;line-height:1}.lang-course-switch{margin-left:auto}.progresswrap{min-width:80px}}
 </style>
-<link rel="stylesheet" href="v51.css"/>
+<link rel="stylesheet" href="v52.css"/>
 </head>
 <body id="top">
 <header class="top"><div class="topin">
-<a class="psylab-home-btn" href="../../index.html" title="Retour à PsyLab">← PsyLab</a><div class="brand">Bipolar<em>Lab</em> · N1 + N2 <small class="version-tag">V51</small></div>
+<a class="psylab-home-btn" href="../../index.html" title="Retour à PsyLab">← PsyLab</a><div class="brand">Bipolar<em>Lab</em> · N1 + N2</div>
 <div class="progresswrap"><div class="progressbar"><i id="progress"></i></div><div class="progresslabel" id="progresslabel">Start of the psychopathology examination</div></div>
-<div aria-label="Langue" class="lang-course-switch"><a class="" href="index.html">FR</a><a class="active" href="en.html">EN</a></div><button class="cloud-user-chip" id="cloudUserChip" onclick="openCommunity('account')" title="Compte, synchronisation et classement" type="button"><span class="cloud-dot"></span><span class="cloud-user-label" id="cloudUserLabel">Mode local</span></button><button class="reset menu-top-btn" onclick="openAppMenu()" type="button">☰ Menu</button><button class="reset" onclick="resetAll()" type="button">Reset</button>
+<div aria-label="Langue" class="lang-course-switch"><a class="" href="index.html">FR</a><a class="active" href="en.html">EN</a></div><button class="cloud-user-chip" id="cloudUserChip" onclick="openCommunity('account')" title="Compte, synchronisation et classement" type="button"><span class="cloud-dot"></span><span class="cloud-user-label" id="cloudUserLabel">Account</span></button><button class="reset menu-top-btn" onclick="openAppMenu()" type="button">☰ Menu</button><button class="reset" onclick="resetAll()" type="button">Reset</button>
 </div></header>
 <section class="hero"><div class="heroin">
 <div><div class="kicker">LEVEL 1 · DESCRIPTIVE PSYCHOPATHOLOGY</div>
@@ -3909,7 +3909,7 @@ textarea{width:100%;min-height:92px;resize:vertical;border:1px solid #cdd7d4;bac
 </div>
 </div>
 </div>
-<div class="n2-nav"><a href="#n2case-mk">Mr K</a><a href="#n2case-ma">Ms A</a><a href="#n2case-ms">Ms S</a><a href="#n2boss">🕗 Staff de 8 h</a><a href="#n2trophies">🏆 Level 2 trophies</a></div>
+<div class="n2-nav"><a href="#n2case-mk">Mr K</a><a href="#n2case-ma">Ms A</a><a href="#n2case-ms">Ms S</a><a href="#n2boss">🕗 8 a.m. case conference</a><a href="#n2trophies">🏆 Level 2 trophies</a></div>
 <div class="n2-main">
 <div class="n2-layout">
 <div class="n2-content">
@@ -4557,7 +4557,7 @@ textarea{width:100%;min-height:92px;resize:vertical;border:1px solid #cdd7d4;bac
 <div><div class="community-kicker">BIPOLARLAB · COMMUNITY</div><h2 id="communityTitle">Profile &amp; leaderboard</h2><p>Synchronized progress · public usernames · no patient data.</p></div>
 <button aria-label="Fermer" class="community-close" onclick="closeCommunity()" type="button">×</button>
 </div>
-<div class="community-status" id="cloudStatus">Mode local — BipolarLab fonctionne normalement sans compte.</div>
+<div class="community-status" id="cloudStatus">Connecting to PsyLab account…</div>
 <nav aria-label="Sections communauté" class="community-tabs">
 <button class="community-tab active" data-community-tab="account" onclick="showCommunityTab('account')" type="button">👤 Compte</button>
 <button class="community-tab" data-community-tab="leaderboard" onclick="showCommunityTab('leaderboard')" type="button">🏆 Classement</button>
@@ -4660,7 +4660,7 @@ textarea{width:100%;min-height:92px;resize:vertical;border:1px solid #cdd7d4;bac
 <a href="#n2case-mk" onclick="menuNavigate(event,'#n2case-mk')">🌳 M. K.</a>
 <a href="#n2case-ma" onclick="menuNavigate(event,'#n2case-ma')">🌳 Mme A.</a>
 <a href="#n2case-ms" onclick="menuNavigate(event,'#n2case-ms')">🌳 Mme S.</a>
-<a href="#n2boss" onclick="menuNavigate(event,'#n2boss')">🕗 Staff de 8 h</a>
+<a href="#n2boss" onclick="menuNavigate(event,'#n2boss')">🕗 8 a.m. case conference</a>
 </div>
 </div>
 <div class="menu-section community-menu-section">
@@ -4885,7 +4885,7 @@ const V48_TROPHIES={
  "hypothese":{title:"Hypothèse retenue",desc:"Les preuves sont pondérées, pas simplement comptées.",quote:"Compatible is not the same as discriminating. This weighting is correct."},
  "chrono":{title:"Chronologie impeccable",desc:"La séquence temporelle est correctement intégrée au raisonnement.",quote:"Avant, pendant, après. Enfin dans le bon ordre."},
  "surveillance":{title:"Diagnostic sous haute surveillance",desc:"Seuil, sévérité et causes secondaires sont correctement testés.",quote:"Un diagnostic ne passe pas le contrôle qualité sur son nom seul."},
- "formulation":{title:"Staff-proof",desc:"La formulation de staff est jugée acquise.",quote:"Syndrome, temporalité, différentiel, certitude. Rien ne déborde."},
+ "formulation":{title:"Case-ready",desc:"La clinical formulation est jugée acquise.",quote:"Syndrome, temporalité, différentiel, certitude. Rien ne déborde."},
  "juge":{title:"Juge suprême des hypothèses",desc:"Différentiel, pondération des preuves et incertitude sont acquis.",quote:"Le verdict peut attendre. La hiérarchie, elle, est propre."},
  "entrelignes":{title:"Vu entre les lignes",desc:"Une source ou une information secondaire devient diagnostiquement utile.",quote:"Ce n’était pas spectaculaire. C’était juste décisif."},
  "questionplus":{title:"Une question de plus",desc:"You demandez l’information à meilleur rendement diagnostique.",quote:"Une bonne question peut faire tomber trois mauvaises hypothèses."},
@@ -4896,12 +4896,12 @@ const V48_TROPHIES={
  "checklist":{title:"Bien plus qu’une checklist",desc:"Au moins sept compétences diagnostiques du N2 sont acquises.",quote:"Les critères organisent. Ils ne pensent pas à votre place."},
  "dsmconfirm":{title:"Le DSM demande confirmation",desc:"La nosologie est utilisée après l’analyse clinique du seuil.",quote:"Le manuel peut entrer. L’entretien a déjà fait son travail."},
  "checkcrit":{title:"Pas seulement des critères",desc:"Représentation du problème, causalité et nosologie sont reliées.",quote:"Un critère isolé n’a jamais raconté toute l’histoire."},
- "argumente":{title:"Diagnostic : argumenté",desc:"La pondération des preuves et la formulation de staff sont acquises.",quote:"Ce n’est plus seulement une conclusion. C’est une démonstration clinique."},
- "senior":{title:"Le senior hoche la tête",desc:"Le Staff est validé et au moins six dimensions sont acquises.",quote:"Pas d’interruption. Profitez de ce moment rare."},
- "diagnosticpropre":{title:"Diagnostic propre",desc:"Le Staff est validé avec toutes les dimensions acquises.",quote:"Rien à retirer. Rien à maquiller. C’est propre."},
- "cliniquetranche":{title:"Dossier classé",desc:"Le N2 est maîtrisé et le Staff final validé.",quote:"Pas parce que le cas était simple. Parce que le raisonnement est devenu solide."},
- "staff":{title:"Le staff approuve",desc:"Le Staff final est validé.",quote:"Silence inhabituel. C’est bon signe."},
- "jaspers":{title:"Jaspers prend des notes",desc:"Toutes les dimensions du Staff sont auto-évaluées comme acquises.",quote:"Je n’ai rien dit. Lui non plus. Continuez."},
+ "argumente":{title:"Diagnostic : argumenté",desc:"La pondération des preuves et la clinical formulation sont acquises.",quote:"Ce n’est plus seulement une conclusion. C’est une démonstration clinique."},
+ "senior":{title:"Le senior hoche la tête",desc:"The final case synthesis is validated and at least six dimensions are mastered.",quote:"Pas d’interruption. Profitez de ce moment rare."},
+ "diagnosticpropre":{title:"Diagnostic propre",desc:"The final case synthesis is validated with all dimensions mastered.",quote:"Rien à retirer. Rien à maquiller. C’est propre."},
+ "cliniquetranche":{title:"Dossier classé",desc:"Le N2 est maîtrisé et le final case synthesis validé.",quote:"Pas parce que le cas était simple. Parce que le raisonnement est devenu solide."},
+ "staff":{title:"Le staff approuve",desc:"Le final case synthesis est validé.",quote:"Silence inhabituel. C’est bon signe."},
+ "jaspers":{title:"Jaspers prend des notes",desc:"All dimensions of the final case synthesis are self-rated as mastered.",quote:"Je n’ai rien dit. Lui non plus. Continuez."},
  "triboletplus":{title:"Tribolet ne corrige plus",desc:"Maîtrise conjointe du N1 et du N2.",quote:"Là, on commence à manquer de marge pour vous reprendre."}
 };
 if(!state.v48)state.v48={trophies:{},seen:{},staffEntered:false};
@@ -4980,7 +4980,7 @@ function updateAxoneStage(){
  if(seen>=15){stage="Je vous laisse chercher.";line="Bon. Je peux arrêter de surveiller chaque clic."}
  if((state.v43?.boss||0)>=8){stage="Ça devient propre.";line="You savez nommer. Maintenant, il faut décider."}
  if(n2done>=3){stage="On passe aux hypothèses.";line="Cette branche-là, vous l’avez vue avant moi."}
- if(state.v48.staffEntered){stage="8 a.m. rounds.";line="Cette fois je ne vous aide pas. J’ai du café."}
+ if(state.v48.staffEntered){stage="8 a.m. case conference.";line="Cette fois je ne vous aide pas. J’ai du café."}
  const st=document.getElementById("axoneStage"),bubble=document.getElementById("heroBubble");if(st)st.textContent=stage;if(bubble&&!document.getElementById("toast")?.classList.contains("show"))bubble.textContent=line;
 }
 const oldRenderMastery=renderMastery;
@@ -5002,7 +5002,7 @@ function setN2Comp(comp,status){
  renderN2Comp();saveN2();if(typeof updateTrophies==="function")updateTrophies();
 }
 function renderN2Comp(){
- Object.keys({"representation": "Repr\u00e9sentation du probl\u00e8me", "branching": "Ouverture des branches", "causality": "Causalit\u00e9 / temporalit\u00e9", "closure": "Fermeture prudente", "differential": "Diagnostic diff\u00e9rentiel", "threshold": "Seuil & s\u00e9v\u00e9rit\u00e9", "evidence": "Pond\u00e9ration des preuves", "information": "Valeur de l\u2019information", "nosology": "Nosographie", "uncertainty": "Certitude calibr\u00e9e", "formulation": "Formulation de staff"}).forEach(k=>{
+ Object.keys({"representation": "Repr\u00e9sentation du probl\u00e8me", "branching": "Ouverture des branches", "causality": "Causalit\u00e9 / temporalit\u00e9", "closure": "Fermeture prudente", "differential": "Diagnostic diff\u00e9rentiel", "threshold": "Seuil & s\u00e9v\u00e9rit\u00e9", "evidence": "Pond\u00e9ration des preuves", "information": "Valeur de l\u2019information", "nosology": "Nosographie", "uncertainty": "Certitude calibr\u00e9e", "formulation": "Clinical formulation"}).forEach(k=>{
    const el=document.getElementById("comp-"+k); if(!el)return;
    const s=n2state.comp[k]||"none"; el.classList.remove("acquis","fragile","encours");
    if(s!=="none")el.classList.add(s);
@@ -5058,7 +5058,7 @@ function selfN2Open(sid,status){
 }
 function showCounter(id){const el=document.getElementById("counter-"+id);el.innerHTML=N2_COUNTER[id];el.classList.add("show")}
 function toggleN2BossModel(){document.getElementById("n2boss-model").classList.toggle("show");setN2Comp("formulation","encours")}
-function setBossN2(status){n2state.boss=status;saveN2();setN2Comp("formulation",status==="acquis"?"acquis":"fragile");n2Toast(status==="acquis"?"Bon. You pouvez présenter le dossier.":"Le Staff reste à retravailler.",status==="acquis");if(typeof updateTrophies==="function")updateTrophies()}
+function setBossN2(status){n2state.boss=status;saveN2();setN2Comp("formulation",status==="acquis"?"acquis":"fragile");n2Toast(status==="acquis"?"Good. You can present the case.":"The final case synthesis still needs work.",status==="acquis");if(typeof updateTrophies==="function")updateTrophies()}
 function restoreN2(){
  renderN2Comp();Object.keys(N2_BRANCH_IDS).forEach(renderBranches);
  Object.entries(n2state.stations||{}).forEach(([sid,s])=>{if(s==="acquis"){document.getElementById("n2-"+sid)?.classList.add("solved");document.getElementById("n2corr-"+sid)?.classList.add("show")}});
@@ -5224,7 +5224,7 @@ function selectStaffDim(el){
 }
 document.querySelectorAll("[data-staffdim]").forEach(el=>el.addEventListener("click",()=>selectStaffDim(el)));
 function rateStaffDimension(status){
-  if(!selectedStaffDim){n2Toast("Select a rounds dimension first.",false);return;}
+  if(!selectedStaffDim){n2Toast("Select a clinical review dimension first.",false);return;}
   n2state.staffEval[selectedStaffDim]=status;saveN2();renderStaffEval();if(typeof updateTrophies==="function")updateTrophies();
 }
 function renderStaffEval(){
@@ -5236,7 +5236,7 @@ function renderStaffEval(){
 }
 
 function v47CaseLabel(caseId){
- const map={mk:["M. K.","Activation, stress réel et seuil maniaque"],ma:["Mme A.","Dépression actuelle et hypomanie oubliée"],ms:["Mme S.","Dépression, activation concomitante et caractéristiques mixtes"],staff:["8 a.m. rounds · M. R.","Arbre vierge construit par le résident"]};
+ const map={mk:["M. K.","Activation, stress réel et seuil maniaque"],ma:["Mme A.","Dépression actuelle et hypomanie oubliée"],ms:["Mme S.","Dépression, activation concomitante et caractéristiques mixtes"],staff:["8 a.m. case conference · M. R.","Arbre vierge construit par le résident"]};
  return map[caseId]||["Diagnostic Lab","Dossier actif"];
 }
 // Override V46 context handling.
@@ -5320,7 +5320,7 @@ const AXONE_CONTEXT={
  "n2case-mk":["Dossier M. K.","Do not let stress explain what it does not explain."],
  "n2case-ma":["Dossier Mme A.","Polarity is decided longitudinally, not from today’s complaint."],
  "n2case-ms":["Dossier Mme S.","Mixed features: do not merely count symptoms. Organize their simultaneity."],
- n2boss:["8 a.m. rounds","This time I am not helping. I have coffee. You are on your own."]
+ n2boss:["8 a.m. case conference","This time I am not helping. I have coffee. You are on your own."]
 };
 function setAxoneContext(id){
  const ctx=AXONE_CONTEXT[id];if(!ctx)return;axoneCurrentContext=id;
@@ -5349,7 +5349,7 @@ function installAxonePresence(){
   ['n2case-mk','M. K.','The stress is real. The question is: is it sufficient?'],
   ['n2case-ma','Mme A.','Current depression does not erase past hypomania.'],
   ['n2case-ms','Mme S.','The trap is confusing concurrent activation with a separate episode.'],
-  ['n2boss','staff','I keep the coffee. You keep the tree.']
+  ['n2boss','staff','You keep the tree. Build the hierarchy.']
  ].forEach(x=>addAxoneInline(...x));
  document.querySelectorAll('.diagnostic-cockpit').forEach((cp,i)=>{
    if(cp.querySelector('.axone-inline'))return;
@@ -5410,15 +5410,15 @@ const AXONE_SCENES={
  'n2case-mk':{mood:'skeptical',title:'Le stress est réel.',lines:['La question est : explique-t-il tout ?','Un déclencheur n’est pas forcément une cause suffisante.']},
  'n2case-ma':{mood:'thinking',title:'Remontez dans le temps.',lines:['La plainte du jour ne décide pas à elle seule de la polarité.','Une hypomanie oubliée peut peser plus qu’un symptôme actuel.']},
  'n2case-ms':{mood:'skeptical',title:'Ne découpez pas trop vite.',lines:['Activation concomitante n’est pas forcément épisode séparé.','La simultanéité change la lecture du tableau.']},
- n2boss:{mood:'coffee',title:'8 a.m. rounds.',lines:['Cette fois je ne vous aide pas. J’ai du café.','I keep the coffee. You keep the tree.','Présentez. Je n’interromps que si vous sautez une étape.']}
+ n2boss:{mood:'coffee',title:'8 a.m. case conference.',lines:['Cette fois je ne vous aide pas. J’ai du café.','You keep the tree. Build the hierarchy.','Présentez. Je n’interromps que si vous sautez une étape.']}
 };
 const AXONE_REACTIONS={
  good:['Oui. Gardez exactement ce niveau de précision.','Ça tient. Ne rajoutez rien.','Bien. Là, vous décrivez, vous ne devinez pas.','Je n’ai rien à corriger sur celle-là.','Ça peut rester au dossier.'],
  bad:['Joli terme. Mauvais voisin.','You avez sauté le détail qui séparait les deux.','Ça se défend… jusqu’à la donnée suivante.','Reprenez la scène. Qu’est-ce qui est réellement observé ?','On ralentit d’une étape : phénomène d’abord.'],
- special:['Bon. Ça, je le note.','Je garde celle-là pour le staff.','Là, vous m’enlevez du travail.']
+ special:['Bon. Ça, je le note.','I will keep that one for the case synthesis.','Là, vous m’enlevez du travail.']
 };
 let axoneModeCurrent='observe',axoneMoodCurrent='curious';
-const AXONE_MODE_LABEL={observe:'Mode observation',memory:'Mode carnet',tree:'Mode arbre diagnostique',staff:'Mode staff',quiet:'En retrait'};
+const AXONE_MODE_LABEL={observe:'Mode observation',memory:'Mode carnet',tree:'Mode arbre diagnostique',staff:'Synthesis mode',quiet:'En retrait'};
 function setAxoneMode(mode='observe'){axoneModeCurrent=mode;document.querySelectorAll('.axone-figure').forEach(x=>x.dataset.mode=mode);const card=document.getElementById('axoneCard');if(card)card.dataset.mode=mode;const pill=document.querySelector('#axoneModePill span');if(pill)pill.textContent=AXONE_MODE_LABEL[mode]||'Mode clinique';}
 const AXONE_SECTION_MODE={mission:'observe',pretest:'quiet',cas:'observe',cas2:'observe',cas3:'observe',fauxamis:'observe',memory:'memory',memory2:'memory',memory3:'memory',inverse:'memory',atelier:'memory',adaptatif:'quiet',boss:'quiet',badges:'quiet',niveau2:'tree',n2trophies:'tree','n2case-mk':'tree','n2case-ma':'tree','n2case-ms':'tree',n2boss:'staff'};
 const axoneLive={context:'mission',lastLine:'',success:0,errors:0,collapseTimer:null,sayTimer:null,seenContexts:new Set()};
@@ -5440,7 +5440,7 @@ function installAxonePresence(){
  axoneCameo('n2case-mk','Le stress est réel. Maintenant, dites-moi ce qu’il n’explique pas.','sticky','skeptical',false);
  axoneCameo('n2case-ma','Ne restez pas coincé dans l’épisode actuel. Remontez.','aside','thinking',true);
  axoneCameo('n2case-ms','Même moment, deux polarités : la chronologie devient votre meilleur outil.','sticky','thinking',false);
- axoneCameo('n2boss','I keep the coffee. You keep the tree.','coffee dark','coffee',true);
+ axoneCameo('n2boss','You keep the tree. Build the hierarchy.','coffee dark','coffee',true);
  const targets=Object.keys(AXONE_SCENES).map(id=>document.getElementById(id)).filter(Boolean);
  if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{const vis=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(vis)setAxoneContext(vis.target.id);},{rootMargin:'-20% 0px -58% 0px',threshold:[.08,.2,.4]});targets.forEach(t=>obs.observe(t));}
  setAxoneContext('mission');
@@ -5521,7 +5521,7 @@ async function handleCloudSession(session,event=''){
 }
 function renderCloudIdentity(){
  const logged=!!BPLAB_V49.user;const lo=document.getElementById('accountLoggedOut'),li=document.getElementById('accountLoggedIn'),label=document.getElementById('cloudUserLabel');if(lo)lo.style.display=logged?'none':'grid';if(li)li.style.display=logged?'block':'none';
- if(label)label.textContent=logged?(BPLAB_V49.profile?.display_name||BPLAB_V49.user?.user_metadata?.display_name||'Mon profil'):'Mode local';
+ if(label)label.textContent=logged?(BPLAB_V49.profile?.display_name||BPLAB_V49.user?.user_metadata?.display_name||'My profile'):'Account';
  const syncBtn=document.getElementById('syncNowBtn'),loadBtn=document.getElementById('loadCloudBtn');if(syncBtn)syncBtn.disabled=!logged;if(loadBtn)loadBtn.disabled=!logged;
  if(logged)renderProfileCard();
 }
@@ -5568,5 +5568,5 @@ setTimeout(()=>{renderLocalMetric();initCloud()},250);
 <nav aria-label="Navigation mobile" class="mobile-bottom-nav"><a href="#cas"><b>◉</b><span>Course</span></a><a href="#carte"><b>▦</b><span>Progress</span></a><a href="#badges"><b>🏆</b><span>Trophies</span></a><button onclick="openAppMenu()" type="button"><b>☰</b><span>Menu</span></button></nav>
 <script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.codex').forEach(c=>{if(c.querySelector('.mobile-codex-toggle'))return;const b=document.createElement('button');b.type='button';b.className='mobile-codex-toggle';b.textContent='Show full term card';b.addEventListener('click',()=>{c.classList.toggle('mobile-expanded');b.textContent=c.classList.contains('mobile-expanded')?'Collapse term card':'Show full term card'});c.appendChild(b)});const a=document.querySelector('.axone-companion');if(a)a.addEventListener('click',()=>a.classList.toggle('expanded'))});</script>
 <script src="../../learning-engine.js"></script>
-<script src="./v51.js"></script>
+<script src="./v52.js"></script>
 </body></html>
