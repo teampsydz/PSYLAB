@@ -55,7 +55,7 @@ function installGuide(){
  const modal=document.createElement('div');modal.className='v51-overlay';modal.id='v51Guide';modal.innerHTML=`<div class="v51-dialog" role="dialog" aria-modal="true"><button class="v51-dialog-close" aria-label="Close">×</button><div class="kicker">${L.guideK}</div><h2>${L.guideT}</h2><p>${L.guideIntro}</p><h3>N1 · ${isEN?'Descriptive psychopathology':'Psychopathologie descriptive'}</h3><p>${L.guideN1}</p><h3>N2 · ${isEN?'Diagnostic reasoning':'Raisonnement diagnostique'}</h3><p>${L.guideN2}</p><h3>N3 · ${isEN?'Care Lab · coming later':'Care Lab · à venir'}</h3><p>${L.guideN3}</p><h3>${L.guideHow}</h3><p>${L.guideHowP}</p><p>${L.guideTrophies}</p><p>${L.guideAxon}</p><div class="v51-rule">${L.rule}</div><div class="v51-dialog-actions"><button class="v51-primary" data-v51-start>${L.start}</button><label class="v51-check"><input type="checkbox" id="v51DontShow"> ${L.dont}</label></div></div>`;document.body.appendChild(modal);
  modal.querySelector('.v51-dialog-close').onclick=()=>closeOverlay('v51Guide');modal.addEventListener('click',e=>{if(e.target===modal)closeOverlay('v51Guide')});modal.querySelector('[data-v51-start]').onclick=()=>{if(document.getElementById('v51DontShow').checked)localStorage.setItem('bplabIntroSeenV51','1');closeOverlay('v51Guide');document.getElementById('cas')?.scrollIntoView({behavior:'smooth'})};
  const menu=document.querySelector('#appMenu .menu-actions');if(menu&&!menu.querySelector('[data-v51-guide]')){const b=document.createElement('button');b.className='v51-menu-extra';b.dataset.v51Guide='1';b.textContent=L.menuProject;b.onclick=()=>{if(typeof closeAppMenu==='function')closeAppMenu();openOverlay('v51Guide')};menu.appendChild(b)}
- if(!localStorage.getItem('bplabIntroSeenV51'))setTimeout(()=>openOverlay('v51Guide'),650);
+ if(!localStorage.getItem('bplabIntroSeenV51')&&!wantsStaffChair())setTimeout(()=>openOverlay('v51Guide'),650);
 }
 
 function renderCoach(){
@@ -109,6 +109,9 @@ async function loadChallengeLeaderboard(key=null){const box=document.getElementB
 
 function fixMobileNav(){const nav=document.querySelector('.mobile-bottom-nav');if(!nav)return;nav.style.pointerEvents='auto';nav.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const el=document.querySelector(a.getAttribute('href'));if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}));nav.querySelectorAll('button').forEach(b=>{b.style.pointerEvents='auto';b.style.touchAction='manipulation'})}
 
-function install(){installGuide();renderCoach();installPsychometrics();installEndgame();instrumentLearning();fixMobileNav();setInterval(()=>{renderMaintenance();refreshCoach()},30000)}
+function wantsStaffChair(){try{const q=new URLSearchParams(location.search);return location.hash==='#v51-challenge'||q.get('open')==='staff-chair'||q.get('challenge')==='staff'}catch(e){return location.hash==='#v51-challenge'}}
+function handleV51DeepLink(){if(!wantsStaffChair())return;setTimeout(()=>{const card=document.getElementById('v51-challenge');if(card)card.scrollIntoView({behavior:'auto',block:'center'});openChallenge();try{const u=new URL(location.href);u.searchParams.delete('open');u.searchParams.delete('challenge');u.hash='v51-challenge';history.replaceState(null,'',u.pathname+u.search+u.hash)}catch(e){}},180)}
+
+function install(){installGuide();renderCoach();installPsychometrics();installEndgame();instrumentLearning();fixMobileNav();handleV51DeepLink();setInterval(()=>{renderMaintenance();refreshCoach()},30000)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
