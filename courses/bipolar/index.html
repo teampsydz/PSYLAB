@@ -577,12 +577,28 @@ textarea{width:100%;min-height:92px;resize:vertical;border:1px solid #cdd7d4;bac
 <style>
 /* V50.2 — l’objectif pédagogique devient le titre de chaque activité */
 .case-card .card-head h3,.n2-station .n2-st-head h3{line-height:1.23}
-</style></head>
+</style>
+<style id="v503-mobile">
+/* ===== V50.3 · Mobile-first ===== */
+@media(max-width:760px){
+  body{padding-bottom:72px;font-size:15px}
+  .top{position:sticky;top:0}.topin{padding:8px 10px;gap:8px}.brand{font-size:14px}.version-tag{display:none}.progresslabel{font-size:9px}.reset{display:none}.cloud-user-chip{min-width:40px;height:40px;padding:0 10px}.psylab-home-btn{width:40px;height:40px;justify-content:center;padding:0}.psylab-platform-note{display:none}
+  .hero{display:none}.nav{display:none}main{padding:12px 10px 90px}.intro{grid-template-columns:1fr;gap:10px}.panel{padding:15px;border-radius:16px}.panel h2{font-size:23px}.steps{grid-template-columns:1fr 1fr}.step{min-height:62px}
+  .sectionhead{margin:30px 2px 12px}.sectionhead h2{font-size:28px;line-height:1.05}.sectionhead p{font-size:13px}
+  .case-card{margin:12px 0;border-radius:17px;scroll-margin-top:70px}.card-head{grid-template-columns:46px 1fr;padding:15px 14px 10px;gap:10px}.qnum{width:42px;height:42px;border-radius:12px}.card-head h3{font-size:19px;line-height:1.24}.clinical-scene{margin:0 12px 12px;padding:14px;border-radius:13px}.clinical-scene p{font-size:14px}.ask{padding:0 14px 9px;font-size:15px}.choice-grid{grid-template-columns:1fr;padding:0 12px 14px;gap:8px}.choice{min-height:52px;padding:12px;font-size:14px}.choice span{width:28px;height:28px}.micro-feedback{margin:0 12px 12px}.nuance-box{margin:0 12px 14px;padding:13px}.codex-top{padding:15px 14px}.codex-top h3{font-size:23px}.codex-grid{grid-template-columns:1fr}.codex-grid>div{padding:14px;border-right:0!important}.codex-grid>div:nth-child(n+3){display:none}.codex.mobile-expanded .codex-grid>div{display:block}.mobile-codex-toggle{display:block;width:calc(100% - 28px);margin:12px 14px 15px;border:1px solid #9dc9c3;background:#edf7f5;color:#124e50;border-radius:10px;padding:11px;font-weight:900}
+  .duels,.memory-grid,.rewrite-grid,.repair-grid,.boss-grid,.badge-grid,.concept-grid,.n2-dashboard,.n2-principles,.n2-options,.n2-multi,.n2-boss-grid,.branch-list,.trophy-grid{grid-template-columns:1fr!important}.duel-zone{padding:16px 11px;border-radius:18px;margin-top:34px}.memory-intro{padding:17px}.memory-intro h2{font-size:27px}.memory-card{padding:14px}.n2-hero{display:none}.n2-nav{display:none}.n2-main{padding-left:10px!important;padding-right:10px!important}.n2-case-hero{padding:16px!important}.n2-station{border-radius:16px}.n2-st-head{padding:14px!important}.n2-st-head h3{font-size:19px!important}.n2-data{margin:0 12px 12px!important;padding:13px!important}.n2-options{padding:0 12px 14px!important}.n2-choice{min-height:52px!important;padding:12px!important}.n2-correction{margin:0 12px 14px!important}.cockpit-shell{border-radius:16px!important}.cockpit-grid,.cockpit-columns{grid-template-columns:1fr!important}.cockpit-panel{padding:13px!important}.staff-shell{padding:14px!important}.app-menu-card,.community-modal{width:calc(100vw - 18px)!important;max-height:88svh!important;border-radius:18px!important}
+  .axone-companion{width:54px!important;height:54px!important;border-radius:50%!important;padding:0!important;display:grid!important;place-items:center!important;right:12px!important;bottom:82px!important;overflow:visible!important}.axone-companion .axone-mini{font-size:30px!important}.axone-companion .axone-companion-copy{display:none!important}.axone-companion.expanded{width:min(320px,calc(100vw - 24px))!important;height:auto!important;border-radius:16px!important;padding:10px!important;grid-template-columns:42px 1fr!important}.axone-companion.expanded .axone-companion-copy{display:block!important}
+}
+.mobile-bottom-nav{display:none}
+.lang-course-switch{display:inline-flex;gap:2px;border:1px solid rgba(255,255,255,.22);border-radius:10px;overflow:hidden}.lang-course-switch a{color:#cde2df;text-decoration:none;padding:7px 8px;font-size:10px;font-weight:950}.lang-course-switch a.active{background:white;color:#123f47}
+@media(max-width:760px){.mobile-bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:90;height:66px;background:rgba(255,253,249,.98);border-top:1px solid #d5dfdc;display:grid;grid-template-columns:repeat(4,1fr);padding:5px max(6px,env(safe-area-inset-left)) calc(5px + env(safe-area-inset-bottom));box-shadow:0 -8px 28px rgba(12,46,54,.08)}.mobile-bottom-nav a,.mobile-bottom-nav button{border:0;background:transparent;text-decoration:none;color:#31545a;display:grid;place-items:center;align-content:center;gap:2px;font-size:9px;font-weight:850}.mobile-bottom-nav b{font-size:20px;line-height:1}.lang-course-switch{margin-left:auto}.progresswrap{min-width:80px}}
+</style>
+</head>
 <body id="top">
 <header class="top"><div class="topin">
-<a class="psylab-home-btn" href="../../index.html" title="Retour à PsyLab">← PsyLab</a><div class="brand">Bipolar<em>Lab</em> · N1 + N2 <small class="version-tag">V50</small></div>
+<a class="psylab-home-btn" href="../../index.html" title="Retour à PsyLab">← PsyLab</a><div class="brand">Bipolar<em>Lab</em> · N1 + N2 <small class="version-tag">V50.3</small></div>
 <div class="progresswrap"><div class="progressbar"><i id="progress"></i></div><div class="progresslabel" id="progresslabel">Début de l’examen sémiologique</div></div>
-<button class="cloud-user-chip" id="cloudUserChip" onclick="openCommunity('account')" title="Compte, synchronisation et classement" type="button"><span class="cloud-dot"></span><span class="cloud-user-label" id="cloudUserLabel">Mode local</span></button><button class="reset menu-top-btn" onclick="openAppMenu()" type="button">☰ Menu</button><button class="reset" onclick="resetAll()" type="button">Réinitialiser</button>
+<div class="lang-course-switch" aria-label="Langue"><a class="active" href="index.html">FR</a><a href="en.html">EN</a></div><button class="cloud-user-chip" id="cloudUserChip" onclick="openCommunity('account')" title="Compte, synchronisation et classement" type="button"><span class="cloud-dot"></span><span class="cloud-user-label" id="cloudUserLabel">Mode local</span></button><button class="reset menu-top-btn" onclick="openAppMenu()" type="button">☰ Menu</button><button class="reset" onclick="resetAll()" type="button">Réinitialiser</button>
 </div></header>
 <section class="hero"><div class="heroin">
 <div><div class="kicker">NIVEAU 1 · PSYCHOPATHOLOGIE DESCRIPTIVE</div>
@@ -5657,4 +5673,6 @@ function saveCloudConfig(){const url=(document.getElementById('cloudUrlInput')?.
 function clearCloudConfig(){localStorage.removeItem('bplabCloudConfig');location.reload()}
 setTimeout(()=>{renderLocalMetric();initCloud()},250);
 </script>
+<nav class="mobile-bottom-nav" aria-label="Navigation mobile"><a href="#cas"><b>◉</b><span>Cours</span></a><a href="#carte"><b>▦</b><span>Progression</span></a><a href="#badges"><b>🏆</b><span>Trophées</span></a><button type="button" onclick="openAppMenu()"><b>☰</b><span>Menu</span></button></nav>
+<script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.codex').forEach(c=>{if(c.querySelector('.mobile-codex-toggle'))return;const b=document.createElement('button');b.type='button';b.className='mobile-codex-toggle';b.textContent='Afficher toute la fiche';b.addEventListener('click',()=>{c.classList.toggle('mobile-expanded');b.textContent=c.classList.contains('mobile-expanded')?'Réduire la fiche':'Afficher toute la fiche'});c.appendChild(b)});const a=document.querySelector('.axone-companion');if(a)a.addEventListener('click',()=>a.classList.toggle('expanded'))});</script>
 </body></html>
