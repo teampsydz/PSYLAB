@@ -9,8 +9,9 @@ window.PSYLAB_COURSES = [
     description_fr: "Sémiologie, raisonnement diagnostique et, prochainement, prise en charge intégrée.",
     description_en: "Psychopathology, diagnostic reasoning and, soon, integrated management.",
     status: "active",
-    languages: ["fr"],
+    languages: ["fr","en"],
     href: "courses/bipolar/index.html",
+    href_en: "courses/bipolar/en.html",
     levels: [
       {key:"n1", fr:"N1 · Psychopathologie descriptive", en:"L1 · Descriptive psychopathology"},
       {key:"n2", fr:"N2 · Raisonnement diagnostique", en:"L2 · Diagnostic reasoning"},
