@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>BipolarLab · PsyLab V50</title>
+<title>BipolarLab · PsyLab V51</title>
 <style>
 :root{
  --deep:#103943;--deep2:#0a2d34;--teal:#177b77;--mint:#dff3ef;--ivory:#f7f1e6;--paper:#fffdf9;
@@ -593,10 +593,11 @@ textarea{width:100%;min-height:92px;resize:vertical;border:1px solid #cdd7d4;bac
 .lang-course-switch{display:inline-flex;gap:2px;border:1px solid rgba(255,255,255,.22);border-radius:10px;overflow:hidden}.lang-course-switch a{color:#cde2df;text-decoration:none;padding:7px 8px;font-size:10px;font-weight:950}.lang-course-switch a.active{background:white;color:#123f47}
 @media(max-width:760px){.mobile-bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:90;height:66px;background:rgba(255,253,249,.98);border-top:1px solid #d5dfdc;display:grid;grid-template-columns:repeat(4,1fr);padding:5px max(6px,env(safe-area-inset-left)) calc(5px + env(safe-area-inset-bottom));box-shadow:0 -8px 28px rgba(12,46,54,.08)}.mobile-bottom-nav a,.mobile-bottom-nav button{border:0;background:transparent;text-decoration:none;color:#31545a;display:grid;place-items:center;align-content:center;gap:2px;font-size:9px;font-weight:850}.mobile-bottom-nav b{font-size:20px;line-height:1}.lang-course-switch{margin-left:auto}.progresswrap{min-width:80px}}
 </style>
+<link rel="stylesheet" href="v51.css"/>
 </head>
 <body id="top">
 <header class="top"><div class="topin">
-<a class="psylab-home-btn" href="../../index.html" title="Retour à PsyLab">← PsyLab</a><div class="brand">Bipolar<em>Lab</em> · N1 + N2 <small class="version-tag">V50.3</small></div>
+<a class="psylab-home-btn" href="../../index.html" title="Retour à PsyLab">← PsyLab</a><div class="brand">Bipolar<em>Lab</em> · N1 + N2 <small class="version-tag">V51</small></div>
 <div class="progresswrap"><div class="progressbar"><i id="progress"></i></div><div class="progresslabel" id="progresslabel">Début de l’examen sémiologique</div></div>
 <div class="lang-course-switch" aria-label="Langue"><a class="active" href="index.html">FR</a><a href="en.html">EN</a></div><button class="cloud-user-chip" id="cloudUserChip" onclick="openCommunity('account')" title="Compte, synchronisation et classement" type="button"><span class="cloud-dot"></span><span class="cloud-user-label" id="cloudUserLabel">Mode local</span></button><button class="reset menu-top-btn" onclick="openAppMenu()" type="button">☰ Menu</button><button class="reset" onclick="resetAll()" type="button">Réinitialiser</button>
 </div></header>
@@ -5675,4 +5676,6 @@ setTimeout(()=>{renderLocalMetric();initCloud()},250);
 </script>
 <nav class="mobile-bottom-nav" aria-label="Navigation mobile"><a href="#cas"><b>◉</b><span>Cours</span></a><a href="#carte"><b>▦</b><span>Progression</span></a><a href="#badges"><b>🏆</b><span>Trophées</span></a><button type="button" onclick="openAppMenu()"><b>☰</b><span>Menu</span></button></nav>
 <script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.codex').forEach(c=>{if(c.querySelector('.mobile-codex-toggle'))return;const b=document.createElement('button');b.type='button';b.className='mobile-codex-toggle';b.textContent='Afficher toute la fiche';b.addEventListener('click',()=>{c.classList.toggle('mobile-expanded');b.textContent=c.classList.contains('mobile-expanded')?'Réduire la fiche':'Afficher toute la fiche'});c.appendChild(b)});const a=document.querySelector('.axone-companion');if(a)a.addEventListener('click',()=>a.classList.toggle('expanded'))});</script>
+<script src="../../learning-engine.js"></script>
+<script src="./v51.js"></script>
 </body></html>
