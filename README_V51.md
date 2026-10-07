@@ -46,3 +46,8 @@ When Netlify gives you an address such as `https://something.netlify.app`, add b
 under **Supabase → Authentication → URL Configuration → Redirect URLs**.
 
 The Cloudflare Pages deployment can remain active as a backup.
+
+
+## V51.1 hotfix
+- Staff Chair dashboard deep-link now opens the weekly challenge modal directly instead of only landing on BipolarLab.
+- The first-visit BipolarLab guide no longer masks a Staff Chair deep-link.
