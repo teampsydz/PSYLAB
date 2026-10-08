@@ -594,6 +594,7 @@ textarea{width:100%;min-height:92px;resize:vertical;border:1px solid #cdd7d4;bac
 @media(max-width:760px){.mobile-bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:90;height:66px;background:rgba(255,253,249,.98);border-top:1px solid #d5dfdc;display:grid;grid-template-columns:repeat(4,1fr);padding:5px max(6px,env(safe-area-inset-left)) calc(5px + env(safe-area-inset-bottom));box-shadow:0 -8px 28px rgba(12,46,54,.08)}.mobile-bottom-nav a,.mobile-bottom-nav button{border:0;background:transparent;text-decoration:none;color:#31545a;display:grid;place-items:center;align-content:center;gap:2px;font-size:9px;font-weight:850}.mobile-bottom-nav b{font-size:20px;line-height:1}.lang-course-switch{margin-left:auto}.progresswrap{min-width:80px}}
 </style>
 <link rel="stylesheet" href="v54.css"/>
+<link rel="stylesheet" href="v56-course.css"/>
 </head>
 <body id="top">
 <header class="top"><div class="topin">
@@ -5678,4 +5679,5 @@ setTimeout(()=>{renderLocalMetric();initCloud()},250);
 <script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.codex').forEach(c=>{if(c.querySelector('.mobile-codex-toggle'))return;const b=document.createElement('button');b.type='button';b.className='mobile-codex-toggle';b.textContent='Afficher toute la fiche';b.addEventListener('click',()=>{c.classList.toggle('mobile-expanded');b.textContent=c.classList.contains('mobile-expanded')?'Réduire la fiche':'Afficher toute la fiche'});c.appendChild(b)});const a=document.querySelector('.axone-companion');if(a)a.addEventListener('click',()=>a.classList.toggle('expanded'))});</script>
 <script src="../../learning-engine.js"></script>
 <script src="./v54.js"></script>
+<script src="./v56-course.js"></script>
 </body></html>
