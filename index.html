@@ -7,6 +7,7 @@
 <title>PsyLab</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="v55.css">
+<link rel="stylesheet" href="v56.css">
 </head>
 <body class="auth-locked">
 <header class="topbar ps55-auth-topbar">
@@ -19,30 +20,49 @@
   </div>
 </header>
 
-<section class="auth-gate" id="authGate" aria-label="Accès PsyLab">
-  <div class="auth-gate-inner v52-auth-inner">
-    <div class="auth-card v52-auth-card">
-      <div class="auth-card-brand v52-auth-brand"><div><b>PsyLab</b><small>Accès résident</small></div></div>
-      <div class="auth-card-copy"><h1>Connexion</h1><p>Accédez à vos Labs, votre progression et vos résultats.</p></div>
-      <div class="auth-switch">
+<section class="auth-gate ps56-auth" id="authGate" aria-label="Accès PsyLab">
+  <div class="ps56-auth-shell">
+    <section class="ps56-auth-story" aria-label="Découvrir PsyLab">
+      <a class="ps56-auth-wordmark" href="./">Psy<span>Lab</span></a>
+      <div class="ps56-auth-copy">
+        <div class="ps56-auth-kicker">FORMATION CLINIQUE INTERACTIVE</div>
+        <h1>Observer.<br>Raisonner.<br><span>Progresser.</span></h1>
+        <p>Des Labs structurés, des cas progressifs, des QCM ciblés et un défi clinique hebdomadaire.</p>
+      </div>
+      <div class="ps56-auth-preview" aria-hidden="true">
+        <div><b>BipolarLab</b><span>N1 · Sémiologie</span><span>N2 · Diagnostic</span></div>
+        <div><b>Cas cliniques</b><span>Dossiers progressifs</span><span>Décisions argumentées</span></div>
+        <div><b>La Blouse</b><span>Challenge hebdomadaire</span><span>Classement clinique</span></div>
+      </div>
+      <div class="ps56-auth-foot">FR / EN · progression synchronisée · pseudonyme public</div>
+    </section>
+    <section class="auth-card ps56-auth-card">
+      <div class="ps56-auth-card-head">
+        <span class="ps56-auth-mobile-brand">Psy<span>Lab</span></span>
+        <div><small>ESPACE RÉSIDENT</small><h2 id="ps56AuthTitle">Bon retour.</h2><p id="ps56AuthSubtitle">Retrouvez votre progression et reprenez là où vous vous êtes arrêté.</p></div>
+      </div>
+      <div class="auth-switch ps56-auth-switch">
         <button type="button" class="active" data-gate-pane-btn="login">Se connecter</button>
         <button type="button" data-gate-pane-btn="signup">Créer un compte</button>
       </div>
       <div class="gate-pane active" data-gate-pane="login">
         <label>E-mail<input id="gateLoginEmail" type="email" autocomplete="email" placeholder="vous@exemple.com"></label>
         <label>Mot de passe<input id="gateLoginPassword" type="password" autocomplete="current-password" placeholder="Votre mot de passe"></label>
-        <button class="gate-primary" id="gateLoginBtn" type="button">Se connecter</button>
+        <button class="gate-primary ps56-auth-primary" id="gateLoginBtn" type="button">Entrer dans PsyLab</button>
       </div>
       <div class="gate-pane" data-gate-pane="signup">
-        <label>Pseudonyme<input id="gateSignupPseudo" maxlength="32" autocomplete="nickname" placeholder="Votre pseudo public"></label>
+        <div class="ps56-auth-row">
+          <label>Pseudonyme<input id="gateSignupPseudo" maxlength="32" autocomplete="nickname" placeholder="Votre pseudo public"></label>
+          <label>Année de résidence<select id="gateSignupResidency"><option value="">Facultatif</option><option value="R1">R1</option><option value="R2">R2</option><option value="R3">R3</option><option value="R4">R4</option><option value="R5">R5+</option></select></label>
+        </div>
         <label>Promotion / groupe <span>(facultatif)</span><input id="gateSignupCohort" maxlength="24" placeholder="Ex. RES2027"></label>
         <label>E-mail<input id="gateSignupEmail" type="email" autocomplete="email" placeholder="vous@exemple.com"></label>
         <label>Mot de passe<input id="gateSignupPassword" type="password" autocomplete="new-password" placeholder="8 caractères minimum"></label>
-        <button class="gate-primary" id="gateSignupBtn" type="button">Créer mon compte</button>
+        <button class="gate-primary ps56-auth-primary" id="gateSignupBtn" type="button">Créer mon espace</button>
       </div>
       <div class="gate-message" id="gateMessage">Connexion sécurisée via PsyLab.</div>
-      <div class="gate-privacy">L’e-mail reste privé. Les classements affichent uniquement le pseudonyme et, si renseignée, la promotion.</div>
-    </div>
+      <div class="gate-privacy">Votre e-mail reste privé. Le classement utilise votre pseudonyme. La photo de profil est facultative.</div>
+    </section>
   </div>
 </section>
 
@@ -58,11 +78,11 @@
     <div class="ps55-user-tools">
       <div class="lang-switch ps55-lang" aria-label="Language"><button type="button" data-lang="fr" class="active">FR</button><button type="button" data-lang="en">EN</button></div>
       <button class="ps55-bell" id="ps55Bell" type="button" aria-label="Défi de la semaine"><span>○</span><i></i></button>
-      <button class="ps55-user" type="button" data-open-profile>
+      <a class="ps55-user" href="profile.html" data-profile-link>
         <span class="ps55-user-avatar" id="ps55Avatar">R</span>
         <span><b id="ps55UserName">Résident</b><small id="ps55UserCohort">PsyLab</small></span>
         <span aria-hidden="true">⌄</span>
-      </button>
+      </a>
     </div>
   </header>
 
@@ -70,17 +90,17 @@
     <aside class="ps55-sidebar" aria-label="Navigation PsyLab">
       <nav>
         <a href="#home" class="active" data-nav="home"><span>⌂</span>Accueil</a>
-        <a href="#labs" data-nav="labs"><span>▣</span>Cours</a>
-        <a href="courses/bipolar/index.html"><span>▤</span>Cas cliniques</a>
-        <a href="courses/bipolar/index.html"><span>◎</span>QCM & entraînement</a>
+        <a href="labs.html" data-nav="labs"><span>▣</span>Labs</a>
+        <a href="cases.html"><span>▤</span>Cas cliniques</a>
+        <a href="training.html"><span>◎</span>QCM & entraînement</a>
         <a href="#competition" class="ps55-competition-nav" data-nav="competition"><span>♛</span><b>Tout le monde<br>veut la blouse</b><em>NOUVEAU</em></a>
-        <a href="#progression" data-nav="stats"><span>▥</span>Mes statistiques</a>
-        <button type="button" id="mobileTrophies"><span>◇</span>Mes trophées</button>
+        <a href="profile.html#progression" data-nav="stats"><span>▥</span>Mes statistiques</a>
+        <a href="profile.html#trophies"><span>◇</span>Mes trophées</a>
       </nav>
       <div class="ps55-sidebar-divider"></div>
       <nav>
-        <a href="#labs"><span>◉</span>Vos Labs</a>
-        <a href="courses/bipolar/index.html"><span>▧</span>Ressources</a>
+        <a href="labs.html"><span>◉</span>Vos Labs</a>
+        <a href="resources.html"><span>▧</span>Ressources</a>
         <button type="button" id="ps55Help"><span>?</span>Aide</button>
       </nav>
       <button class="ps55-axone-entry" type="button" data-axone-jump>
@@ -143,17 +163,17 @@
             <header><h2><span class="ps55-icon mint">◎</span>Ma progression</h2><a href="#labs">Voir mon parcours →</a></header>
             <div class="ps55-progress-overview">
               <div class="ps55-ring" id="ps55ProgressRing"><b id="ps55ProgressPct">0%</b></div>
-              <div><b>Progression globale</b><span>Maîtrise actuelle de BipolarLab</span></div>
+              <div><b>Progression globale</b><span>Maîtrise clinique actuelle</span></div>
               <div class="ps55-streak"><small>Jours actifs · 7 j</small><b id="ps55ActiveDays">0</b></div>
             </div>
             <div class="ps55-skill-bars" id="ps55SkillBars"><div class="ps55-empty">Les compétences apparaîtront après vos premières activités.</div></div>
           </article>
 
           <article class="ps55-card ps55-weak-card">
-            <header><h2><span class="ps55-icon coral">↗</span>Mes points à renforcer</h2><a href="courses/bipolar/index.html">Ouvrir BipolarLab →</a></header>
+            <header><h2><span class="ps55-icon coral">↗</span>Mes points à renforcer</h2><a href="training.html?mode=adaptive">Révision ciblée →</a></header>
             <small class="ps55-card-note">D’après vos dernières réponses</small>
             <div class="ps55-weak-list" id="ps55WeakList"><div class="ps55-empty">Aucune faiblesse récurrente détectée pour le moment.</div></div>
-            <div class="ps55-plan-card"><span>☼</span><div><b>Par où commencer ?</b><small id="ps55PlanText">Dr Axone utilisera vos erreurs récurrentes pour proposer une révision ciblée.</small></div><a href="courses/bipolar/index.html">Réviser →</a></div>
+            <div class="ps55-plan-card"><span>☼</span><div><b>Par où commencer ?</b><small id="ps55PlanText">Dr Axone utilisera vos erreurs récurrentes pour proposer une révision ciblée.</small></div><a href="training.html?mode=adaptive">Réviser →</a></div>
           </article>
         </section>
 
@@ -161,22 +181,23 @@
           <header><div><span class="ps55-axone-avatar">A</span><span><b>Dr Axone</b><small>Guide clinique</small></span></div><em>● En ligne</em></header>
           <div class="ps55-axone-message"><b id="ps55AxoneGreeting">Votre avis clinique</b><p id="ps55AxoneText">Je n’interviens que lorsqu’un point mérite réellement d’être consolidé.</p></div>
           <div class="ps55-axone-actions">
-            <a href="courses/bipolar/index.html">M’expliquer un concept <span>›</span></a>
-            <a href="courses/bipolar/index.html">Analyser mes erreurs <span>›</span></a>
-            <a href="courses/bipolar/index.html">Mini QCM ciblé <span>›</span></a>
-            <a href="courses/bipolar/index.html">Créer un plan de révision <span>›</span></a>
+            <button type="button" data-axone-action="explain">M’expliquer un concept <span>›</span></button>
+            <button type="button" data-axone-action="errors">Analyser mes erreurs <span>›</span></button>
+            <a href="training.html?mode=mini">Mini QCM ciblé <span>›</span></a>
+            <a href="training.html?mode=adaptive">Créer un plan de révision <span>›</span></a>
           </div>
-          <a class="ps55-axone-input" href="courses/bipolar/index.html">Ouvrir mon profil clinique <span>→</span></a>
+          <div class="ps56-axone-chat"><input id="ps56AxoneQuestion" placeholder="Posez une question sur votre cours…" maxlength="600"><button id="ps56AxoneAsk" type="button">→</button></div>
+          <small class="ps56-axone-state" id="ps56AxoneState">Guide clinique actif · question libre disponible si le module IA est configuré.</small>
         </aside>
       </div>
 
       <section class="ps55-explore" id="labs">
         <header><h2>Explorer PsyLab</h2><a id="resumeBipolar" href="courses/bipolar/index.html">Reprendre BipolarLab · <b id="resumeScore">0%</b> →</a></header>
         <div class="ps55-shortcuts">
-          <a href="courses/bipolar/index.html"><span class="blue">▭</span><div><b>Cours</b><small>Parcours structurés</small></div><i>›</i></a>
-          <a href="courses/bipolar/index.html"><span class="green">▣</span><div><b>Cas cliniques</b><small>Dossiers progressifs</small></div><i>›</i></a>
-          <a href="courses/bipolar/index.html"><span class="purple">◎</span><div><b>QCM & entraînement</b><small>Révision adaptative</small></div><i>›</i></a>
-          <a href="courses/bipolar/index.html"><span class="teal">▤</span><div><b>Psychométrie</b><small>Choisir · coter · interpréter</small></div><i>›</i></a>
+          <a href="labs.html"><span class="blue">▭</span><div><b>Labs</b><small>Parcours par trouble</small></div><i>›</i></a>
+          <a href="cases.html"><span class="green">▣</span><div><b>Cas cliniques</b><small>Dossiers progressifs</small></div><i>›</i></a>
+          <a href="training.html"><span class="purple">◎</span><div><b>QCM & entraînement</b><small>Par thème ou faiblesse</small></div><i>›</i></a>
+          <a href="training.html?mode=adaptive"><span class="teal">↗</span><div><b>Révision adaptative</b><small>Corriger mes points faibles</small></div><i>›</i></a>
           <a href="#competition"><span class="navy">♛</span><div><b>Compétition</b><small>Prendre la Blouse</small></div><i>›</i></a>
         </div>
         <div class="ps55-labs-native"><div class="course-grid" id="courseGrid"></div></div>
@@ -217,12 +238,14 @@
 <script src="./app.js"></script>
 <script src="./learning-engine.js"></script>
 <script src="./platform-v55.js"></script>
+<script src="./dr-axone.js"></script>
+<script src="./platform-v56.js"></script>
 <nav class="ps55-mobile-nav" aria-label="Navigation mobile">
   <a href="#home" class="active"><span>⌂</span><b>Accueil</b></a>
-  <a href="#labs"><span>▣</span><b>Cours</b></a>
+  <a href="labs.html"><span>▣</span><b>Labs</b></a>
   <a href="#competition"><span>♛</span><b>Défi</b></a>
   <button id="ps55MobileLeaderboard" type="button"><span>▥</span><b>Classement</b></button>
-  <button id="ps55MobileProfile" type="button"><span>○</span><b>Profil</b></button>
+  <a href="profile.html"><span>○</span><b>Profil</b></a>
 </nav>
 </body>
 </html>
