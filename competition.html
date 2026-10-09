@@ -19,6 +19,12 @@
 
 <main class="v70-vestiaire-shell">
   <div class="v70-vestiaire-main">
+    <section class="v71-live-rail" aria-label="Édition en cours">
+      <div class="v71-live-label"><i></i><span data-copy="fr">ÉDITION EN COURS</span><span data-copy="en">LIVE EDITION</span></div>
+      <div><strong id="competitionParticipantsRail">0</strong><span data-copy="fr"> au classement</span><span data-copy="en"> ranked</span></div>
+      <div><span data-copy="fr">Votre rang</span><span data-copy="en">Your rank</span> <strong id="competitionMyRankHero">—</strong></div>
+      <div><span data-copy="fr">Clôture dans</span><span data-copy="en">Closes in</span> <strong id="competitionCountdownRail">—</strong></div>
+    </section>
     <section class="v70-vestiaire-stage">
       <article class="v70-vestiaire-hero">
         <div class="v70-vestiaire-copy">
@@ -26,8 +32,16 @@
           <h1><span data-copy="fr">Le Vestiaire</span><span data-copy="en">The Locker Room</span></h1>
           <p class="hook"><span data-copy="fr">Cette semaine, prenez votre place.</span><span data-copy="en">This week, take your place.</span></p>
           <p class="challenge-line"><span data-copy="fr">Deux challenges. Un classement. À vous de jouer.</span><span data-copy="en">Two challenges. One ranking. Your move.</span></p>
-          <a class="v70-btn square" href="#challenges"><span data-copy="fr">Découvrir les défis</span><span data-copy="en">See the challenges</span> <span class="v70-arrow">→</span></a>
-          <div class="v70-vestiaire-live"><span><i class="v70-live-dot"></i><b id="competitionParticipants">0</b> <span data-copy="fr">participants</span><span data-copy="en">participants</span></span><span><span data-copy="fr">Clôture dans</span><span data-copy="en">Closes in</span> <b id="competitionCountdown">—</b></span></div>
+          <a class="v70-btn square v71-enter" href="#challenges"><span data-copy="fr">Entrer dans l’édition</span><span data-copy="en">Enter the edition</span> <span class="v70-arrow">→</span></a>
+          <div class="v70-vestiaire-live">
+            <span><i class="v70-live-dot"></i><b id="competitionParticipants">0</b> <span data-copy="fr">au classement</span><span data-copy="en">ranked</span></span>
+            <span><span data-copy="fr">Clôture dans</span><span data-copy="en">Closes in</span> <b id="competitionCountdown">—</b></span>
+          </div>
+          <div class="v71-rank-ticket">
+            <small><span data-copy="fr">VOTRE POSITION</span><span data-copy="en">YOUR POSITION</span></small>
+            <strong id="competitionMyRankTicket">—</strong>
+            <span id="competitionMyScoreHero"><span data-copy="fr">À vous d’entrer au classement</span><span data-copy="en">Your move to enter the ranking</span></span>
+          </div>
         </div>
       </article>
 
@@ -46,12 +60,12 @@
     <section class="v70-competition-strip">
       <article class="v70-dark-panel">
         <div class="v70-dark-panel-head"><h2><span data-copy="fr">Classement de la semaine</span><span data-copy="en">Weekly ranking</span></h2><button type="button"><span data-copy="fr">La Blouse · /100</span><span data-copy="en">White Coat · /100</span></button></div>
-        <div class="v70-rank-list" id="competitionLeaderboard"><p style="padding:12px;color:#aa978c;font-size:.68rem"><span data-copy="fr">Le classement apparaîtra dès les premières participations.</span><span data-copy="en">The ranking will appear after the first attempts.</span></p></div>
+        <div class="v71-podium" id="competitionPodium"></div><div class="v70-rank-list" id="competitionLeaderboard"><p style="padding:12px;color:#aa978c;font-size:.68rem"><span data-copy="fr">Le classement apparaîtra dès les premières participations.</span><span data-copy="en">The ranking will appear after the first attempts.</span></p></div>
       </article>
       <article class="v70-dark-panel v70-my-position">
         <small><span data-copy="fr">VOTRE POSITION</span><span data-copy="en">YOUR POSITION</span></small>
         <div class="rank"><strong id="competitionMyRankLarge">—</strong><span id="competitionMyScore"><span data-copy="fr">Jouez pour entrer au classement.</span><span data-copy="en">Play to enter the ranking.</span></span></div>
-        <p><span data-copy="fr">Le classement affiché ici correspond au challenge clinique actuellement classé.</span><span data-copy="en">The ranking shown here currently reflects the ranked clinical challenge.</span></p>
+        <p><span data-copy="fr">Chaque édition repart de zéro. Une tentative, un score, une place à défendre.</span><span data-copy="en">Every edition starts from zero. One attempt, one score, one place to defend.</span></p>
         <div class="v70-holder"><span class="avatar" id="competitionHolderAvatar">1</span><div><small><span data-copy="fr">LA BLOUSE EST PORTÉE PAR</span><span data-copy="en">THE COAT IS HELD BY</span></small><b id="competitionHolderName">À prendre</b><span id="competitionHolderMeta"></span></div></div>
       </article>
     </section>

@@ -2,6 +2,22 @@
 const q=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const preview=new URLSearchParams(location.search).get('preview')==='1';
+const quotes={
+  fr:[
+    {q:"C’est la relation qui guérit.",a:"Irvin D. Yalom"},
+    {q:"100 % des personnes ont une santé mentale, avec aussi des traits positifs.",a:"Dilip V. Jeste"},
+    {q:"Le comportement humain n’est pas dicté par les conditions rencontrées, mais par les décisions que l’on prend.",a:"Viktor E. Frankl"}
+  ],
+  en:[
+    {q:"It is the relationship that heals.",a:"Irvin D. Yalom"},
+    {q:"100% of people have mental health including some positive traits.",a:"Dilip V. Jeste"},
+    {q:"Human behaviour is not dictated by conditions that man encounters, but by decisions he himself makes.",a:"Viktor E. Frankl"}
+  ]
+};
+let quoteIndex=0,quoteTimer=null;
+function renderQuote(){const box=q('#psyQuote'),txt=q('#psyQuoteText'),author=q('#psyQuoteAuthor');if(!box||!txt||!author)return;const lg=window.PsyLabV60?.lang?.()||document.documentElement.lang||'fr',arr=quotes[String(lg).startsWith('en')?'en':'fr'],item=arr[quoteIndex%arr.length];box.classList.remove('is-changing');void box.offsetWidth;box.classList.add('is-changing');txt.textContent=item.q;author.textContent=item.a;box.querySelectorAll('.v70-quote-dots i').forEach((d,i)=>d.classList.toggle('active',i===quoteIndex%arr.length));}
+function initQuotes(){if(!q('#psyQuote'))return;renderQuote();clearInterval(quoteTimer);quoteTimer=setInterval(()=>{quoteIndex=(quoteIndex+1)%3;renderQuote()},8000)}
+
 const art={bipolar:'assets/v70/bipolar.jpg',anxiety:'assets/v70/anxiete.jpg',addiction:'assets/v70/addicto.jpg',psychosis:'assets/v70/psychose.jpg'};
 const display={
   fr:{bipolar:['BipolarLab','Troubles bipolaires'],psychosis:['PsychoseLab','Spectre de la psychose'],anxiety:['AnxiétéLab','Troubles anxieux'],addiction:['AddictoLab','Troubles addictifs']},
@@ -50,12 +66,12 @@ function renderMaintenance(ctx){
   else{copy.textContent=lang==='en'?'Key concepts return here when reactivation becomes useful.':'Les notions importantes reviendront ici lorsqu’une réactivation deviendra utile.';list.innerHTML=`<a class="v70-maintenance-item" href="maintenance.html"><i></i><div><b>${lang==='en'?'View retention schedule':'Voir le planning'}</b><br><small>${lang==='en'?'Spaced consolidation':'Consolidation espacée'}</small></div><span>→</span></a>`}
 }
 async function renderVestiaireMeta(ctx){
-  if(preview){if(q('#participantCount'))q('#participantCount').textContent='126';if(q('#countdown'))q('#countdown').textContent='4j';return}
+  if(preview){if(q('#participantCount'))q('#participantCount').textContent='126';if(q('#participantCountVisible'))q('#participantCountVisible').textContent='126';if(q('#countdown'))q('#countdown').textContent='4j';return}
   const c=ctx?.client,lang=window.PsyLabV60?.lang?.()||'fr';if(!c)return;
-  try{const current=await c.rpc('get_current_challenge',{p_course_key:'bipolar'}),row=Array.isArray(current.data)?current.data[0]:current.data;if(!row)return;const lb=await c.rpc('get_challenge_leaderboard',{p_challenge_key:row.challenge_key,p_limit:100}),rows=lb.data||[];if(q('#participantCount'))q('#participantCount').textContent=String(rows.length);const end=new Date(row.ends_at);if(!Number.isNaN(end.getTime())){const rem=Math.max(0,end-Date.now()),d=Math.floor(rem/86400000),h=Math.floor((rem%86400000)/3600000);if(q('#countdown'))q('#countdown').textContent=`${d}j ${h}h`}}
+  try{const current=await c.rpc('get_current_challenge',{p_course_key:'bipolar'}),row=Array.isArray(current.data)?current.data[0]:current.data;if(!row)return;const lb=await c.rpc('get_challenge_leaderboard',{p_challenge_key:row.challenge_key,p_limit:100}),rows=lb.data||[];if(q('#participantCount'))q('#participantCount').textContent=String(rows.length);if(q('#participantCountVisible'))q('#participantCountVisible').textContent=String(rows.length);const end=new Date(row.ends_at);if(!Number.isNaN(end.getTime())){const rem=Math.max(0,end-Date.now()),d=Math.floor(rem/86400000),h=Math.floor((rem%86400000)/3600000);if(q('#countdown'))q('#countdown').textContent=`${d}j ${h}h`}}
   catch(_){}
 }
-function render(ctx){renderIdentity(ctx);renderLabs(ctx);renderMaintenance(ctx);renderVestiaireMeta(ctx)}
+function render(ctx){renderIdentity(ctx);renderLabs(ctx);renderMaintenance(ctx);renderVestiaireMeta(ctx);initQuotes()}
 window.addEventListener('psylab:v60-ready',e=>render(e.detail));
 if(preview){document.body.classList.remove('ps59-auth-pending','ps59-auth-required');document.body.classList.add('ps59-authenticated');render({profile:{display_name:'Nadia',professional_status:'R3'},user:{email:'nadia@example.test',user_metadata:{}},progress:[{course_key:'bipolar',course_score:46}]})}
 })();

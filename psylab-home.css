@@ -43,3 +43,22 @@
   .v70-home-focus{grid-template-columns:1fr;gap:10px;margin-top:10px}.v70-resume-card{min-height:190px}.v70-resume-content{min-height:190px;width:72%;padding:20px}.v70-resume-content h2{font-size:2rem}.v70-resume-content p{font-size:.66rem}.v70-resume-progress{min-width:128px}.v70-vestiaire-teaser{min-height:148px}.v70-vestiaire-teaser .inner{min-height:148px;width:72%;padding:19px}.v70-vestiaire-teaser h2{font-size:1.65rem}
   .v70-home-lower{grid-template-columns:1fr;gap:10px;margin-top:10px}.v70-labs-row{grid-template-columns:1fr}.v70-lab-mini{grid-template-columns:72px 1fr}.v70-lab-mini img{width:72px;height:62px}.v70-panel-head{padding:14px 14px 9px}
 }
+
+/* Editorial psychiatry quotations — verified authors, deliberately concise */
+.v70-quote{right:20px;bottom:18px;width:min(292px,46%);padding:15px 17px 13px;border:1px solid rgba(111,16,34,.12);background:rgba(255,250,241,.88);box-shadow:0 10px 30px rgba(62,35,21,.11)}
+.v70-quote-mark{position:absolute;left:11px;top:2px;font-family:var(--ps-serif);font-size:2rem;line-height:1;color:rgba(111,16,34,.24)}
+.v70-quote blockquote{margin:0 0 7px;padding-left:11px;font-family:var(--ps-serif);font-size:.82rem;line-height:1.42;font-style:italic;color:#493a34}
+.v70-quote cite{padding-left:11px;color:var(--ps-burgundy);font-size:.59rem;font-weight:740;letter-spacing:.02em}
+.v70-quote-dots{display:flex;gap:4px;justify-content:flex-end;margin-top:5px}.v70-quote-dots i{width:12px;height:2px;border-radius:4px;background:#d7c3b2;transition:.25s}.v70-quote-dots i.active{width:22px;background:var(--ps-burgundy)}
+.v70-quote.is-changing{animation:v70QuoteSwap .42s ease}
+@keyframes v70QuoteSwap{0%{opacity:.35;transform:translateY(4px)}100%{opacity:1;transform:none}}
+
+.v70-vestiaire-teaser-foot{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.v70-vestiaire-live-mini{display:inline-flex;align-items:center;gap:5px;color:#f1d6bf;font-size:.57rem}.v70-vestiaire-live-mini i{width:6px;height:6px;border-radius:50%;background:#e6a353;box-shadow:0 0 0 4px rgba(230,163,83,.12);animation:v70Pulse 1.8s ease-in-out infinite}.v70-vestiaire-live-mini b{font-family:var(--ps-serif);font-size:.82rem;color:#fff}
+@keyframes v70Pulse{50%{box-shadow:0 0 0 7px rgba(230,163,83,0)}}
+
+@media(max-width:760px){
+  .v70-quote{display:block;position:relative;right:auto;bottom:auto;width:auto;margin:0 13px 13px;padding:11px 12px 10px;background:rgba(255,250,241,.91)}
+  .v70-quote blockquote{font-size:.69rem;margin-bottom:4px}.v70-quote cite{font-size:.54rem}.v70-quote-dots{margin-top:2px}
+}
+@media(prefers-reduced-motion:reduce){.v70-quote.is-changing,.v70-vestiaire-live-mini i{animation:none!important}}

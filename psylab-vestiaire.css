@@ -24,3 +24,38 @@ body.v70-vestiaire-body{background:#25140f}
   .v70-competition-strip{gap:10px;margin-top:10px}.v70-dark-panel-head{padding:14px 14px 9px}.v70-rank-list{padding:4px 8px 9px}.v70-rank-row{grid-template-columns:28px 1fr 58px;padding:8px 4px}.v70-my-position{padding:15px}.v70-my-position .rank strong{font-size:2.55rem}
   body.v70-vestiaire-body .v70-topbar{background:rgba(255,250,241,.96);border-color:#d8c6b7}body.v70-vestiaire-body .v70-mobile-nav{background:rgba(255,250,241,.98);border-color:#d8c6b7}
 }
+
+/* V71 — competitive energy without game-like decoration */
+.v71-live-rail{position:relative;z-index:3;display:grid;grid-template-columns:1.25fr repeat(3,auto);align-items:center;gap:18px;margin-bottom:12px;padding:10px 15px;border:1px solid rgba(255,255,255,.10);border-radius:8px;background:linear-gradient(90deg,rgba(255,250,241,.085),rgba(255,250,241,.035));box-shadow:0 8px 26px rgba(0,0,0,.12);font-size:.62rem;color:#cdb7a8;overflow:hidden}
+.v71-live-rail::after{content:"";position:absolute;left:-30%;bottom:0;width:30%;height:1px;background:linear-gradient(90deg,transparent,#d98a50,transparent);animation:v71Rail 5.5s linear infinite}
+.v71-live-rail strong{margin-left:4px;font-family:var(--ps-serif);font-size:.88rem;color:#fff}.v71-live-label{display:flex;align-items:center;gap:8px;color:#efc18b;font-weight:800;letter-spacing:.14em}.v71-live-label i{width:7px;height:7px;border-radius:50%;background:#e5a04f;box-shadow:0 0 0 0 rgba(229,160,79,.5);animation:v71Live 1.8s ease-out infinite}
+@keyframes v71Live{70%{box-shadow:0 0 0 8px rgba(229,160,79,0)}}@keyframes v71Rail{to{left:110%}}
+
+.v70-vestiaire-stage{min-height:452px}
+.v70-vestiaire-hero{isolation:isolate}
+.v70-vestiaire-hero::before{animation:v71HeroDrift 18s ease-in-out infinite alternate}
+.v70-vestiaire-hero::after{background:linear-gradient(90deg,rgba(27,16,13,.99) 0%,rgba(27,16,13,.91) 43%,rgba(27,16,13,.43) 72%,rgba(27,16,13,.12))}
+.v70-vestiaire-hero::marker{display:none}
+.v70-vestiaire-copy{min-height:452px;padding:45px 40px 42px}
+.v70-vestiaire-copy .hook{font-size:1.62rem;line-height:1.08}.v70-vestiaire-copy .challenge-line{font-size:.86rem;color:#ead7c7;max-width:420px}
+.v71-enter{min-height:46px;padding-inline:22px;background:linear-gradient(135deg,#8c172b,#a33a2a);border-color:#b75944;box-shadow:0 9px 24px rgba(143,23,43,.24)}
+.v71-rank-ticket{position:absolute;right:20px;bottom:20px;width:152px;padding:13px 14px 12px;border:1px solid rgba(255,255,255,.18);border-radius:9px;background:rgba(34,18,14,.74);backdrop-filter:blur(9px);box-shadow:0 15px 30px rgba(0,0,0,.22)}
+.v71-rank-ticket small{display:block;color:#dca878;font-size:.5rem;letter-spacing:.14em}.v71-rank-ticket strong{display:block;margin:2px 0 1px;font-family:var(--ps-serif);font-size:2.45rem;line-height:1;color:#fff;font-weight:500}.v71-rank-ticket>span{display:block;color:#cdb7a9;font-size:.56rem;line-height:1.35}
+@keyframes v71HeroDrift{from{transform:scale(1.03) translateX(0)}to{transform:scale(1.075) translateX(-1.1%)}}
+
+.v70-challenge-card{transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}.v70-challenge-card::after{content:"";position:absolute;z-index:3;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,0);transition:.24s}.v70-challenge-card:hover{transform:translateY(-4px);box-shadow:0 20px 42px rgba(0,0,0,.27);border-color:rgba(230,164,95,.46)}.v70-challenge-card:hover::after{box-shadow:inset 0 0 0 1px rgba(230,164,95,.25)}.v70-challenge-card .art img{transition:transform .55s ease,filter .35s ease}.v70-challenge-card:hover .art img{transform:scale(1.04);filter:saturate(1.08)}
+.v70-challenge-card:first-child .content{border-top:2px solid rgba(132,25,40,.62)}.v70-challenge-card:last-child .content{border-top:2px solid rgba(192,132,77,.58)}
+.v70-challenge-link{font-size:.68rem}.v70-challenge-link span:last-child{transition:.2s}.v70-challenge-card:hover .v70-challenge-link span:last-child{transform:translateX(3px);background:#f5e3d5}
+
+.v71-podium{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:12px 12px 6px}.v71-podium-card{position:relative;min-height:82px;padding:11px 10px 9px;border:1px solid rgba(255,255,255,.09);border-radius:7px;background:linear-gradient(180deg,rgba(255,250,241,.07),rgba(255,250,241,.025));overflow:hidden}.v71-podium-card:first-child{background:linear-gradient(180deg,rgba(207,143,70,.18),rgba(255,250,241,.035));border-color:rgba(211,154,91,.27)}.v71-podium-card .place{font-family:var(--ps-serif);font-size:1.25rem;color:#e5b16e}.v71-podium-card b{display:block;margin-top:2px;font-size:.64rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.v71-podium-card small{display:block;color:#9f8c80;font-size:.52rem}.v71-podium-card strong{position:absolute;right:9px;bottom:7px;font-family:var(--ps-serif);font-size:1.04rem;color:#fff}.v71-podium-empty{grid-column:1/-1;padding:8px;color:#aa978c;font-size:.62rem}
+.v70-rank-row{transition:background .25s,transform .25s}.v70-rank-row:hover{background:rgba(255,255,255,.045);transform:translateX(2px)}.v70-rank-row.me{background:linear-gradient(90deg,rgba(184,91,61,.23),rgba(184,91,61,.07));box-shadow:inset 2px 0 #cf754f}
+.v70-my-position{position:relative;overflow:hidden}.v70-my-position::before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-55px;top:-55px;background:radial-gradient(circle,rgba(187,85,52,.16),transparent 68%)}
+
+@media(max-width:900px){.v71-live-rail{grid-template-columns:1fr repeat(3,auto)}.v71-rank-ticket{right:18px}.v70-vestiaire-stage{min-height:0}.v70-vestiaire-copy{min-height:420px}}
+@media(max-width:760px){
+  .v71-live-rail{grid-template-columns:1fr 1fr;gap:5px 10px;margin-bottom:10px;padding:9px 11px;font-size:.56rem}.v71-live-label{grid-column:1/-1}.v71-live-rail>div:last-child{text-align:right}.v71-live-rail::after{display:none}
+  .v70-vestiaire-copy{width:78%;min-height:318px;padding:25px 18px 23px}.v70-vestiaire-copy .hook{font-size:1.18rem}.v70-vestiaire-copy .challenge-line{font-size:.68rem}.v71-enter{min-height:40px;padding-inline:15px}
+  .v71-rank-ticket{right:12px;bottom:12px;width:116px;padding:9px 10px}.v71-rank-ticket strong{font-size:1.85rem}.v71-rank-ticket>span{font-size:.5rem}.v71-rank-ticket small{font-size:.44rem}
+  .v71-podium{gap:5px;padding:9px 8px 4px}.v71-podium-card{min-height:72px;padding:8px 7px}.v71-podium-card .place{font-size:1.05rem}.v71-podium-card b{font-size:.56rem}.v71-podium-card strong{font-size:.86rem}
+}
+@media(prefers-reduced-motion:reduce){.v71-live-rail::after,.v71-live-label i,.v70-vestiaire-hero::before{animation:none!important}.v70-challenge-card,.v70-challenge-card .art img{transition:none!important}}
