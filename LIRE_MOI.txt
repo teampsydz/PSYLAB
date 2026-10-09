@@ -1,0 +1,19 @@
+PSYLAB — REFONTE VISUELLE PC + MOBILE
+
+Ce paquet met à jour l'apparence de la plateforme sans remplacer votre configuration Supabase.
+
+Installation :
+1. Décompressez cette archive.
+2. Copiez son contenu à la racine de votre dossier PSYLAB-main actuel.
+3. Acceptez le remplacement des fichiers portant le même nom.
+4. Ne supprimez pas votre fichier psylab-config.js : il n'est volontairement pas inclus ici.
+
+Décisions intégrées :
+- Direction visuelle chaude et claire sur PC et mobile.
+- Navigation : Accueil · Labs · Maintien · Le Vestiaire · Profil.
+- Maintien reste volontairement « en cours de construction ».
+- Le Vestiaire reprend la présentation convenue : édition hebdomadaire, compétition, classement, La Blouse et La Page Blanche.
+- La Blouse reste le challenge clinique ; La Page Blanche reste le challenge théorique.
+- Aucun thème sombre n'est introduit dans cette refonte.
+- BipolarLab conserve son contenu pédagogique ; seule son enveloppe visuelle est modifiée.
+- psylab-config.js n'est pas modifié.

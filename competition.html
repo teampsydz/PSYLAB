@@ -1,85 +1,9 @@
-<!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#25140f">
-<title>Le Vestiaire · PsyLab</title>
-<script>(function(){const l=String(localStorage.getItem('psylab_lang_v59')||'fr').toLowerCase();document.documentElement.lang=l.startsWith('en')?'en':'fr';if(new URLSearchParams(location.search).get('preview')==='1')document.documentElement.classList.add('v70-preview')})()</script>
-<link rel="stylesheet" href="psylab-core.css">
-<link rel="stylesheet" href="psylab-vestiaire.css">
-</head>
-<body class="v70-vestiaire-body">
-<div class="v70-app">
-<header class="v70-topbar">
-  <a class="v70-brand" href="index.html">Psy<span>Lab</span></a>
-  <nav class="v70-nav"><a href="index.html">Accueil</a><a href="labs.html">Labs</a><a href="maintenance.html">Maintien</a><a class="active" href="competition.html">Le Vestiaire</a><a href="profile.html">Profil</a></nav>
-  <div class="v70-actions"><div class="v70-search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><span>Rechercher…</span></div><div class="v70-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div><a class="v70-user" href="profile.html"><span class="avatar" data-user-avatar>R</span></a></div>
-</header>
-
-<main class="v70-vestiaire-shell">
-  <div class="v70-vestiaire-main">
-    <section class="v71-live-rail" aria-label="Édition en cours">
-      <div class="v71-live-label"><i></i><span data-copy="fr">ÉDITION EN COURS</span><span data-copy="en">LIVE EDITION</span></div>
-      <div><strong id="competitionParticipantsRail">0</strong><span data-copy="fr"> au classement</span><span data-copy="en"> ranked</span></div>
-      <div><span data-copy="fr">Votre rang</span><span data-copy="en">Your rank</span> <strong id="competitionMyRankHero">—</strong></div>
-      <div><span data-copy="fr">Clôture dans</span><span data-copy="en">Closes in</span> <strong id="competitionCountdownRail">—</strong></div>
-    </section>
-    <section class="v70-vestiaire-stage">
-      <article class="v70-vestiaire-hero">
-        <div class="v70-vestiaire-copy">
-          <p class="v70-eyebrow"><span data-copy="fr">LE VESTIAIRE · ÉDITION HEBDOMADAIRE</span><span data-copy="en">THE LOCKER ROOM · WEEKLY EDITION</span></p>
-          <h1><span data-copy="fr">Le Vestiaire</span><span data-copy="en">The Locker Room</span></h1>
-          <p class="hook"><span data-copy="fr">Cette semaine, prenez votre place.</span><span data-copy="en">This week, take your place.</span></p>
-          <p class="challenge-line"><span data-copy="fr">Deux challenges. Un classement. À vous de jouer.</span><span data-copy="en">Two challenges. One ranking. Your move.</span></p>
-          <a class="v70-btn square v71-enter" href="#challenges"><span data-copy="fr">Entrer dans l’édition</span><span data-copy="en">Enter the edition</span> <span class="v70-arrow">→</span></a>
-          <div class="v70-vestiaire-live">
-            <span><i class="v70-live-dot"></i><b id="competitionParticipants">0</b> <span data-copy="fr">au classement</span><span data-copy="en">ranked</span></span>
-            <span><span data-copy="fr">Clôture dans</span><span data-copy="en">Closes in</span> <b id="competitionCountdown">—</b></span>
-          </div>
-          <div class="v71-rank-ticket">
-            <small><span data-copy="fr">VOTRE POSITION</span><span data-copy="en">YOUR POSITION</span></small>
-            <strong id="competitionMyRankTicket">—</strong>
-            <span id="competitionMyScoreHero"><span data-copy="fr">À vous d’entrer au classement</span><span data-copy="en">Your move to enter the ranking</span></span>
-          </div>
-        </div>
-      </article>
-
-      <section class="v70-challenges" id="challenges">
-        <article class="v70-challenge-card">
-          <div class="art"><img src="assets/v70/blouse_case.jpg" alt=""></div>
-          <div class="content"><small><span data-copy="fr">CHALLENGE CLINIQUE</span><span data-copy="en">CLINICAL CHALLENGE</span></small><h2>La Blouse</h2><p><span data-copy="fr">Un dossier. Une tentative classée. Votre décision compte.</span><span data-copy="en">One case. One ranked attempt. Your decision counts.</span></p><a class="v70-challenge-link" id="competitionCTA" href="blouse-challenge.html"><span><span data-copy="fr">Ouvrir le dossier</span><span data-copy="en">Open the case</span></span><span>→</span></a><span id="clinicalTitle" hidden>Le Faux Évident</span></div>
-        </article>
-        <article class="v70-challenge-card">
-          <div class="art"><img src="assets/v70/page_blanche.jpg" alt=""></div>
-          <div class="content"><small><span data-copy="fr">CHALLENGE THÉORIQUE</span><span data-copy="en">THEORY CHALLENGE</span></small><h2><span data-copy="fr">La Page Blanche</span><span data-copy="en">The Blank Page</span></h2><p><span data-copy="fr">Un sujet surprise. Aucun indice. Restituez à froid.</span><span data-copy="en">A surprise topic. No hints. Retrieve from memory.</span></p><a class="v70-challenge-link" href="page-blanche.html"><span><span data-copy="fr">Retourner la feuille</span><span data-copy="en">Turn the page</span></span><span>→</span></a></div>
-        </article>
-      </section>
-    </section>
-
-    <section class="v70-competition-strip">
-      <article class="v70-dark-panel">
-        <div class="v70-dark-panel-head"><h2><span data-copy="fr">Classement de la semaine</span><span data-copy="en">Weekly ranking</span></h2><button type="button"><span data-copy="fr">La Blouse · /100</span><span data-copy="en">White Coat · /100</span></button></div>
-        <div class="v71-podium" id="competitionPodium"></div><div class="v70-rank-list" id="competitionLeaderboard"><p style="padding:12px;color:#aa978c;font-size:.68rem"><span data-copy="fr">Le classement apparaîtra dès les premières participations.</span><span data-copy="en">The ranking will appear after the first attempts.</span></p></div>
-      </article>
-      <article class="v70-dark-panel v70-my-position">
-        <small><span data-copy="fr">VOTRE POSITION</span><span data-copy="en">YOUR POSITION</span></small>
-        <div class="rank"><strong id="competitionMyRankLarge">—</strong><span id="competitionMyScore"><span data-copy="fr">Jouez pour entrer au classement.</span><span data-copy="en">Play to enter the ranking.</span></span></div>
-        <p><span data-copy="fr">Chaque édition repart de zéro. Une tentative, un score, une place à défendre.</span><span data-copy="en">Every edition starts from zero. One attempt, one score, one place to defend.</span></p>
-        <div class="v70-holder"><span class="avatar" id="competitionHolderAvatar">1</span><div><small><span data-copy="fr">LA BLOUSE EST PORTÉE PAR</span><span data-copy="en">THE COAT IS HELD BY</span></small><b id="competitionHolderName">À prendre</b><span id="competitionHolderMeta"></span></div></div>
-      </article>
-    </section>
-  </div>
-</main>
-
-<nav class="v70-mobile-nav">
-  <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10v10h13V10"></path></svg><span>Accueil</span></a>
-  <a href="labs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"></path></svg><span>Labs</span></a>
-  <a href="maintenance.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 18V9M10 18V5M16 18v-7M22 18V2"></path></svg><span>Maintien</span></a>
-  <a class="active" href="competition.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 4h10v4a5 5 0 0 1-10 0z"></path><path d="M9 16h6M12 13v3M8 20h8"></path><path d="M7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"></path></svg><span>Vestiaire</span></a>
-  <a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></svg><span>Profil</span></a>
-</nav>
-</div>
-<script src="psylab-config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="v60-ui.js"></script><script src="shell-v60.js"></script><script src="competition-v70.js"></script>
-</body>
-</html>
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#fffaf1"><title>Le Vestiaire · PsyLab</title><script>(function(){const l=String(localStorage.getItem('psylab_lang_v59')||'fr').toLowerCase();document.documentElement.lang=l.startsWith('en')?'en':'fr';if(new URLSearchParams(location.search).get('preview')==='1')document.documentElement.classList.add('ps-preview')})()</script><link rel="stylesheet" href="psylab-ui.css"><link rel="stylesheet" href="psylab-vestiaire-v71.css"></head><body><div class="ps-app">
+<header class="ps-topbar"><a class="ps-brand" href="index.html">Psy<span>Lab</span></a><nav class="ps-nav"><a href="index.html">Accueil</a><a href="labs.html">Labs</a><a href="maintenance.html">Maintien</a><a class="active" href="competition.html">Le Vestiaire</a><a href="profile.html">Profil</a></nav><div class="ps-actions"><div class="ps-search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><span>Rechercher…</span></div><div class="ps-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div><a class="ps-user" href="profile.html"><span class="avatar" data-user-avatar>R</span></a></div></header>
+<main class="ps-vestiaire-page ps-container"><section class="ps-vestiaire-livebar"><div class="ps-live-label"><i></i><span data-copy="fr">ÉDITION EN COURS</span><span data-copy="en">LIVE EDITION</span></div><div class="ps-live-stat"><strong id="competitionParticipants">0</strong><span data-copy="fr">participants classés</span><span data-copy="en">ranked participants</span></div><div class="ps-live-stat"><span data-copy="fr">Votre rang</span><span data-copy="en">Your rank</span><strong id="competitionMyRankHero">—</strong></div><div class="ps-live-stat"><span data-copy="fr">Clôture dans</span><span data-copy="en">Closes in</span><strong id="competitionCountdown">—</strong></div></section>
+<section class="ps-vestiaire-hero"><div class="ps-vestiaire-hero-copy"><p class="ps-eyebrow">LE VESTIAIRE · ÉDITION HEBDOMADAIRE</p><h1>Le Vestiaire</h1><p class="ps-vestiaire-hook"><span data-copy="fr">Cette semaine, prenez votre place.</span><span data-copy="en">This week, take your place.</span></p><p class="ps-vestiaire-line"><span data-copy="fr">Deux challenges. Un classement. À vous de jouer.</span><span data-copy="en">Two challenges. One ranking. Your move.</span></p><a class="ps-btn square" href="#challenges"><span data-copy="fr">Entrer dans l’édition</span><span data-copy="en">Enter the edition</span> →</a><div class="ps-rank-ticket"><small><span data-copy="fr">VOTRE POSITION</span><span data-copy="en">YOUR POSITION</span></small><strong id="competitionMyRankTicket">—</strong><span id="competitionMyScoreHero"><span data-copy="fr">À vous d’entrer au classement</span><span data-copy="en">Your move to enter the ranking</span></span></div></div><div class="ps-vestiaire-hero-art" aria-hidden="true"></div></section>
+<section class="ps-challenge-grid" id="challenges"><article class="ps-challenge"><div class="ps-challenge-art"><img src="assets/v71/blouse_case.jpg" alt=""></div><div class="ps-challenge-body"><small><span data-copy="fr">CHALLENGE CLINIQUE</span><span data-copy="en">CLINICAL CHALLENGE</span></small><h2>La Blouse</h2><p><span data-copy="fr">Un dossier. Une tentative classée. Votre décision compte.</span><span data-copy="en">One case. One ranked attempt. Your decision counts.</span></p><div class="ps-challenge-meta"><span><span data-copy="fr">Tentative unique</span><span data-copy="en">One attempt</span></span><span>≈ 10 min</span></div><a class="ps-challenge-link" id="competitionCTA" href="blouse-challenge.html"><span><span data-copy="fr">Ouvrir le dossier</span><span data-copy="en">Open the case</span></span><b>→</b></a><span id="clinicalTitle" hidden>Le Faux Évident</span></div></article><article class="ps-challenge"><div class="ps-challenge-art"><img src="assets/v71/page_blanche.jpg" alt=""></div><div class="ps-challenge-body"><small><span data-copy="fr">CHALLENGE THÉORIQUE</span><span data-copy="en">THEORY CHALLENGE</span></small><h2>La Page Blanche</h2><p><span data-copy="fr">Un sujet surprise. Aucun indice. Restituez à froid.</span><span data-copy="en">A surprise topic. No hints. Retrieve from memory.</span></p><div class="ps-challenge-meta"><span><span data-copy="fr">Sujet masqué</span><span data-copy="en">Hidden topic</span></span><span>≈ 15 min</span></div><a class="ps-challenge-link" href="page-blanche.html"><span><span data-copy="fr">Retourner la feuille</span><span data-copy="en">Turn the page</span></span><b>→</b></a></div></article></section>
+<section class="ps-competition-grid"><article class="ps-card ps-ranking"><div class="ps-ranking-head"><h2><span data-copy="fr">Classement de la semaine</span><span data-copy="en">Weekly ranking</span></h2><span><span data-copy="fr">La Blouse · /100</span><span data-copy="en">White Coat · /100</span></span></div><div class="ps-podium" id="competitionPodium"></div><div class="ps-rank-list" id="competitionLeaderboard"><p style="color:#8c786a;font-size:.7rem"><span data-copy="fr">Le classement apparaîtra dès les premières participations.</span><span data-copy="en">The ranking will appear after the first attempts.</span></p></div></article><article class="ps-card ps-position"><h2><span data-copy="fr">Votre position</span><span data-copy="en">Your position</span></h2><div class="ps-my-rank"><strong id="competitionMyRankLarge">—</strong><span id="competitionMyScore"><span data-copy="fr">Jouez pour entrer au classement.</span><span data-copy="en">Play to enter the ranking.</span></span></div><p><span data-copy="fr">Chaque édition repart de zéro. Une tentative, un score, une place à défendre.</span><span data-copy="en">Every edition starts from zero. One attempt, one score, one place to defend.</span></p><div class="ps-holder"><span class="avatar" id="competitionHolderAvatar">1</span><div><small><span data-copy="fr">LA BLOUSE EST PORTÉE PAR</span><span data-copy="en">THE COAT IS HELD BY</span></small><b id="competitionHolderName">À prendre</b><span id="competitionHolderMeta"></span></div></div></article></section>
+<section class="ps-card ps-vestiaire-history"><div class="ps-history-head"><h2><span data-copy="fr">Vos dernières éditions</span><span data-copy="en">Your latest editions</span></h2><span id="historyCount">—</span></div><div class="ps-history-strip" id="competitionHistory"><div class="ps-history-item"><b>Éd. —</b><span><span data-copy="fr">Historique à venir</span><span data-copy="en">History coming soon</span></span></div></div></section></main>
+<nav class="ps-mobile-nav"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10v10h13V10"></path></svg><span>Accueil</span></a><a href="labs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"></path></svg><span>Labs</span></a><a href="maintenance.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 18V9M10 18V5M16 18v-7M22 18V2"></path></svg><span>Maintien</span></a><a class="active" href="competition.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 4h10v4a5 5 0 0 1-10 0z"></path><path d="M9 16h6M12 13v3M8 20h8"></path></svg><span>Vestiaire</span></a><a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></svg><span>Profil</span></a></nav></div>
+<script src="psylab-config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="v60-ui.js"></script><script src="shell-v71.js"></script><script src="competition-v71.js"></script></body></html>

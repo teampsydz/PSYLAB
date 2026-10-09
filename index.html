@@ -5,142 +5,85 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#fffaf1">
 <title>PsyLab</title>
-<script>(function(){const l=String(localStorage.getItem('psylab_lang_v59')||'fr').toLowerCase();document.documentElement.lang=l.startsWith('en')?'en':'fr';if(new URLSearchParams(location.search).get('preview')==='1')document.documentElement.classList.add('v70-preview')})()</script>
-<link rel="stylesheet" href="psylab-core.css">
-<link rel="stylesheet" href="psylab-home.css">
+<script>(function(){const l=String(localStorage.getItem('psylab_lang_v59')||'fr').toLowerCase();document.documentElement.lang=l.startsWith('en')?'en':'fr';if(new URLSearchParams(location.search).get('preview')==='1')document.documentElement.classList.add('ps-preview')})()</script>
+<link rel="stylesheet" href="psylab-ui.css">
 </head>
 <body class="ps59-auth-pending">
-<section class="ps66-auth" id="authGate" aria-label="Connexion PsyLab">
-  <div class="ps66-auth-shell">
-    <section class="ps66-auth-editorial">
-      <div class="ps66-auth-brand">
-        <div class="ps66-wordmark">Psy<span>Lab</span></div>
-        <div class="ps66-brand-rule"></div>
-        <small><span data-copy="fr">Psychiatrie · formation clinique</span><span data-copy="en">Psychiatry · clinical training</span></small>
+<section class="ps-auth ps66-auth" id="authGate" aria-label="Connexion PsyLab">
+  <div class="ps-auth-shell">
+    <section class="ps-auth-scene">
+      <a class="ps-auth-brand" href="index.html">Psy<span>Lab</span></a>
+      <div class="ps-auth-copy">
+        <p class="ps-eyebrow"><span data-copy="fr">FORMATION CLINIQUE EN PSYCHIATRIE</span><span data-copy="en">CLINICAL PSYCHIATRY EDUCATION</span></p>
+        <h1><span data-copy="fr">Approfondir.<br>Comprendre.<br>Se préparer.</span><span data-copy="en">Go deeper.<br>Understand.<br>Prepare.</span></h1>
+        <p><span data-copy="fr">Cours structurés, dossiers cliniques et entraînement actif dans un espace pensé pour la psychiatrie.</span><span data-copy="en">Structured courses, clinical cases and active practice in a space designed for psychiatry.</span></p>
       </div>
-      <div class="ps66-auth-copy">
-        <p class="ps66-overline"><span data-copy="fr">FORMATION CLINIQUE EN PSYCHIATRIE</span><span data-copy="en">CLINICAL PSYCHIATRY EDUCATION</span></p>
-        <h1><span data-copy="fr">La psychiatrie,<br><em>travaillée avec rigueur.</em></span><span data-copy="en">Psychiatry,<br><em>worked with rigor.</em></span></h1>
-        <p class="ps66-auth-intro"><span data-copy="fr">Cours structurés, dossiers cliniques, restitution active et consolidation à distance.</span><span data-copy="en">Structured courses, clinical cases, active retrieval and spaced consolidation.</span></p>
-      </div>
-      <div class="ps66-auth-foot"><span data-copy="fr">Sémiologie · diagnostic · thérapeutique · consolidation</span><span data-copy="en">Psychopathology · diagnosis · treatment · retention</span></div>
+      <div class="ps-auth-quote"><blockquote>« C’est la relation qui soigne. »</blockquote><cite>Irvin D. Yalom</cite></div>
     </section>
-    <section class="ps66-auth-panel">
-      <div class="ps66-auth-toolbar">
-        <button class="ps66-iconbtn" data-theme-toggle aria-label="Thème"><span class="ps68-theme-mark" aria-hidden="true"></span><span class="sr-only" data-theme-icon>☀</span></button>
-        <div class="ps66-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div>
-      </div>
-      <div class="ps66-auth-tabs"><button class="active" data-auth-tab="login" data-i18n="signin">Se connecter</button><button data-auth-tab="signup" data-i18n="signup">Créer un compte</button></div>
-      <div class="active ps66-auth-pane" data-auth-pane="login">
-        <div class="ps66-auth-heading"><h2><span data-copy="fr">Bon retour.</span><span data-copy="en">Welcome back.</span></h2><p><span data-copy="fr">Reprenez votre parcours là où vous l’avez laissé.</span><span data-copy="en">Resume your learning where you left off.</span></p></div>
+    <section class="ps-auth-panel">
+      <div class="ps-auth-tools"><div class="ps-lang ps66-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div></div>
+      <div class="ps-auth-tabs ps66-auth-tabs"><button class="active" data-auth-tab="login" data-i18n="signin">Se connecter</button><button data-auth-tab="signup" data-i18n="signup">Créer un compte</button></div>
+      <div class="ps-auth-pane ps66-auth-pane active" data-auth-pane="login">
+        <div class="ps-auth-heading"><h2><span data-copy="fr">Bon retour.</span><span data-copy="en">Welcome back.</span></h2><p><span data-copy="fr">Reprenez votre parcours là où vous l’avez laissé.</span><span data-copy="en">Resume your learning where you left off.</span></p></div>
         <label><span data-i18n="email">Adresse e-mail</span><input autocomplete="email" id="loginEmail" type="email" placeholder="nom@exemple.com"></label>
         <label><span data-i18n="password">Mot de passe</span><input autocomplete="current-password" id="loginPassword" type="password" placeholder="••••••••"></label>
-        <button class="ps66-primary" id="loginBtn" data-i18n="signin">Se connecter</button>
-        <div class="ps66-social-block" data-social-block="login"><div class="ps66-or"><span data-copy="fr">ou</span><span data-copy="en">or</span></div><button data-oauth="google" type="button"><b>G</b><span data-i18n="google">Continuer avec Google</span></button><button data-oauth="apple" type="button"><b></b><span data-i18n="apple">Continuer avec Apple</span></button></div>
+        <button class="ps-auth-primary" id="loginBtn" data-i18n="signin">Se connecter</button>
+        <div class="ps-social ps66-social-block" data-social-block="login"><div class="ps-or"><span data-copy="fr">ou</span><span data-copy="en">or</span></div><button data-oauth="google" type="button"><b>G</b><span data-i18n="google">Continuer avec Google</span></button><button data-oauth="apple" type="button"><b></b><span data-i18n="apple">Continuer avec Apple</span></button></div>
       </div>
-      <div class="ps66-auth-pane" data-auth-pane="signup">
-        <div class="ps66-auth-heading"><h2><span data-copy="fr">Créer votre espace.</span><span data-copy="en">Create your space.</span></h2><p><span data-copy="fr">Quelques informations professionnelles seront complétées après l’inscription.</span><span data-copy="en">Professional details are completed after sign-up.</span></p></div>
-        <div class="ps66-social-block" data-social-block="signup"><button data-oauth="google" type="button"><b>G</b><span data-i18n="google">Continuer avec Google</span></button><button data-oauth="apple" type="button"><b></b><span data-i18n="apple">Continuer avec Apple</span></button><div class="ps66-or"><span data-copy="fr">ou</span><span data-copy="en">or</span></div></div>
+      <div class="ps-auth-pane ps66-auth-pane" data-auth-pane="signup">
+        <div class="ps-auth-heading"><h2><span data-copy="fr">Créer votre espace.</span><span data-copy="en">Create your space.</span></h2><p><span data-copy="fr">Quelques informations professionnelles seront complétées après l’inscription.</span><span data-copy="en">Professional details are completed after sign-up.</span></p></div>
+        <div class="ps-social ps66-social-block" data-social-block="signup"><button data-oauth="google" type="button"><b>G</b><span data-i18n="google">Continuer avec Google</span></button><button data-oauth="apple" type="button"><b></b><span data-i18n="apple">Continuer avec Apple</span></button><div class="ps-or"><span data-copy="fr">ou</span><span data-copy="en">or</span></div></div>
         <label><span data-i18n="email">Adresse e-mail</span><input autocomplete="email" id="signupEmail" type="email" placeholder="nom@exemple.com"></label>
         <label><span data-i18n="password">Mot de passe</span><input autocomplete="new-password" id="signupPassword" type="password" placeholder="8 caractères minimum"></label>
-        <button class="ps66-primary" id="signupBtn" data-i18n="create_space">Créer mon espace</button>
+        <button class="ps-auth-primary" id="signupBtn" data-i18n="create_space">Créer mon espace</button>
       </div>
       <div class="ps59-auth-message" id="authMessage"></div>
-      <p class="ps66-auth-privacy"><span data-copy="fr">Votre adresse e-mail reste privée.</span><span data-copy="en">Your email address remains private.</span></p>
+      <p class="ps-auth-privacy"><span data-copy="fr">Votre adresse e-mail reste privée.</span><span data-copy="en">Your email address remains private.</span></p>
     </section>
   </div>
 </section>
 
 <section class="ps60-onboarding" hidden id="professionalOnboarding"><div class="ps60-onboarding-card"><a class="ps59-brand" href="index.html">Psy<span>Lab</span></a><h2 data-i18n="complete_profile">Compléter votre profil</h2><p data-i18n="complete_profile_sub">Une dernière étape avant d’entrer dans PsyLab.</p><label><span data-i18n="pseudo">Pseudonyme public</span><input id="onboardingPseudo" maxlength="32"></label><label><span data-i18n="status">Statut professionnel</span><select id="onboardingStatus"><option value="">—</option><option data-status-option value="EXTERNE">Externe</option><option data-status-option value="INTERNE">Interne</option><option data-status-option value="R1">Résident R1</option><option data-status-option value="R2">Résident R2</option><option data-status-option value="R3">Résident R3</option><option data-status-option value="R4">Résident R4</option><option data-status-option value="ASSISTANT">Assistant</option><option data-status-option value="PROFESSEUR">Professeur</option></select></label><button class="ps59-btn" data-i18n="save_continue" id="onboardingSave">Enregistrer et continuer</button><div class="ps59-auth-message" id="onboardingMessage"></div></div></section>
 
-<div class="v70-app">
-<header class="v70-topbar">
-  <a class="v70-brand" href="index.html">Psy<span>Lab</span></a>
-  <nav class="v70-nav" aria-label="Navigation principale"><a class="active" href="index.html">Accueil</a><a href="labs.html">Labs</a><a href="maintenance.html">Maintien</a><a href="competition.html">Le Vestiaire</a><a href="profile.html">Profil</a></nav>
-  <div class="v70-actions">
-    <div class="v70-search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><span>Rechercher…</span></div>
-    <div class="v70-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div>
-    <a class="v70-user" href="profile.html" aria-label="Profil"><span class="avatar" id="topAvatar">R</span></a>
-  </div>
+<div class="ps-app">
+<header class="ps-topbar">
+  <a class="ps-brand" href="index.html">Psy<span>Lab</span></a>
+  <nav class="ps-nav" aria-label="Navigation principale"><a class="active" href="index.html">Accueil</a><a href="labs.html">Labs</a><a href="maintenance.html">Maintien</a><a href="competition.html">Le Vestiaire</a><a href="profile.html">Profil</a></nav>
+  <div class="ps-actions"><div class="ps-search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><span>Rechercher…</span></div><div class="ps-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div><a class="ps-user" href="profile.html" aria-label="Profil"><span class="avatar" id="topAvatar">R</span></a></div>
 </header>
 
-<main class="v70-home v70-container">
-  <section class="v70-home-hero">
-    <div class="v70-home-hero-copy">
-      <p class="v70-eyebrow"><span data-copy="fr">VOTRE ESPACE PSYLAB</span><span data-copy="en">YOUR PSYLAB SPACE</span></p>
+<main class="ps-home ps-container">
+  <section class="ps-home-hero">
+    <div class="ps-home-copy">
+      <p class="ps-eyebrow"><span data-copy="fr">VOTRE ESPACE PSYLAB</span><span data-copy="en">YOUR PSYLAB SPACE</span></p>
       <h1 id="greeting">Bonjour <span>Nadia</span>,</h1>
-      <p class="v70-welcome-sub"><span data-copy="fr">Votre espace de travail clinique.</span><span data-copy="en">Your clinical learning space.</span></p>
-      <p class="v70-welcome-note"><span data-copy="fr">Continuer à explorer, approfondir et faire grandir votre regard clinique.</span><span data-copy="en">Keep exploring, deepening and sharpening your clinical perspective.</span></p>
-      <p id="userMeta" hidden></p><span id="userName" hidden></span><span id="userSub" hidden></span>
+      <p class="ps-home-sub"><span data-copy="fr">Ravie de vous revoir.</span><span data-copy="en">Good to see you again.</span></p>
+      <p class="ps-home-note"><span data-copy="fr">Continuer à explorer, approfondir et faire grandir votre regard clinique.</span><span data-copy="en">Keep exploring, deepening and sharpening your clinical perspective.</span></p>
+      <span id="userMeta" hidden></span><span id="userName" hidden></span><span id="userSub" hidden></span>
     </div>
-    <div class="v70-home-hero-art" aria-hidden="true"></div>
-    <aside class="v70-quote" id="psyQuote" aria-live="polite">
-      <span class="v70-quote-mark">“</span>
-      <blockquote id="psyQuoteText">C’est la relation qui guérit.</blockquote>
-      <cite id="psyQuoteAuthor">Irvin D. Yalom</cite>
-      <div class="v70-quote-dots" aria-hidden="true"><i class="active"></i><i></i><i></i></div>
-    </aside>
+    <div class="ps-home-art" aria-hidden="true"></div>
+    <aside class="ps-quote-card" id="psyQuote" aria-live="polite"><span class="ps-quote-mark">“</span><blockquote id="quoteText">C’est la relation qui soigne.</blockquote><cite id="quoteAuthor">Irvin D. Yalom</cite><a class="ps-quote-source" id="quoteSource" target="_blank" rel="noopener">source</a></aside>
   </section>
 
-  <section class="v70-home-focus">
-    <article class="v70-resume-card">
-      <div class="v70-resume-content">
-        <small>LAB 01</small>
-        <h2>BipolarLab</h2>
-        <p><span data-copy="fr">Comprendre les troubles bipolaires pour une approche clinique nuancée.</span><span data-copy="en">Understand bipolar disorders through a nuanced clinical approach.</span></p>
-        <div class="v70-resume-actions">
-          <a class="v70-btn" id="resumeLink" href="courses/bipolar/index.html"><span data-copy="fr">Continuer</span><span data-copy="en">Continue</span> <span class="v70-arrow">→</span></a>
-          <div class="v70-resume-progress"><div class="v70-progress"><i id="resumeBar" style="width:46%"></i></div><strong id="resumePct">46%</strong></div>
-        </div>
-        <span id="resumeDetail" hidden></span>
-      </div>
-    </article>
-
-    <a class="v70-vestiaire-teaser" href="competition.html">
-      <div class="inner">
-        <small><span data-copy="fr">CHALLENGES HEBDOMADAIRES</span><span data-copy="en">WEEKLY CHALLENGES</span></small>
-        <h2><span data-copy="fr">Le Vestiaire</span><span data-copy="en">The Locker Room</span></h2>
-        <p><span data-copy="fr">Les challenges de la semaine sont ouverts.</span><span data-copy="en">This week’s challenges are open.</span></p>
-        <div class="v70-vestiaire-teaser-foot">
-          <span class="v70-vestiaire-live-mini"><i></i><b id="participantCountVisible">0</b> <span data-copy="fr">au classement</span><span data-copy="en">ranked</span></span>
-          <span class="v70-round-link">→</span>
-        </div>
-      </div>
-      <span id="weekCase" hidden>Le Faux Évident</span><span id="countdown" hidden>—</span><span id="holderName" hidden>À prendre</span><span id="holderMeta" hidden></span><span id="participantCount" hidden>0</span>
-    </a>
+  <section class="ps-home-focus">
+    <article class="ps-resume" id="resumeCard"><div class="ps-resume-content"><small>LAB 01</small><h2>BipolarLab</h2><p><span data-copy="fr">Comprendre les troubles bipolaires pour une approche clinique nuancée.</span><span data-copy="en">Understand bipolar disorders through a nuanced clinical approach.</span></p><div class="ps-resume-actions"><a class="ps-btn" id="resumeLink" href="courses/bipolar/index.html"><span data-copy="fr">Continuer</span><span data-copy="en">Continue</span> <span class="ps-arrow">→</span></a><div class="ps-resume-progress"><div class="ps-progress"><i id="resumeBar" style="width:0%"></i></div><strong id="resumePct">0%</strong></div></div><span id="resumeDetail" hidden></span></div></article>
+    <a class="ps-vestiaire-teaser" href="competition.html"><div class="inner"><small><span data-copy="fr">CHALLENGES HEBDOMADAIRES</span><span data-copy="en">WEEKLY CHALLENGES</span></small><h2>Le Vestiaire</h2><p><span data-copy="fr">Les challenges de la semaine sont ouverts.</span><span data-copy="en">This week’s challenges are open.</span></p><div class="go"><span><b id="participantCount">—</b> <span data-copy="fr">participants</span><span data-copy="en">participants</span> · <span id="countdown">—</span></span><b>→</b></div></div><span id="weekCase" hidden>Le Faux Évident</span><span id="holderName" hidden></span><span id="holderMeta" hidden></span></a>
   </section>
 
-  <section class="v70-home-lower">
-    <article class="v70-panel">
-      <div class="v70-panel-head"><h2><span data-copy="fr">Vos Labs</span><span data-copy="en">Your Labs</span></h2><a href="labs.html"><span data-copy="fr">Voir tout</span><span data-copy="en">View all</span> →</a></div>
-      <div class="v70-labs-row" id="labsGrid"></div>
-    </article>
-    <article class="v70-panel v70-maintenance-card" id="maintenanceCard">
-      <h2>Maintien</h2>
-      <p id="maintenanceCopy"><span data-copy="fr">Les notions importantes reviennent au bon moment pour durer.</span><span data-copy="en">Important concepts return at the right time for lasting retention.</span></p>
-      <div class="v70-maintenance-list">
-        <div class="v70-maintenance-item"><i></i><div><b>Sémiologie de la manie</b><br><small>BipolarLab</small></div><span><span data-copy="fr">Aujourd’hui</span><span data-copy="en">Today</span></span></div>
-        <div class="v70-maintenance-item"><i></i><div><b>Dépression mixte</b><br><small>BipolarLab</small></div><span><span data-copy="fr">Dans 3 j</span><span data-copy="en">In 3 d</span></span></div>
-      </div>
-      <span id="maintenanceArrow" hidden></span>
-    </article>
+  <section class="ps-home-lower">
+    <article class="ps-section-card"><div class="ps-section-head"><h2><span data-copy="fr">Vos Labs</span><span data-copy="en">Your Labs</span></h2><a href="labs.html"><span data-copy="fr">Voir tout</span><span data-copy="en">See all</span> →</a></div><div class="ps-labs-mini" id="labsGrid"></div></article>
+    <article class="ps-section-card ps-maint-mini" id="maintenanceCard"><div><div class="ps-section-head"><h2>Maintien</h2></div><span class="construction"><span data-copy="fr">EN CONSTRUCTION</span><span data-copy="en">IN DEVELOPMENT</span></span><p id="maintenanceCopy"><span data-copy="fr">Cet espace de consolidation sera ouvert dans une prochaine étape.</span><span data-copy="en">This consolidation space will open in a later stage.</span></p></div><a href="maintenance.html"><span data-copy="fr">Voir la page</span><span data-copy="en">Open page</span><span id="maintenanceArrow">→</span></a></article>
   </section>
 </main>
 
-<nav class="v70-mobile-nav" aria-label="Navigation mobile">
-  <a class="active" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10v10h13V10"></path></svg><span>Accueil</span></a>
-  <a href="labs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"></path></svg><span>Labs</span></a>
-  <a href="maintenance.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 18V9M10 18V5M16 18v-7M22 18V2"></path></svg><span>Maintien</span></a>
-  <a href="competition.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 4h10v4a5 5 0 0 1-10 0z"></path><path d="M9 16h6M12 13v3M8 20h8"></path><path d="M7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"></path></svg><span>Vestiaire</span></a>
-  <a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></svg><span>Profil</span></a>
+<nav class="ps-mobile-nav" aria-label="Navigation mobile">
+<a class="active" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10v10h13V10"></path></svg><span>Accueil</span></a>
+<a href="labs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"></path></svg><span>Labs</span></a>
+<a href="maintenance.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 18V9M10 18V5M16 18v-7M22 18V2"></path></svg><span>Maintien</span></a>
+<a href="competition.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 4h10v4a5 5 0 0 1-10 0z"></path><path d="M9 16h6M12 13v3M8 20h8"></path><path d="M7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"></path></svg><span>Vestiaire</span></a>
+<a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></svg><span>Profil</span></a>
 </nav>
 <button hidden id="logoutBtn"></button>
 </div>
-<script src="psylab-config.js"></script>
-<script src="course-catalog.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="v60-ui.js"></script>
-<script src="auth-v66.js"></script>
-<script src="platform-v70.js"></script>
-</body>
-</html>
+<script src="psylab-config.js"></script><script src="course-catalog.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="v60-ui.js"></script><script src="auth-v66.js"></script><script src="platform-v71.js"></script>
+</body></html>

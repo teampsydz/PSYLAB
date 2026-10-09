@@ -1,4 +1,5 @@
 (function(){
+if(new URLSearchParams(location.search).get('preview')==='1'){const show=()=>{document.body.classList.remove('ps59-auth-pending','ps59-auth-required');document.body.classList.add('ps59-authenticated')};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',show);else show();return;}
 const cfg=window.PSYLAB_CONFIG||{},key=cfg.anonKey||cfg.publishableKey||'';let client=null,user=null,profile=null,progress=[];
 const q=s=>document.querySelector(s),qa=s=>[...document.querySelectorAll(s)];
 function msg(t,type=''){const e=q('#authMessage');if(!e)return;e.textContent=t;e.className='ps59-auth-message '+type}
