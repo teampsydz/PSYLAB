@@ -1,4 +1,12 @@
 (function(){
+const preview=new URLSearchParams(location.search).get('preview')==='1';
+if(preview){
+  const detail={client:null,user:{id:'preview-user',email:'nadia@example.test',user_metadata:{display_name:'Nadia'}},profile:{display_name:'Nadia',professional_status:'R3',residency_year:'R3'},progress:[{course_key:'bipolar',course_score:46}]};
+  window.PSYLAB_V60_CONTEXT=detail;window.PSYLAB_V59_CONTEXT=detail;window.PSYLAB_V57_PAGE=detail;
+  const fire=()=>{window.dispatchEvent(new CustomEvent('psylab:v59-page-ready',{detail}));window.dispatchEvent(new CustomEvent('psylab:v60-page-ready',{detail}));window.dispatchEvent(new CustomEvent('psylab:v57-page-ready',{detail}))};
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fire);else setTimeout(fire,0);
+  return;
+}
 const cfg=window.PSYLAB_CONFIG||{},key=cfg.anonKey||cfg.publishableKey||'';const qa=s=>[...document.querySelectorAll(s)];
 function initials(n){return String(n||'R').trim().split(/\s+/).slice(0,2).map(x=>x[0]).join('').toUpperCase()||'R'}
 async function signedAvatar(c,path){if(!path)return'';try{const {data,error}=await c.storage.from('avatars').createSignedUrl(path,3600);return error?'':(data?.signedUrl||'')}catch(_){return''}}

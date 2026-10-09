@@ -1,9 +1,41 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f3ecdf"><title>Labs · PsyLab</title><script>(function(){const p=localStorage.getItem('psylab_theme_v59')||'auto',d=p==='auto'?matchMedia('(prefers-color-scheme: dark)').matches:p==='dark';document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.lang=(String(localStorage.getItem('psylab_lang_v59')||'fr').toLowerCase().startsWith('en')?'en':'fr')})()</script><link rel="stylesheet" href="psylab-design.css"><link rel="stylesheet" href="psylab-app.css"></head><body class="ps68-page"><div class="ps66-app">
-<header class="ps66-topbar"><a class="ps66-brand" href="index.html">Psy<span>Lab</span></a><nav class="ps66-nav"><a href="index.html" data-i18n="home">Accueil</a><a class="active" href="labs.html" data-i18n="labs">Labs</a><a href="maintenance.html" data-i18n="maintenance">Maintien</a><a class="coat" href="competition.html" data-i18n="coat">La Blouse</a><a href="profile.html" data-i18n="profile">Profil</a></nav><div class="ps66-top-actions"><button class="ps66-iconbtn" data-theme-toggle aria-label="Thème"><span class="ps68-theme-mark" aria-hidden="true"></span><span class="sr-only" data-theme-icon>☀</span></button><div class="ps66-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div><a class="ps66-user" href="profile.html" aria-label="Profil"><span class="avatar" data-user-avatar>R</span></a></div></header>
-<main class="ps66-labs-page">
-<section class="ps66-labs-head"><p class="ps66-overline"><span data-copy="fr">PARCOURS D’APPRENTISSAGE</span><span data-copy="en">LEARNING PATHS</span></p><h1><span data-copy="fr">Les Labs</span><span data-copy="en">Labs</span></h1><p><span data-copy="fr">Parcours pédagogiques structurés par thématique. Le Lab actif reste au premier plan ; les prochains parcours sont présentés comme une bibliothèque en développement.</span><span data-copy="en">Structured learning paths by topic. The active Lab stays prominent while upcoming paths form a developing library.</span></p></section>
-<section id="featuredLab"></section>
-<section class="ps66-section ps66-lab-catalog-section"><div class="ps66-section-head"><div><p class="ps66-overline"><span data-copy="fr">BIBLIOTHÈQUE</span><span data-copy="en">LIBRARY</span></p><h2><span data-copy="fr">Tous les Labs</span><span data-copy="en">All Labs</span></h2></div></div><div class="ps66-lab-catalog" id="catalog"></div></section>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fffaf1">
+<title>Labs · PsyLab</title>
+<script>(function(){const l=String(localStorage.getItem('psylab_lang_v59')||'fr').toLowerCase();document.documentElement.lang=l.startsWith('en')?'en':'fr';if(new URLSearchParams(location.search).get('preview')==='1')document.documentElement.classList.add('v70-preview')})()</script>
+<link rel="stylesheet" href="psylab-core.css">
+<link rel="stylesheet" href="psylab-labs.css">
+</head>
+<body>
+<div class="v70-app">
+<header class="v70-topbar">
+  <a class="v70-brand" href="index.html">Psy<span>Lab</span></a>
+  <nav class="v70-nav"><a href="index.html">Accueil</a><a class="active" href="labs.html">Labs</a><a href="maintenance.html">Maintien</a><a href="competition.html">Le Vestiaire</a><a href="profile.html">Profil</a></nav>
+  <div class="v70-actions"><div class="v70-search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><span>Rechercher…</span></div><div class="v70-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div><a class="v70-user" href="profile.html"><span class="avatar" data-user-avatar>R</span></a></div>
+</header>
+
+<main class="v70-labs v70-container">
+  <section class="v70-labs-intro">
+    <p class="v70-eyebrow"><span data-copy="fr">PARCOURS PÉDAGOGIQUES</span><span data-copy="en">LEARNING PATHS</span></p>
+    <h1><span data-copy="fr">Les Labs</span><span data-copy="en">Labs</span></h1>
+    <p><span data-copy="fr">Des parcours thématiques pour approfondir votre compréhension des grands enjeux de la psychiatrie.</span><span data-copy="en">Thematic learning paths to deepen your understanding of major areas in psychiatry.</span></p>
+  </section>
+  <section id="featuredLab"></section>
+  <section class="v70-lab-grid" id="catalog"></section>
+  <p class="v70-labs-note"><span data-copy="fr">Le Vestiaire reste un espace séparé : La Blouse et La Page Blanche n’apparaissent pas dans le catalogue des Labs.</span><span data-copy="en">The Locker Room remains separate: The White Coat and The Blank Page are not part of the Labs catalog.</span></p>
 </main>
-<nav class="ps66-mobile-nav"><a href="index.html"><span data-i18n="home">Accueil</span></a><a class="active" href="labs.html"><span data-i18n="labs">Labs</span></a><a href="maintenance.html"><span data-i18n="maintenance">Maintien</span></a><a href="competition.html"><span data-i18n="coat">Blouse</span></a><a href="profile.html"><span data-i18n="profile">Profil</span></a></nav></div>
-<script src="psylab-config.js"></script><script src="course-catalog.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="v60-ui.js"></script><script src="shell-v60.js"></script><script src="labs-v66.js"></script></body></html>
+
+<nav class="v70-mobile-nav">
+  <a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10v10h13V10"></path></svg><span>Accueil</span></a>
+  <a class="active" href="labs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"></path></svg><span>Labs</span></a>
+  <a href="maintenance.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 18V9M10 18V5M16 18v-7M22 18V2"></path></svg><span>Maintien</span></a>
+  <a href="competition.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 4h10v4a5 5 0 0 1-10 0z"></path><path d="M9 16h6M12 13v3M8 20h8"></path><path d="M7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"></path></svg><span>Vestiaire</span></a>
+  <a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></svg><span>Profil</span></a>
+</nav>
+</div>
+<script src="psylab-config.js"></script><script src="course-catalog.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="v60-ui.js"></script><script src="shell-v60.js"></script><script src="labs-v70.js"></script>
+</body>
+</html>
