@@ -1,13 +1,10 @@
-PsyLab — mise à jour visuelle
+PsyLab — correction visuelle La Blouse
 
-Copiez le contenu de ce dossier à la racine de votre dossier PSYLAB-main et acceptez le remplacement des fichiers.
+Cette correction répare l'indicateur « Votre parcours » qui était déformé :
+- suppression des numéros de liste dupliqués ;
+- suppression des blocs colorés parasites ;
+- étapes correctement alignées sur PC ;
+- version compacte adaptée au mobile.
 
-Cette mise à jour :
-- retire les citations pour le moment ;
-- remplace « Ravie de vous revoir » par une accroche plus motivante ;
-- transforme La Blouse en expérience de dossier clinique ;
-- transforme La Page Blanche en expérience de copie/feuille ;
-- éclaircit les bannières des deux challenges dans Le Vestiaire ;
-- conserve Le Vestiaire, les moteurs de challenge et le contenu pédagogique.
-
-psylab-config.js n'est pas inclus.
+Copier psylab-challenges-v71.css à la racine de PSYLAB-main et accepter le remplacement.
+Aucun autre fichier n'est modifié. psylab-config.js n'est pas touché.

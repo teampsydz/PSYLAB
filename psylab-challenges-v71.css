@@ -124,3 +124,155 @@
 }
 .ps67-dossier-shell>.ps67-decision::before{display:none!important}
 .ps66-paper-sheet::before{left:auto!important;bottom:auto!important;width:auto!important}
+
+/* =========================================================
+   V73.1 HOTFIX — La Blouse / indicateur de parcours
+   The stepper markup uses text spans; older rules treated every
+   span/i as a progress bar. Scope each element explicitly.
+   ========================================================= */
+.ps65-progress{
+  display:grid!important;
+  grid-template-columns:max-content minmax(0,1fr)!important;
+  gap:22px!important;
+  align-items:center!important;
+  min-height:0!important;
+  padding:15px 20px!important;
+}
+.ps65-progress>small{
+  display:block!important;
+  margin:0!important;
+  color:#86685a!important;
+  font-size:.58rem!important;
+  font-weight:900!important;
+  letter-spacing:.14em!important;
+  line-height:1.2!important;
+  text-transform:uppercase!important;
+  white-space:nowrap!important;
+}
+.ps65-progress>ol{
+  list-style:none!important;
+  margin:0!important;
+  padding:0!important;
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:0!important;
+  counter-reset:none!important;
+}
+.ps65-progress>ol>li{
+  list-style:none!important;
+  position:relative!important;
+  display:grid!important;
+  grid-template-columns:32px minmax(0,1fr)!important;
+  gap:10px!important;
+  align-items:center!important;
+  min-width:0!important;
+  margin:0!important;
+  padding:0 18px!important;
+  background:transparent!important;
+}
+.ps65-progress>ol>li::marker{content:""!important;font-size:0!important}
+.ps65-progress>ol>li:first-child{padding-left:0!important}
+.ps65-progress>ol>li:last-child{padding-right:0!important}
+.ps65-progress>ol>li:not(:last-child)::after{
+  content:""!important;
+  position:absolute!important;
+  z-index:0!important;
+  left:calc(100% - 7px)!important;
+  top:50%!important;
+  width:14px!important;
+  height:1px!important;
+  background:#d9c9ba!important;
+}
+.ps65-progress>ol>li>i{
+  position:relative!important;
+  z-index:1!important;
+  display:grid!important;
+  place-items:center!important;
+  width:30px!important;
+  min-width:30px!important;
+  height:30px!important;
+  min-height:30px!important;
+  margin:0!important;
+  padding:0!important;
+  border:1px solid #d9c6b6!important;
+  border-radius:50%!important;
+  background:#fffaf2!important;
+  color:#846557!important;
+  font-style:normal!important;
+  font-size:.67rem!important;
+  font-weight:900!important;
+  line-height:1!important;
+  box-shadow:none!important;
+  flex:none!important;
+}
+.ps65-progress>ol>li.active>i{
+  border-color:var(--wine)!important;
+  background:var(--wine)!important;
+  color:#fff!important;
+  box-shadow:0 5px 12px rgba(116,21,40,.16)!important;
+}
+.ps65-progress>ol>li.done>i{
+  border-color:#bd7c4b!important;
+  background:#f2d6b9!important;
+  color:#71391f!important;
+}
+.ps65-progress>ol>li>div{
+  min-width:0!important;
+  display:grid!important;
+  gap:2px!important;
+  align-content:center!important;
+}
+.ps65-progress>ol>li>div>b{
+  display:block!important;
+  margin:0!important;
+  color:#352822!important;
+  font-size:.72rem!important;
+  font-weight:800!important;
+  line-height:1.2!important;
+  white-space:normal!important;
+}
+.ps65-progress>ol>li.active>div>b{color:var(--wine)!important}
+.ps65-progress>ol>li>div>span{
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:#8a7569!important;
+  font-size:.61rem!important;
+  font-weight:500!important;
+  line-height:1.25!important;
+  white-space:normal!important;
+  flex:none!important;
+}
+
+@media (max-width:720px){
+  .ps65-progress{
+    position:sticky!important;
+    top:65px!important;
+    grid-template-columns:1fr!important;
+    gap:9px!important;
+    padding:11px 12px!important;
+    border-radius:12px!important;
+  }
+  .ps65-progress>small{display:none!important}
+  .ps65-progress>ol{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .ps65-progress>ol>li{
+    grid-template-columns:26px minmax(0,1fr)!important;
+    gap:6px!important;
+    padding:0 7px!important;
+  }
+  .ps65-progress>ol>li:first-child{padding-left:0!important}
+  .ps65-progress>ol>li:last-child{padding-right:0!important}
+  .ps65-progress>ol>li>i{
+    width:26px!important;min-width:26px!important;height:26px!important;min-height:26px!important;
+    font-size:.6rem!important;
+  }
+  .ps65-progress>ol>li>div>b{font-size:.61rem!important;line-height:1.12!important}
+  .ps65-progress>ol>li>div>span{display:none!important}
+  .ps65-progress>ol>li:not(:last-child)::after{display:none!important}
+}
