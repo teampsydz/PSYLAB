@@ -1,0 +1,42 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f3f0e8"><title>La Blouse · PsyLab</title><script>(function(){const p=localStorage.getItem('psylab_theme_v59')||'auto',d=p==='auto'?matchMedia('(prefers-color-scheme: dark)').matches:p==='dark';document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.lang=localStorage.getItem('psylab_lang_v59')||'fr'})()</script><link rel="stylesheet" href="v59.css"><link rel="stylesheet" href="v60.css"><link rel="stylesheet" href="v61.css"></head><body class="ps61-page">
+<div class="ps61-app">
+<header class="ps61-top">
+  <a class="ps61-brand" href="index.html">Psy<span>Lab</span></a>
+  <nav class="ps61-nav"><a href="index.html" data-i18n="home">Accueil</a><a href="labs.html" data-i18n="labs">Labs</a><a href="maintenance.html" data-i18n="maintenance">Maintien</a><a class="active coat" href="competition.html" data-i18n="coat">La Blouse</a><a href="profile.html" data-i18n="profile">Profil</a></nav>
+  <div class="ps61-search">⌕ <input data-i18n-placeholder="search" placeholder="Rechercher un contenu, un Lab, une notion…"></div>
+  <div class="ps61-controls"><button class="ps61-iconbtn" data-theme-toggle aria-label="Thème"><span data-theme-icon>☀</span></button><div class="ps61-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div><a class="ps61-user" href="profile.html"><span class="avatar" data-user-avatar>R</span><span><b data-user-name>Résident</b><small data-user-sub></small></span></a></div>
+</header>
+<main class="ps61-coat-main">
+  <section class="ps61-coat-hero">
+    <div class="ps61-countdown" id="competitionCountdown">—</div>
+    <div class="ps61-coat-hero-copy">
+      <div class="ps61-kicker"><span data-copy="fr">LA COMPÉTITION HEBDOMADAIRE</span><span data-copy="en">THE WEEKLY COMPETITION</span></div>
+      <h1><span data-copy="fr">TOUT LE MONDE VEUT<br>LA BLOUSE</span><span data-copy="en">EVERYONE WANTS<br>THE WHITE COAT</span></h1>
+      <p><span data-copy="fr">Un dossier clinique chaque semaine. Une tentative classée. Le raisonnement compte davantage que la vitesse.</span><span data-copy="en">One clinical case each week. One ranked attempt. Reasoning matters more than speed.</span></p>
+      <a class="ps61-gold-btn" id="competitionCTA" href="courses/bipolar/index.html?open=blouse#v52-challenge"><span data-copy="fr">Je veux la blouse</span><span data-copy="en">I want the coat</span><span>→</span></a>
+    </div>
+    <div class="ps61-coat-summary">
+      <div><small data-i18n="current_holder">Titulaire actuel</small><b id="competitionHolderName">À prendre</b><small id="competitionHolderMeta"></small></div>
+      <div class="ps61-metric"><strong id="competitionParticipants">—</strong><small data-i18n="participants">participants</small></div>
+      <div class="ps61-metric"><strong id="competitionMyRank">—</strong><small><span data-copy="fr">votre rang</span><span data-copy="en">your rank</span></small></div>
+      <div class="ps61-metric"><strong>1</strong><small><span data-copy="fr">blouse</span><span data-copy="en">coat</span></small></div>
+    </div>
+  </section>
+
+  <section class="ps61-coat-grid">
+    <article class="ps61-panel">
+      <h2 data-i18n="weekly_case">Le dossier de la semaine</h2>
+      <div class="ps61-week-card"><div class="ps61-week-art"></div><div><div class="ps61-kicker"><span data-copy="fr">CAS CLINIQUE</span><span data-copy="en">CLINICAL CASE</span></div><h3 id="competitionFormat">L’épisode oublié</h3><p><span data-copy="fr">Un dossier progressif conçu pour tester votre raisonnement clinique, pas votre vitesse.</span><span data-copy="en">A progressive case designed to test clinical reasoning, not speed.</span></p><div class="ps61-mini-meta"><span>◷ ~15 min</span><span>1 <span data-copy="fr">tentative</span><span data-copy="en">attempt</span></span><span>100 pts</span></div><a class="ps61-green-btn" href="courses/bipolar/index.html?open=blouse#v52-challenge"><span data-copy="fr">Commencer le défi →</span><span data-copy="en">Start the challenge →</span></a></div></div>
+    </article>
+    <article class="ps61-panel"><h2 data-i18n="leaderboard">Classement actuel</h2><div id="competitionLeaderboard" class="ps61-leaderboard"></div><div style="margin-top:12px;color:var(--61-muted);font-size:11px" id="competitionGap"></div></article>
+    <article class="ps61-panel"><h2><span data-copy="fr">Comment gagner la blouse ?</span><span data-copy="en">How do you win the coat?</span></h2><div class="ps61-rules">
+      <div class="ps61-rule"><i>1</i><div><b><span data-copy="fr">Justesse clinique</span><span data-copy="en">Clinical accuracy</span></b><small><span data-copy="fr">Des décisions fondées sur les données du dossier.</span><span data-copy="en">Decisions grounded in the case data.</span></small></div></div>
+      <div class="ps61-rule"><i>2</i><div><b><span data-copy="fr">Discrimination</span><span data-copy="en">Discrimination</span></b><small><span data-copy="fr">Repérer ce qui distingue réellement les hypothèses.</span><span data-copy="en">Identify what truly separates competing hypotheses.</span></small></div></div>
+      <div class="ps61-rule"><i>3</i><div><b><span data-copy="fr">Flexibilité</span><span data-copy="en">Flexibility</span></b><small><span data-copy="fr">Réviser son raisonnement lorsque les données changent.</span><span data-copy="en">Revise reasoning when new information appears.</span></small></div></div>
+      <div class="ps61-rule"><i>4</i><div><b><span data-copy="fr">Calibration</span><span data-copy="en">Calibration</span></b><small><span data-copy="fr">Adapter son niveau de confiance à l’incertitude clinique.</span><span data-copy="en">Match confidence to clinical uncertainty.</span></small></div></div>
+    </div></article>
+  </section>
+</main>
+<nav class="ps61-mobile-nav"><a href="index.html"><b>⌂</b><span data-i18n="home">Accueil</span></a><a href="labs.html"><b>△</b><span data-i18n="labs">Labs</span></a><a href="maintenance.html"><b>♧</b><span data-i18n="maintenance">Maintien</span></a><a class="active" href="competition.html"><b>♛</b><span data-i18n="coat">Blouse</span></a><a href="profile.html"><b>○</b><span data-i18n="profile">Profil</span></a></nav>
+</div>
+<script src="psylab-config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="v60-ui.js"></script><script src="shell-v60.js"></script><script src="competition-v61.js"></script></body></html>
