@@ -1,5 +1,0 @@
-(function(){
-const cfg=window.PSYLAB_CONFIG||{};const quick={explain:'Choisissez un concept dans votre Lab : je peux reformuler la définition, la distinction clinique et le piège principal.',errors:'Votre profil d’erreurs sert à cibler les révisions. Je regarde d’abord les erreurs répétées plutôt qu’une réponse isolée.'};
-async function ask(text,context={}){text=String(text||'').trim();if(!text)return{answer:'Écrivez une question clinique ou pédagogique.'};if(!cfg.aiEndpoint)return{answer:'La question libre IA n’est pas encore activée sur ce déploiement. Les fonctions de coaching ciblé restent disponibles sans IA.'};try{const r=await fetch(cfg.aiEndpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({question:text,context})});if(!r.ok)throw new Error('Service indisponible');const d=await r.json();return{answer:d.answer||d.response||'Réponse indisponible.'}}catch(e){return{answer:'Dr Axone ne peut pas joindre le module IA pour le moment. Utilisez la révision ciblée ou réessayez plus tard.'}}}
-window.PsyLabAxone={ask,quick:(k)=>quick[k]||quick.explain};
-})();

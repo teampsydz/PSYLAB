@@ -1,9 +1,0 @@
-(function(){const cases=[
-{f:'n1',lab:'BipolarLab · N1',t:'M. R. — accélération, langage et activité',d:'Identifier les phénomènes avant toute interprétation diagnostique.',u:'courses/bipolar/index.html?mission=cas'},
-{f:'n1',lab:'BipolarLab · N1',t:'Mme A. — ralentir n’est pas un seul symptôme',d:'Distinguer humeur, énergie, volonté et ralentissement psychomoteur.',u:'courses/bipolar/index.html?mission=cas2'},
-{f:'n1',lab:'BipolarLab · N1',t:'Mme S. — état négatif mais activé',d:'Dysphorie, tension, vigilance et temporalité.',u:'courses/bipolar/index.html?mission=cas3'},
-{f:'n2',lab:'BipolarLab · N2',t:'Activation, stress réel et seuil maniaque',d:'Temporalité causale, diagnostic différentiel et seuil de sévérité.',u:'courses/bipolar/index.html?mission=n2-mk'},
-{f:'n2',lab:'BipolarLab · N2',t:'Dépression actuelle et hypomanie oubliée',d:'Reconstruire l’histoire longitudinale sans biais rétrospectif.',u:'courses/bipolar/index.html?mission=n2-ma'},
-{f:'n2',lab:'BipolarLab · N2',t:'Dépression avec activation concomitante',d:'Caractéristiques mixtes, chevauchements et formulation diagnostique.',u:'courses/bipolar/index.html?mission=n2-ms'},
-{f:'competition',lab:'Tout le monde veut la blouse',t:'Défi clinique hebdomadaire',d:'Un dossier inédit, cinq décisions, un score clinique /100.',u:'courses/bipolar/index.html?mission=competition'}];
-const g=document.getElementById('ps56CasesGrid');function draw(f='all'){g.innerHTML=cases.filter(x=>f==='all'||x.f===f).map(x=>`<article class="ps56-tile"><span class="eyebrow">${x.lab}</span><h3>${x.t}</h3><p>${x.d}</p><footer><span class="ps56-meta">Dossier progressif</span><a class="ps56-secondary" href="${x.u}">Ouvrir →</a></footer></article>`).join('')}document.querySelectorAll('[data-case-filter]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-case-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');draw(b.dataset.caseFilter)});draw()})();
