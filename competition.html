@@ -1,72 +1,95 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f3f0e8"><title>La Blouse · PsyLab</title><script>(function(){const p=localStorage.getItem('psylab_theme_v59')||'auto',d=p==='auto'?matchMedia('(prefers-color-scheme: dark)').matches:p==='dark';document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.lang=localStorage.getItem('psylab_lang_v59')||'fr'})()</script><link rel="stylesheet" href="v59.css"><link rel="stylesheet" href="v60.css"><link rel="stylesheet" href="v61.css"><link rel="stylesheet" href="v62.css"><link rel="stylesheet" href="v63.css"></head><body class="ps61-page ps63-coat-page">
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#061a1d"><title>La Blouse · PsyLab</title><script>(function(){const p=localStorage.getItem('psylab_theme_v59')||'auto',d=p==='auto'?matchMedia('(prefers-color-scheme: dark)').matches:p==='dark';document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.lang=localStorage.getItem('psylab_lang_v59')||'fr'})()</script><link rel="stylesheet" href="v59.css"><link rel="stylesheet" href="v60.css"><link rel="stylesheet" href="v61.css"><link rel="stylesheet" href="v62.css"><link rel="stylesheet" href="v63.css"><link rel="stylesheet" href="v64.css"></head><body class="ps61-page ps64-coat-page">
 <div class="ps61-app">
-<header class="ps61-top">
+<header class="ps61-top ps64-top">
   <a class="ps61-brand" href="index.html">Psy<span>Lab</span></a>
   <nav class="ps61-nav"><a href="index.html" data-i18n="home">Accueil</a><a href="labs.html" data-i18n="labs">Labs</a><a href="maintenance.html" data-i18n="maintenance">Maintien</a><a class="active coat" href="competition.html" data-i18n="coat">La Blouse</a><a href="profile.html" data-i18n="profile">Profil</a></nav>
   <div class="ps61-search">⌕ <input data-i18n-placeholder="search" placeholder="Rechercher un contenu, un Lab, une notion…"></div>
   <div class="ps61-controls"><button class="ps61-iconbtn" data-theme-toggle aria-label="Thème"><span data-theme-icon>☀</span></button><div class="ps61-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div><a class="ps61-user" href="profile.html"><span class="avatar" data-user-avatar>R</span><span><b data-user-name>Résident</b><small data-user-sub></small></span></a></div>
 </header>
-<main class="ps63-coat-main">
-  <section class="ps63-coat-hero">
-    <div class="ps63-hero-copy">
-      <div class="ps63-eyebrow"><span data-copy="fr">TOUT LE MONDE VEUT</span><span data-copy="en">EVERYONE WANTS</span></div>
+<main class="ps64-main">
+  <section class="ps64-hero">
+    <div class="ps64-hero-copy">
+      <span class="ps64-kicker"><span data-copy="fr">TOUT LE MONDE VEUT</span><span data-copy="en">EVERYONE WANTS</span></span>
       <h1><span data-copy="fr">LA BLOUSE</span><span data-copy="en">THE WHITE COAT</span></h1>
-      <div class="ps63-weekline"><span data-copy="fr">Semaine clinique</span><span data-copy="en">Clinical week</span> <b id="competitionWeek">—</b></div>
-      <h2 id="competitionFormat">L’épisode oublié</h2>
-      <p class="ps63-hook" id="competitionSubtitle">La chronologie pourrait tout changer.</p>
-      <div class="ps63-countdown" id="competitionCountdown">—</div>
-      <a class="ps63-gold-btn" id="competitionCTA" href="blouse-challenge.html"><span data-copy="fr">Je veux la blouse</span><span data-copy="en">I want the coat</span><span>→</span></a>
+      <div class="ps64-week"><span data-copy="fr">Semaine</span><span data-copy="en">Week</span> <b id="competitionWeek">—</b></div>
+      <h2 id="competitionFormat">Compatible n’est pas discriminant</h2>
+      <p id="competitionSubtitle">Un symptôme partagé ne tranche pas le différentiel.</p>
+      <div class="ps64-timer" id="competitionCountdown">—</div>
+      <a class="ps64-gold" id="competitionCTA" href="blouse-challenge.html"><span data-copy="fr">Je veux la blouse</span><span data-copy="en">I want the coat</span><span>→</span></a>
     </div>
-    <div class="ps63-coat-stage" aria-hidden="true"><div class="ps63-laurel left"></div><div class="ps63-coat-image"></div><div class="ps63-pedestal"><span>SAVOIR</span><span>RAISONNER</span><span>PRENDRE SOIN</span></div><div class="ps63-laurel right"></div></div>
-    <blockquote class="ps63-hero-quote"><span data-copy="fr">« Une blouse pour ceux qui mettent leur raisonnement clinique au service des patients. »</span><span data-copy="en">“A coat for those who put clinical reasoning at the service of patients.”</span></blockquote>
-    <div class="ps63-holder-strip">
-      <div class="ps63-holder"><span class="ps63-holder-avatar" id="competitionHolderAvatar">♛</span><div><small><span data-copy="fr">Titulaire actuel</span><span data-copy="en">Current holder</span></small><b id="competitionHolderName">À prendre</b><span id="competitionHolderMeta">—</span></div></div>
-      <div class="ps63-strip-stat"><b id="competitionParticipants">0</b><span data-copy="fr">challengers cette semaine</span><span data-copy="en">challengers this week</span></div>
-      <div class="ps63-strip-stat"><b>1</b><span data-copy="fr">tentative classée par participant</span><span data-copy="en">ranked attempt per participant</span></div>
+    <div class="ps64-stage" aria-hidden="true">
+      <div class="ps64-halo"></div><div class="ps64-laurels"></div>
+      <img src="assets/blouse-v61.jpg" alt="" class="ps64-coat-img">
+      <div class="ps64-plinth"><span>SAVOIR</span><span>RAISONNER</span><span>PRENDRE SOIN</span></div>
     </div>
-  </section>
-
-  <section class="ps63-coat-console">
-    <div class="ps63-tabbar" role="tablist">
-      <button class="active" data-coat-tab="challenge" role="tab"><span>▤</span><span data-copy="fr">Le défi</span><span data-copy="en">Challenge</span></button>
-      <button data-coat-tab="leaderboard" role="tab"><span>▥</span><span data-copy="fr">Classement</span><span data-copy="en">Leaderboard</span></button>
-      <button data-coat-tab="season" role="tab"><span>♜</span><span data-copy="fr">Saison</span><span data-copy="en">Season</span></button>
-      <button data-coat-tab="rules" role="tab"><span>ⓘ</span><span data-copy="fr">Règles</span><span data-copy="en">Rules</span></button>
-    </div>
-
-    <div class="ps63-tabpanel active" data-coat-panel="challenge">
-      <article class="ps63-week-case">
-        <div class="ps63-case-art"><span class="ps63-case-badge"><span data-copy="fr">NOUVEAU</span><span data-copy="en">NEW</span></span></div>
-        <div class="ps63-case-body">
-          <small><span data-copy="fr">CETTE SEMAINE</span><span data-copy="en">THIS WEEK</span></small>
-          <h2 id="competitionCaseTitle">L’épisode oublié</h2>
-          <p id="competitionCaseIntro">Ce qui semblait être une dépression récurrente cache peut-être un élément longitudinal décisif.</p>
-          <div class="ps63-case-metas"><span>◷ <b>10–15 min</b><small data-copy="fr">durée estimée</small><small data-copy="en">estimated time</small></span><span>▤ <b>6</b><small data-copy="fr">décisions cliniques</small><small data-copy="en">clinical decisions</small></span><span>◉ <b>1</b><small data-copy="fr">tentative classée</small><small data-copy="en">ranked attempt</small></span><span>▥ <b><span data-copy="fr">Tous niveaux</span><span data-copy="en">All levels</span></b><small data-copy="fr">challenge commun</small><small data-copy="en">shared challenge</small></span></div>
-          <a class="ps63-gold-btn full" href="blouse-challenge.html"><span data-copy="fr">Commencer le défi</span><span data-copy="en">Start the challenge</span><span>→</span></a>
-        </div>
-      </article>
-      <div class="ps63-focus-row"><div><strong><span data-copy="fr">Cette semaine, vous serez évalué sur :</span><span data-copy="en">This week, you will be assessed on:</span></strong></div><article><i>↔</i><div><b><span data-copy="fr">Reconstruction temporelle</span><span data-copy="en">Timeline reconstruction</span></b><small><span data-copy="fr">Identifier les éléments clés de l’évolution du cas.</span><span data-copy="en">Identify key elements in the course of the case.</span></small></div></article><article><i>▤</i><div><b><span data-copy="fr">Choix de l’information</span><span data-copy="en">Information selection</span></b><small><span data-copy="fr">Rechercher ce qui est réellement discriminant.</span><span data-copy="en">Seek what is truly discriminating.</span></small></div></article><article><i>↗</i><div><b><span data-copy="fr">Révision d’hypothèse</span><span data-copy="en">Hypothesis revision</span></b><small><span data-copy="fr">Adapter le raisonnement aux nouvelles données.</span><span data-copy="en">Adapt reasoning to new information.</span></small></div></article></div>
-    </div>
-
-    <div class="ps63-tabpanel" data-coat-panel="leaderboard">
-      <div class="ps63-rank-layout"><article class="ps63-my-rank"><small><span data-copy="fr">VOTRE POSITION</span><span data-copy="en">YOUR POSITION</span></small><div class="ps63-rank-number" id="competitionMyRankLarge">—</div><strong id="competitionMyScore">—</strong><p id="competitionGap"></p></article><article class="ps63-podium"><h2><span data-copy="fr">Podium de la semaine</span><span data-copy="en">Weekly podium</span></h2><div id="competitionPodium"></div></article></div>
-      <article class="ps63-leader-list"><div class="ps63-panel-head"><h2><span data-copy="fr">Classement actuel</span><span data-copy="en">Current leaderboard</span></h2><small><span data-copy="fr">Le temps ne départage pas les scores.</span><span data-copy="en">Speed does not break score ties.</span></small></div><div id="competitionLeaderboard" class="ps63-leaderboard"></div></article>
-    </div>
-
-    <div class="ps63-tabpanel" data-coat-panel="season">
-      <div class="ps63-season-hero"><div><small><span data-copy="fr">SAISON EN COURS</span><span data-copy="en">CURRENT SEASON</span></small><h2><span data-copy="fr">La Blouse d’Or</span><span data-copy="en">The Golden Coat</span></h2><p><span data-copy="fr">La saison récompense la maîtrise clinique et la régularité. Une absence ponctuelle ne doit pas effacer plusieurs semaines de travail.</span><span data-copy="en">The season rewards clinical mastery and regularity. One missed week should not erase several weeks of work.</span></p></div><div class="ps63-season-badge">♛</div></div>
-      <div class="ps63-season-grid"><article><small><span data-copy="fr">Votre rang saison</span><span data-copy="en">Your season rank</span></small><b id="seasonRank">—</b></article><article><small><span data-copy="fr">Blouses remportées</span><span data-copy="en">Coats won</span></small><b id="seasonWins">—</b></article><article><small><span data-copy="fr">Score saison</span><span data-copy="en">Season score</span></small><b id="seasonScore">—</b></article></div>
-      <article class="ps63-season-leader"><h2><span data-copy="fr">Classement saisonnier</span><span data-copy="en">Season leaderboard</span></h2><div id="seasonLeaderboard"></div></article>
-    </div>
-
-    <div class="ps63-tabpanel" data-coat-panel="rules">
-      <div class="ps63-rules-intro"><div><small><span data-copy="fr">BARÈME CLINIQUE</span><span data-copy="en">CLINICAL SCORING</span></small><h2><span data-copy="fr">100 points. Aucun bonus de vitesse.</span><span data-copy="en">100 points. No speed bonus.</span></h2><p><span data-copy="fr">Deux résidents peuvent conclure au même diagnostic et obtenir des scores différents selon la qualité du raisonnement qui les y a conduits.</span><span data-copy="en">Two residents may reach the same diagnosis and receive different scores depending on the quality of the reasoning that led them there.</span></p></div><strong>100</strong></div>
-      <div class="ps63-rules-grid"><article><i>30</i><div><b><span data-copy="fr">Décisions cliniques</span><span data-copy="en">Clinical decisions</span></b><p><span data-copy="fr">Pertinence des choix au moment où ils sont pris.</span><span data-copy="en">Relevance of choices at the moment they are made.</span></p></div></article><article><i>20</i><div><b><span data-copy="fr">Recherche d’information</span><span data-copy="en">Information search</span></b><p><span data-copy="fr">Capacité à demander les données réellement discriminantes.</span><span data-copy="en">Ability to seek truly discriminating information.</span></p></div></article><article><i>15</i><div><b><span data-copy="fr">Hiérarchisation</span><span data-copy="en">Hierarchy</span></b><p><span data-copy="fr">Priorisation explicite des hypothèses.</span><span data-copy="en">Explicit prioritization of hypotheses.</span></p></div></article><article><i>15</i><div><b><span data-copy="fr">Flexibilité</span><span data-copy="en">Flexibility</span></b><p><span data-copy="fr">Réviser une hypothèse lorsque les nouvelles données l’imposent.</span><span data-copy="en">Revise a hypothesis when new data require it.</span></p></div></article><article><i>10</i><div><b><span data-copy="fr">Argument discriminant</span><span data-copy="en">Discriminating argument</span></b><p><span data-copy="fr">Repérer le signe qui change réellement l’arbre diagnostique.</span><span data-copy="en">Identify the clue that truly changes the diagnostic tree.</span></p></div></article><article><i>10</i><div><b>Calibration</b><p><span data-copy="fr">Adapter son niveau de confiance à l’incertitude réelle.</span><span data-copy="en">Match confidence to actual uncertainty.</span></p></div></article></div>
-      <div class="ps63-rule-note"><b><span data-copy="fr">Pendant la tentative :</span><span data-copy="en">During the attempt:</span></b> <span data-copy="fr">Dr Axone reste silencieux et la correction détaillée demeure verrouillée jusqu’à la clôture hebdomadaire.</span><span data-copy="en">Dr Axone remains silent and detailed correction stays locked until weekly closure.</span></div>
+    <blockquote class="ps64-quote"><span data-copy="fr">« Observer, questionner, reconstruire : c’est ainsi qu’on évite les pièges cliniques. »</span><span data-copy="en">“Observe, question, reconstruct: that is how clinical traps are avoided.”</span></blockquote>
+    <div class="ps64-hero-strip">
+      <div class="ps64-holder"><span class="ps64-holder-avatar" id="competitionHolderAvatar">♛</span><div><small><span data-copy="fr">Titulaire actuel</span><span data-copy="en">Current holder</span></small><b id="competitionHolderName">À prendre</b><span id="competitionHolderMeta">—</span></div></div>
+      <div class="ps64-strip-stat"><b id="competitionParticipants">0</b><span data-copy="fr">challengers cette semaine</span><span data-copy="en">challengers this week</span></div>
+      <div class="ps64-strip-stat"><b>1</b><span data-copy="fr">tentative classée</span><span data-copy="en">ranked attempt</span></div>
     </div>
   </section>
-  <a id="debriefLink" class="ps63-debrief-card" href="blouse-challenge.html?debrief=last" hidden><span>↺</span><div><b><span data-copy="fr">Débrief précédent disponible</span><span data-copy="en">Previous debrief available</span></b><small><span data-copy="fr">Revoir vos décisions et l’explication de Dr Axone.</span><span data-copy="en">Review your decisions and Dr Axone’s explanation.</span></small></div><strong>→</strong></a>
+
+  <section class="ps64-console">
+    <div class="ps64-tabs" role="tablist">
+      <button class="active" data-coat-tab="challenge"><span>◎</span><b data-copy="fr">Le défi</b><b data-copy="en">Challenge</b></button>
+      <button data-coat-tab="leaderboard"><span>▥</span><b data-copy="fr">Classement</b><b data-copy="en">Leaderboard</b></button>
+      <button data-coat-tab="season"><span>♛</span><b data-copy="fr">Saison</b><b data-copy="en">Season</b></button>
+      <button data-coat-tab="rules"><span>ⓘ</span><b data-copy="fr">Règles</b><b data-copy="en">Rules</b></button>
+    </div>
+
+    <div class="ps64-panel active" data-coat-panel="challenge">
+      <div class="ps64-challenge-grid">
+        <aside class="ps64-journey">
+          <small><span data-copy="fr">PARCOURS DU DOSSIER</span><span data-copy="en">CASE JOURNEY</span></small>
+          <ol>
+            <li class="active"><i>1</i><div><b data-copy="fr">Carte d’hypothèses</b><b data-copy="en">Hypothesis map</b><span data-copy="fr">Hiérarchiser avant de conclure</span><span data-copy="en">Rank before concluding</span></div></li>
+            <li><i>2</i><div><b data-copy="fr">Budget d’exploration</b><b data-copy="en">Exploration budget</b><span data-copy="fr">3 choix parmi 10</span><span data-copy="en">3 choices out of 10</span></div></li>
+            <li><i>3</i><div><b data-copy="fr">Données contradictoires</b><b data-copy="en">Contradictory evidence</b><span data-copy="fr">Repondérer sans s’ancrer</span><span data-copy="en">Reweight without anchoring</span></div></li>
+            <li><i>4</i><div><b data-copy="fr">Chronologie</b><b data-copy="en">Timeline</b><span data-copy="fr">Reconstruire l’épisodicité</span><span data-copy="en">Reconstruct episodicity</span></div></li>
+            <li><i>5</i><div><b data-copy="fr">Révision d’hypothèse</b><b data-copy="en">Hypothesis revision</b><span data-copy="fr">Maintenir, déplacer ou abandonner</span><span data-copy="en">Maintain, move or discard</span></div></li>
+            <li><i>6</i><div><b data-copy="fr">Contrefactuel</b><b data-copy="en">Counterfactual</b><span data-copy="fr">Ce qui vous ferait changer d’avis</span><span data-copy="en">What would change your mind</span></div></li>
+            <li><i>7</i><div><b data-copy="fr">Élément discriminant</b><b data-copy="en">Discriminating clue</b><span data-copy="fr">Séparer le compatible du décisif</span><span data-copy="en">Separate compatible from decisive</span></div></li>
+            <li><i>8</i><div><b data-copy="fr">Signature</b><b data-copy="en">Signature</b><span data-copy="fr">Synthèse clinique argumentée</span><span data-copy="en">Reasoned clinical synthesis</span></div></li>
+          </ol>
+        </aside>
+        <article class="ps64-case-preview">
+          <div class="ps64-preview-art"><span><span data-copy="fr">DOSSIER DE LA SEMAINE</span><span data-copy="en">CASE OF THE WEEK</span></span></div>
+          <div class="ps64-preview-body">
+            <small><span data-copy="fr">CETTE SEMAINE</span><span data-copy="en">THIS WEEK</span></small>
+            <h2 id="competitionCaseTitle">Compatible n’est pas discriminant</h2>
+            <p id="competitionCaseIntro">Plusieurs indices évoquent une bipolarité. Aucun, isolément, ne suffit à la démontrer.</p>
+            <div class="ps64-preview-meta"><span><b>15–25</b><small data-copy="fr">min</small><small data-copy="en">min</small></span><span><b>8</b><small data-copy="fr">phases</small><small data-copy="en">phases</small></span><span><b>3/10</b><small data-copy="fr">infos à choisir</small><small data-copy="en">info choices</small></span><span><b>1</b><small data-copy="fr">tentative</small><small data-copy="en">attempt</small></span></div>
+            <a class="ps64-gold full" href="blouse-challenge.html"><span data-copy="fr">Commencer le défi</span><span data-copy="en">Start the challenge</span><span>→</span></a>
+          </div>
+        </article>
+        <aside class="ps64-mission">
+          <span class="ps64-mission-icon">◎</span><h3><span data-copy="fr">Votre mission</span><span data-copy="en">Your mission</span></h3>
+          <p><span data-copy="fr">Construire un raisonnement défendable malgré des données ambiguës, des faux amis sémiologiques et des informations volontairement incomplètes.</span><span data-copy="en">Build a defensible line of reasoning despite ambiguous data, phenomenological look-alikes and deliberately incomplete information.</span></p>
+          <h4><span data-copy="fr">Ce qui est réellement évalué</span><span data-copy="en">What is really assessed</span></h4>
+          <ul><li data-copy="fr">Qualité de la sémiologie</li><li data-copy="en">Quality of psychopathology</li><li data-copy="fr">Choix des informations utiles</li><li data-copy="en">Selection of useful information</li><li data-copy="fr">Reconstruction temporelle</li><li data-copy="en">Timeline reconstruction</li><li data-copy="fr">Capacité à réviser une hypothèse</li><li data-copy="en">Ability to revise a hypothesis</li><li data-copy="fr">Calibration de la confiance</li><li data-copy="en">Confidence calibration</li></ul>
+          <div class="ps64-principle"><b><span data-copy="fr">Principe de la semaine</span><span data-copy="en">Principle of the week</span></b><span data-copy="fr">Cherchez ce qui distingue les hypothèses, pas seulement ce qu’elles ont en commun.</span><span data-copy="en">Look for what separates hypotheses, not only what they share.</span></div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="ps64-panel" data-coat-panel="leaderboard">
+      <div class="ps64-rank-layout"><article class="ps64-my-rank"><small><span data-copy="fr">VOTRE POSITION</span><span data-copy="en">YOUR POSITION</span></small><div class="ps64-rank-number" id="competitionMyRankLarge">—</div><strong id="competitionMyScore">—</strong><p id="competitionGap"></p></article><article class="ps64-podium"><h2><span data-copy="fr">Podium de la semaine</span><span data-copy="en">Weekly podium</span></h2><div id="competitionPodium"></div></article></div>
+      <article class="ps64-leader-list"><div class="ps64-panel-head"><h2><span data-copy="fr">Classement actuel</span><span data-copy="en">Current leaderboard</span></h2><small><span data-copy="fr">Le temps ne départage pas les scores.</span><span data-copy="en">Speed does not break score ties.</span></small></div><div id="competitionLeaderboard" class="ps64-leaderboard"></div></article>
+    </div>
+
+    <div class="ps64-panel" data-coat-panel="season">
+      <div class="ps64-season-hero"><div><small><span data-copy="fr">SAISON EN COURS</span><span data-copy="en">CURRENT SEASON</span></small><h2><span data-copy="fr">La Blouse d’Or</span><span data-copy="en">The Golden Coat</span></h2><p><span data-copy="fr">La saison récompense la maîtrise clinique et la régularité, pas seulement une performance isolée.</span><span data-copy="en">The season rewards clinical mastery and consistency, not only a single performance.</span></p></div><div class="ps64-season-badge">♛</div></div>
+      <div class="ps64-season-grid"><article><small><span data-copy="fr">Votre rang saison</span><span data-copy="en">Your season rank</span></small><b id="seasonRank">—</b></article><article><small><span data-copy="fr">Blouses remportées</span><span data-copy="en">Coats won</span></small><b id="seasonWins">—</b></article><article><small><span data-copy="fr">Score saison</span><span data-copy="en">Season score</span></small><b id="seasonScore">—</b></article></div>
+      <article class="ps64-season-leader"><h2><span data-copy="fr">Classement saisonnier</span><span data-copy="en">Season leaderboard</span></h2><div id="seasonLeaderboard"></div></article>
+    </div>
+
+    <div class="ps64-panel" data-coat-panel="rules">
+      <div class="ps64-rules-intro"><div><small><span data-copy="fr">BARÈME CLINIQUE</span><span data-copy="en">CLINICAL SCORING</span></small><h2><span data-copy="fr">100 points. Aucun bonus de vitesse.</span><span data-copy="en">100 points. No speed bonus.</span></h2><p><span data-copy="fr">Le diagnostic final compte, mais la qualité du chemin qui y mène compte davantage.</span><span data-copy="en">The final diagnosis matters, but the quality of the reasoning path matters more.</span></p></div></div>
+      <div class="ps64-rules-grid"><article><b>15</b><span data-copy="fr">Sémiologie</span><span data-copy="en">Psychopathology</span></article><article><b>20</b><span data-copy="fr">Stratégie d’exploration</span><span data-copy="en">Exploration strategy</span></article><article><b>15</b><span data-copy="fr">Reconstruction temporelle</span><span data-copy="en">Timeline reconstruction</span></article><article><b>15</b><span data-copy="fr">Hiérarchisation</span><span data-copy="en">Hierarchy</span></article><article><b>15</b><span data-copy="fr">Révision d’hypothèse</span><span data-copy="en">Hypothesis revision</span></article><article><b>10</b><span data-copy="fr">Argument discriminant</span><span data-copy="en">Discriminating argument</span></article><article><b>10</b><span>Calibration</span></article></div>
+      <a id="debriefLink" hidden class="ps64-debrief-link" href="blouse-challenge.html?debrief=last"><span data-copy="fr">Ouvrir mon dernier débrief</span><span data-copy="en">Open my latest debrief</span> →</a>
+    </div>
+  </section>
 </main>
-<nav class="ps61-mobile-nav"><a href="index.html"><b>⌂</b><span data-i18n="home">Accueil</span></a><a href="labs.html"><b>△</b><span data-i18n="labs">Labs</span></a><a href="maintenance.html"><b>♧</b><span data-i18n="maintenance">Maintien</span></a><a class="active" href="competition.html"><b>♛</b><span data-i18n="coat">Blouse</span></a><a href="profile.html"><b>○</b><span data-i18n="profile">Profil</span></a></nav>
 </div>
-<script src="psylab-config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="v60-ui.js"></script><script src="shell-v60.js"></script><script src="competition-v63.js"></script></body></html>
+<script src="psylab-config.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="v60-ui.js"></script><script src="shell-v60.js"></script><script src="competition-v64.js"></script></body></html>
