@@ -2,6 +2,12 @@
    Scope: public/auth shell + connected core pages + shared controls.
    No dependency on V59–V67 CSS on the V68 core surfaces. */
 
+
+/* V68.1 — bilingual visibility hotfix. Only the active locale may render. */
+[data-copy="fr"],[data-copy="en"]{display:none!important}
+html[lang^="fr" i] [data-copy="fr"]{display:inline!important}
+html[lang^="en" i] [data-copy="en"]{display:inline!important}
+
 :root{
   --ivory:#f5f2e9;
   --paper:#fcfbf7;
