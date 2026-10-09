@@ -53,3 +53,74 @@
   .ps-challenge-top{height:58px}.ps65-challenge-root,.ps66-blank-main{padding-top:12px}.ps67-case-gate{min-height:auto;border-radius:20px}.ps67-case-gate::before{left:18px;top:18px}.ps67-case-gate-art{height:210px;min-height:0}.ps67-case-gate-main{padding:64px 23px 29px}.ps67-case-gate-main h1{font-size:3.45rem}.ps67-case-gate-main p{font-size:.94rem}.ps65-progress{top:65px}.ps67-raw-case,.ps65-case-note{padding:24px 20px}.ps67-raw-case h1,.ps65-case-note h1{font-size:2.15rem}.ps67-raw-case p,.ps65-case-note p{font-size:.94rem}.ps65-question-card{padding:20px}.ps67-decision,.ps65-decision{padding:23px 19px}.ps67-result,.ps65-result{padding:24px 20px}
   .ps66-blank-intro{min-height:570px;padding:42px 22px 54px;background:linear-gradient(180deg,rgba(255,250,243,.97),rgba(255,250,243,.91) 54%,rgba(255,248,236,.42)),url('assets/v71/page_blanche.jpg') center bottom/cover no-repeat}.ps66-blank-intro::before{right:16px;top:16px}.ps66-blank-intro::after{font-size:12rem;right:2%;bottom:4%}.ps66-blank-intro h1{font-size:3.8rem}.ps66-blank-lead{font-size:1.12rem}.ps66-blank-stage{padding:27px 18px}.ps66-blank-stage::before{left:18px;right:18px;top:78px}.ps66-blank-stage h1{font-size:1.9rem}.ps66-blank-stage textarea{min-height:340px;padding:16px;font-size:.95rem}
 }
+
+/* =====================================================================
+   V73 — La Blouse = dossier clinique / Page Blanche = vraie copie
+   ===================================================================== */
+/* Banner La Blouse: clair, directement représentatif du dossier */
+.ps67-case-gate{background:linear-gradient(135deg,#fffaf1 0%,#fff4df 100%)}
+.ps67-case-gate-art{display:grid;place-items:center;min-height:590px;background:
+  radial-gradient(circle at 68% 22%,rgba(239,180,83,.18),transparent 26%),
+  linear-gradient(145deg,#f7e2bf,#e9c690 52%,#d8ad75);filter:none;overflow:hidden}
+.ps67-folder{position:relative;width:min(78%,430px);aspect-ratio:1.28/1;border-radius:10px 12px 12px 12px;background:linear-gradient(155deg,#e7bd7d,#dca765);box-shadow:0 30px 55px rgba(91,54,26,.26);transform:rotate(-3deg);display:flex;flex-direction:column;justify-content:flex-end;padding:28px;color:#6d321d}
+.ps67-folder::before{content:"";position:absolute;left:0;top:-26px;width:48%;height:38px;border-radius:10px 10px 0 0;background:#e7bd7d}
+.ps67-folder::after{content:"";position:absolute;left:10%;right:10%;top:14%;height:62%;border-radius:5px;background:
+  linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,250,241,.96)),
+  repeating-linear-gradient(180deg,transparent 0,transparent 27px,#eadfd2 28px);box-shadow:0 10px 24px rgba(95,58,30,.14);transform:rotate(2deg)}
+.ps67-folder span,.ps67-folder small{position:relative;z-index:2}.ps67-folder span{font-family:var(--serif);font-size:1.45rem;font-weight:800;letter-spacing:.04em}.ps67-folder small{margin-top:4px;font-size:.56rem;letter-spacing:.16em;font-weight:900}
+.ps67-case-gate-main h1{color:#591525}.ps67-case-gate-main p{max-width:520px}
+
+/* Le cas lui-même devient un dossier posé sur le bureau */
+.ps67-dossier-shell{position:relative;padding-top:26px}
+.ps67-dossier-tab{position:absolute;z-index:3;left:28px;top:0;min-width:180px;padding:10px 16px 9px;border:1px solid #d4b28a;border-bottom:0;border-radius:12px 12px 0 0;background:linear-gradient(180deg,#ead0a7,#dfbd86);color:#6f351e;font-size:.58rem;font-weight:950;letter-spacing:.16em;box-shadow:0 -6px 16px rgba(94,55,27,.05)}
+.ps67-dossier-shell>.ps67-decision{position:relative;border-radius:10px 18px 18px 18px!important;border-color:#d7b891!important;background:
+  linear-gradient(180deg,rgba(255,253,247,.98),rgba(255,248,236,.98)),
+  repeating-linear-gradient(180deg,transparent 0,transparent 31px,rgba(138,101,74,.06) 32px)!important;box-shadow:0 26px 65px rgba(83,48,25,.15)!important}
+.ps67-dossier-shell>.ps67-decision::after{content:"";position:absolute;inset:13px 13px auto auto;width:24px;height:58px;border:3px solid rgba(111,72,49,.30);border-left-color:transparent;border-radius:14px;transform:rotate(8deg);pointer-events:none}
+.ps67-dossier-shell .ps65-decision-head{padding-bottom:20px;border-bottom:1px solid #ead9c5}
+.ps67-dossier-shell .ps65-decision-head small,.ps67-sign-head small{color:#9a4a38;font-weight:900;letter-spacing:.12em}
+.ps67-dossier-shell .ps65-case-note{margin:22px 0;background:#fffdf8!important;border:1px solid #dfc8ad!important;border-radius:4px 12px 12px 12px!important;box-shadow:0 9px 22px rgba(80,47,25,.06)!important}
+.ps67-dossier-shell .ps65-case-note::after{content:"NOTE CLINIQUE";position:absolute;right:18px;top:15px;font-size:.48rem;letter-spacing:.14em;color:#b58b6b;font-weight:900}
+.ps67-dossier-shell .ps65-rank-choice{padding:10px;border-radius:14px;background:#f5e6d3}
+.ps67-dossier-shell .ps65-rank-option{background:#fffdf8;border-color:#dfcbb4}
+.ps67-dossier-shell .ps65-rank-option.selected{border-color:#9a4a38;box-shadow:inset 4px 0 0 #9a4a38}
+.ps67-dossier-shell .ps65-question-card{background:#fffdf8;border-color:#dec7aa}
+.ps67-dossier-shell .ps65-question-card.selected{border-color:#9a4a38;box-shadow:inset 0 0 0 2px rgba(154,74,56,.12)}
+.ps67-dossier-shell .ps65-field input,.ps67-dossier-shell .ps65-field textarea,.ps67-dossier-shell .ps65-field select{background:#fffefb;border-color:#dcc5aa}
+.ps67-sign-button{min-width:190px}
+.ps67-sealed,.ps67-result,.ps67-debrief{position:relative;background:linear-gradient(180deg,#fffdf8,#fff5e6)!important;border-color:#d8ba96!important}.ps67-sealed::before,.ps67-result::before,.ps67-debrief::before{content:"DOSSIER";position:absolute;right:24px;top:18px;color:rgba(116,21,40,.09);font-family:var(--serif);font-size:3.8rem;font-weight:800;letter-spacing:.04em;pointer-events:none}
+
+/* Page Blanche : la bannière reste lumineuse et la copie devient matérielle */
+.ps66-blank-intro{background:
+  linear-gradient(90deg,#fffdf9 0%,#fff9f1 52%,rgba(255,249,241,.80) 70%,rgba(255,249,241,.18) 100%),
+  url('assets/v71/page_blanche.jpg') center right/cover no-repeat!important}
+.ps66-blank-intro::before{content:"FEUILLE RETOURNÉE"}
+.ps66-blank-intro::after{content:"";right:6%;bottom:9%;width:33%;height:48%;border-radius:8px;background:
+  repeating-linear-gradient(180deg,#fff 0,#fff 28px,#efe5dc 29px)!important;opacity:.94;box-shadow:0 28px 50px rgba(72,43,26,.20);transform:rotate(-4deg);border:1px solid #eaded1}
+.ps66-paper-sheet{background:#fffefb!important;border-radius:8px!important;box-shadow:0 28px 70px rgba(71,43,26,.15)!important;border:1px solid #e3d6ca!important;padding-left:72px!important;overflow:hidden}
+.ps66-paper-sheet::after{content:"";position:absolute;left:47px;top:0;bottom:0;width:1px;background:#e3b0a8;opacity:.72}
+.ps66-paper-sheet::before{content:"COPIE PSYLAB";position:absolute;right:28px;top:24px;height:auto!important;background:none!important;color:rgba(116,21,40,.09);font-family:var(--serif);font-size:2.25rem;font-weight:800;letter-spacing:.04em}
+.ps66-paper-sheet .ps66-blank-stage-head{position:relative;z-index:2;padding-bottom:19px;border-bottom:1px solid #eee2d7}
+.ps66-paper-sheet>p,.ps66-paper-sheet .ps66-copy-layout,.ps66-paper-sheet .ps66-blank-actions,.ps66-paper-sheet .ps66-correction-layout,.ps66-paper-sheet .ps66-consolidate-box{position:relative;z-index:2}
+.ps66-paper-sheet textarea{border:0!important;border-radius:0!important;background:
+  repeating-linear-gradient(180deg,#fffefb 0,#fffefb 30px,#e9e1d8 31px)!important;box-shadow:none!important;padding:18px 16px 18px 8px!important;font-family:var(--serif);font-size:1.02rem;line-height:31px}
+.ps66-paper-sheet textarea:focus{outline:0;background:repeating-linear-gradient(180deg,#fffefb 0,#fffefb 30px,#dfd2c6 31px)!important}
+.ps66-copy-layout aside{background:#f4eadf!important;border-radius:7px!important}.ps66-copy-layout aside::before{content:"BROUILLON";display:block;margin-bottom:8px;font-size:.5rem;font-weight:900;letter-spacing:.14em;color:#9d654f}
+.ps66-correction-stage.ps66-paper-sheet{padding-left:58px!important}
+
+/* Les deux cartes du Vestiaire restent lumineuses et représentatives */
+.ps-challenge-art::after{background:linear-gradient(90deg,transparent 70%,rgba(255,249,239,.16))!important}
+.ps-challenge-art img{filter:brightness(1.10) saturate(.98) contrast(.97)!important}
+
+@media(max-width:800px){
+  .ps67-case-gate-art{height:240px;background:linear-gradient(145deg,#f7e3c3,#e1b578)}
+  .ps67-folder{width:70%;padding:18px}.ps67-folder span{font-size:1.05rem}
+  .ps67-dossier-tab{left:14px;min-width:150px;padding:8px 12px}
+  .ps67-dossier-shell{padding-top:24px}.ps67-dossier-shell>.ps67-decision{border-radius:8px 14px 14px 14px!important}
+  .ps67-dossier-shell>.ps67-decision::after{display:none}
+  .ps66-blank-intro::after{width:46%;height:33%;right:8%;bottom:7%}
+  .ps66-paper-sheet{padding:25px 18px 25px 48px!important}.ps66-paper-sheet::after{left:32px}.ps66-paper-sheet::before{font-size:1.35rem;right:14px;top:14px}
+  .ps66-correction-stage.ps66-paper-sheet{padding-left:48px!important}
+}
+.ps67-dossier-shell>.ps67-decision::before{display:none!important}
+.ps66-paper-sheet::before{left:auto!important;bottom:auto!important;width:auto!important}

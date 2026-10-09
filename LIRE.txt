@@ -1,0 +1,13 @@
+PsyLab — mise à jour visuelle
+
+Copiez le contenu de ce dossier à la racine de votre dossier PSYLAB-main et acceptez le remplacement des fichiers.
+
+Cette mise à jour :
+- retire les citations pour le moment ;
+- remplace « Ravie de vous revoir » par une accroche plus motivante ;
+- transforme La Blouse en expérience de dossier clinique ;
+- transforme La Page Blanche en expérience de copie/feuille ;
+- éclaircit les bannières des deux challenges dans Le Vestiaire ;
+- conserve Le Vestiaire, les moteurs de challenge et le contenu pédagogique.
+
+psylab-config.js n'est pas inclus.

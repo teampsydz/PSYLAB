@@ -46,3 +46,11 @@
   .ps-competition-grid{gap:11px;margin-top:12px}.ps-ranking,.ps-position{padding:18px}.ps-ranking::before{font-size:2.8rem}.ps-ranking-head h2,.ps-position h2{font-size:1.55rem}.ps-podium{gap:6px}.ps-podium-card{padding:10px 5px}.ps-podium-card b{font-size:.77rem}.ps-podium-card strong{font-size:1.18rem}.ps-rank-row{grid-template-columns:29px 1fr auto;padding:9px 3px}.ps-my-rank strong{font-size:3rem}.ps-vestiaire-history{margin-top:11px;padding:17px}
 }
 @media(max-width:430px){.ps-challenge{grid-template-columns:108px 1fr}.ps-challenge-body h2{font-size:1.65rem}.ps-challenge-body p{font-size:.67rem}.ps-podium-card small{display:none}.ps-live-stat span{font-size:.58rem}}
+
+/* V73 — bannières de challenges plus claires et immédiatement représentatives */
+.ps-challenge{background:linear-gradient(180deg,#fffdf8,#fff6e9)}
+.ps-challenge-art{background:#f4e5d4}
+.ps-challenge-art::after{background:linear-gradient(90deg,transparent 70%,rgba(255,249,239,.12))}
+.ps-challenge-art img{filter:brightness(1.12) saturate(.96) contrast(.96);transform:scale(1.02)}
+.ps-challenge:hover .ps-challenge-art img{transform:scale(1.055)}
+.ps-challenge-body{background:linear-gradient(180deg,rgba(255,253,248,.96),rgba(255,247,235,.98))}

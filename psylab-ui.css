@@ -205,3 +205,17 @@ body::before{opacity:.12;background-image:radial-gradient(rgba(114,69,41,.18) .5
   .ps-home-focus{gap:12px}.ps-resume{min-height:280px}.ps-resume-content{width:76%;padding:28px 23px}.ps-resume h2{font-size:2.45rem}.ps-resume p{font-size:.86rem}.ps-vestiaire-teaser{min-height:220px}.ps-vestiaire-teaser h2{font-size:2.1rem}
   .ps-featured-lab{min-height:340px;background:linear-gradient(180deg,rgba(255,247,234,.96) 0%,rgba(255,247,234,.92) 45%,rgba(255,239,220,.20) 72%,rgba(255,239,220,.02)),url('assets/v71/bipolar.jpg') center bottom/cover no-repeat}.ps-featured-copy{width:100%;padding:30px 24px}.ps-featured-copy h2{font-size:2.8rem}.ps-featured-copy p{max-width:88%}
 }
+
+/* =====================================================================
+   V73 — accueil sans citations, plus motivant
+   ===================================================================== */
+.ps-auth-scene{justify-content:flex-start}
+.ps-auth-copy{margin-top:auto;margin-bottom:auto}
+.ps-home-hero{grid-template-columns:.92fr 1.08fr}
+.ps-home-copy{display:flex;flex-direction:column;justify-content:center}
+.ps-home-sub{font-size:1.55rem;font-weight:600;color:#9a463e}
+.ps-home-note{max-width:490px;font-size:.96rem}
+.ps-profile-quote,.ps-auth-quote,.ps-quote-card{display:none!important}
+@media(max-width:800px){
+  .ps-home-copy{padding-bottom:142px}.ps-home-sub{font-size:1.16rem}
+}
