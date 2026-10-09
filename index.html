@@ -1,103 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4f1e9">
+<title>PsyLab</title>
+<script>(function(){const p=localStorage.getItem('psylab_theme_v59')||'auto',d=p==='auto'?matchMedia('(prefers-color-scheme: dark)').matches:p==='dark';document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.lang=localStorage.getItem('psylab_lang_v59')||'fr'})()</script>
+<link rel="stylesheet" href="v59.css"><link rel="stylesheet" href="v60.css"><link rel="stylesheet" href="v61.css"><link rel="stylesheet" href="v66.css">
+</head>
+<body class="ps59-auth-pending ps66-page">
+<section class="ps66-auth" id="authGate" aria-label="Connexion PsyLab">
+  <div class="ps66-auth-shell">
+    <section class="ps66-auth-editorial">
+      <div class="ps66-auth-brand">
+        <div class="ps66-wordmark">Psy<span>Lab</span></div>
+        <div class="ps66-brand-rule"></div>
+        <small><span data-copy="fr">Apprendre à penser clinique.</span><span data-copy="en">Learn to think clinically.</span></small>
+      </div>
+      <div class="ps66-auth-copy">
+        <p class="ps66-overline"><span data-copy="fr">PSYCHIATRIE · FORMATION CLINIQUE</span><span data-copy="en">PSYCHIATRY · CLINICAL TRAINING</span></p>
+        <h1><span data-copy="fr">Du cours à la clinique.<br><em>Du savoir au raisonnement.</em></span><span data-copy="en">From knowledge to clinic.<br><em>From learning to reasoning.</em></span></h1>
+        <p class="ps66-auth-intro"><span data-copy="fr">Des Labs structurés, des défis cliniques et une mémorisation active pour apprendre la psychiatrie autrement.</span><span data-copy="en">Structured Labs, clinical challenges and active recall to learn psychiatry differently.</span></p>
+      </div>
+      <div class="ps66-auth-foot">
+        <blockquote><span data-copy="fr">« Le bon médecin traite la maladie ; le grand médecin traite le patient qui a la maladie. »</span><span data-copy="en">“The good physician treats the disease; the great physician treats the patient who has the disease.”</span></blockquote>
+        <cite>— William Osler</cite>
+      </div>
+    </section>
+    <section class="ps66-auth-panel">
+      <div class="ps66-auth-toolbar"><button class="ps66-iconbtn" data-theme-toggle aria-label="Thème"><span data-theme-icon>☀</span></button><div class="ps66-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div></div>
+      <div class="ps66-panel-brand"><span>Psy<span>Lab</span></span><small><span data-copy="fr">Votre espace clinique</span><span data-copy="en">Your clinical workspace</span></small></div>
+      <div class="ps66-auth-tabs"><button class="active" data-auth-tab="login" data-i18n="signin">Se connecter</button><button data-auth-tab="signup" data-i18n="signup">Créer un compte</button></div>
+      <div class="active ps66-auth-pane" data-auth-pane="login">
+        <div class="ps66-auth-heading"><h2><span data-copy="fr">Bon retour.</span><span data-copy="en">Welcome back.</span></h2><p><span data-copy="fr">Reprenez votre parcours exactement là où vous l’avez laissé.</span><span data-copy="en">Resume exactly where you left off.</span></p></div>
+        <label><span data-i18n="email">Adresse e-mail</span><input autocomplete="email" id="loginEmail" type="email" placeholder="nom@exemple.com"></label>
+        <label><span data-i18n="password">Mot de passe</span><input autocomplete="current-password" id="loginPassword" type="password" placeholder="••••••••"></label>
+        <button class="ps66-primary" id="loginBtn" data-i18n="signin">Se connecter</button>
+        <div class="ps66-social-block" data-social-block="login"><div class="ps66-or"><span data-copy="fr">ou</span><span data-copy="en">or</span></div><button data-oauth="google" type="button"><b>G</b><span data-i18n="google">Continuer avec Google</span></button><button data-oauth="apple" type="button"><b></b><span data-i18n="apple">Continuer avec Apple</span></button></div>
+      </div>
+      <div class="ps66-auth-pane" data-auth-pane="signup">
+        <div class="ps66-auth-heading"><h2><span data-copy="fr">Créer votre espace.</span><span data-copy="en">Create your space.</span></h2><p><span data-copy="fr">Vos informations professionnelles seront complétées après l’inscription.</span><span data-copy="en">Your professional details are completed after sign-up.</span></p></div>
+        <div class="ps66-social-block" data-social-block="signup"><button data-oauth="google" type="button"><b>G</b><span data-i18n="google">Continuer avec Google</span></button><button data-oauth="apple" type="button"><b></b><span data-i18n="apple">Continuer avec Apple</span></button><div class="ps66-or"><span data-copy="fr">ou</span><span data-copy="en">or</span></div></div>
+        <label><span data-i18n="email">Adresse e-mail</span><input autocomplete="email" id="signupEmail" type="email" placeholder="nom@exemple.com"></label>
+        <label><span data-i18n="password">Mot de passe</span><input autocomplete="new-password" id="signupPassword" type="password" placeholder="8 caractères minimum"></label>
+        <button class="ps66-primary" id="signupBtn" data-i18n="create_space">Créer mon espace</button>
+      </div>
+      <div class="ps59-auth-message" id="authMessage"></div>
+      <p class="ps66-auth-privacy"><span data-copy="fr">Votre e-mail reste privé. Pseudonyme, photo et visibilité se règlent dans le profil.</span><span data-copy="en">Your email remains private. Nickname, photo and visibility are controlled in your profile.</span></p>
+    </section>
+  </div>
+</section>
 
-<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><meta content="#f6f2ea" name="theme-color"/><title>PsyLab</title><script>(function(){const p=localStorage.getItem('psylab_theme_v59')||'auto',d=p==='auto'?matchMedia('(prefers-color-scheme: dark)').matches:p==='dark';document.documentElement.dataset.theme=d?'dark':'light';document.documentElement.lang=localStorage.getItem('psylab_lang_v59')||'fr'})()</script><link href="v59.css" rel="stylesheet"/><link href="v60.css" rel="stylesheet"/><link href="v61.css" rel="stylesheet"/><link href="v62.css" rel="stylesheet"/></head>
-<body class="ps59-auth-pending ps61-page">
-<section class="ps59-auth ps62-auth" id="authGate">
-<div class="ps62-auth-shell">
-<section class="ps62-auth-editorial">
-<div class="ps62-auth-brandline">
-<div aria-hidden="true" class="ps62-auth-logo-mark">◉</div>
-<div><div class="ps62-auth-logo">PsyLab</div><small data-copy="fr">Le savoir en pratique.</small><small data-copy="en">Knowledge into practice.</small></div>
-</div>
-<div class="ps62-auth-story">
-<h1><span data-copy="fr">Apprendre aujourd’hui.<br/><em>Soigner demain.</em></span><span data-copy="en">Learn today.<br/><em>Care better tomorrow.</em></span></h1>
-<p data-copy="fr">Sémiologie · raisonnement clinique · progression</p>
-<p data-copy="en">Psychopathology · clinical reasoning · progress</p>
-</div>
-<div aria-hidden="true" class="ps62-auth-coat"><img alt="" src="assets/blouse-v61.jpg"/></div>
-</section>
-<section class="ps59-auth-panel ps62-auth-panel">
-<div class="ps62-auth-toolbar">
-<button aria-label="Thème" class="ps59-iconbtn" data-theme-toggle="" type="button"><span data-theme-icon="">☀</span></button>
-<div class="ps59-lang"><button data-lang-fr="" type="button">FR</button><button data-lang-en="" type="button">EN</button></div>
-</div>
-<div class="ps59-auth-tabs ps62-auth-tabs">
-<button class="active" data-auth-tab="login" data-i18n="signin" type="button">Se connecter</button>
-<button data-auth-tab="signup" data-i18n="signup" type="button">Créer un compte</button>
-</div>
-<div class="active" data-auth-pane="login">
-<div class="ps62-auth-heading"><h2 data-copy="fr">Bon retour parmi nous</h2><h2 data-copy="en">Welcome back</h2><p data-copy="fr">Retrouvez votre parcours là où vous l’avez laissé.</p><p data-copy="en">Pick up your learning where you left off.</p></div>
-<label><span data-i18n="email">Adresse e-mail</span><input autocomplete="email" id="loginEmail" type="email"/></label>
-<label><span data-i18n="password">Mot de passe</span><input autocomplete="current-password" id="loginPassword" type="password"/></label>
-<button class="ps59-btn ps62-auth-primary" data-i18n="signin" id="loginBtn">Se connecter</button>
-<div class="ps60-or" data-i18n="or">ou</div>
-<div class="ps60-social ps62-social"><button data-oauth="google" type="button"><b>G</b><span data-i18n="google">Continuer avec Google</span></button><button data-oauth="apple" type="button"><b></b><span data-i18n="apple">Continuer avec Apple</span></button></div>
-</div>
-<div data-auth-pane="signup">
-<div class="ps62-auth-heading"><h2 data-copy="fr">Créer votre compte</h2><h2 data-copy="en">Create your account</h2><p data-copy="fr">Commencez par vos identifiants. Votre pseudonyme et votre statut professionnel seront demandés ensuite.</p><p data-copy="en">Start with your sign-in details. Your nickname and professional status come next.</p></div>
-<div class="ps60-social ps62-social"><button data-oauth="google" type="button"><b>G</b><span data-i18n="google">Continuer avec Google</span></button><button data-oauth="apple" type="button"><b></b><span data-i18n="apple">Continuer avec Apple</span></button></div>
-<div class="ps60-or" data-i18n="or">ou</div>
-<label><span data-i18n="email">Adresse e-mail</span><input autocomplete="email" id="signupEmail" type="email"/></label>
-<label><span data-i18n="password">Mot de passe</span><input autocomplete="new-password" id="signupPassword" type="password"/></label>
-<button class="ps59-btn ps62-auth-primary" data-i18n="create_space" id="signupBtn">Créer mon espace</button>
-</div>
-<div class="ps59-auth-message" id="authMessage"></div>
-<div class="ps59-auth-privacy" data-copy="fr">Votre e-mail reste privé. Les éléments publics se règlent ensuite dans votre profil.</div>
-<div class="ps59-auth-privacy" data-copy="en">Your email stays private. Public profile details can be adjusted afterwards.</div>
-</section>
-</div>
-</section>
-<section class="ps60-onboarding" hidden="" id="professionalOnboarding"><div class="ps60-onboarding-card"><a class="ps59-brand" href="index.html">Psy<span>Lab</span></a><div class="ps59-tag" data-i18n="platform_tag">APPRENDRE · RAISONNER · PROGRESSER</div><h2 data-i18n="complete_profile">Compléter votre profil</h2><p data-i18n="complete_profile_sub">Une dernière étape avant d’entrer dans PsyLab.</p><label><span data-i18n="pseudo">Pseudonyme public</span><input id="onboardingPseudo" maxlength="32"/></label><label><span data-i18n="status">Statut professionnel</span><select id="onboardingStatus"><option value="">—</option><option data-status-option="" value="EXTERNE">Externe</option><option data-status-option="" value="INTERNE">Interne</option><option data-status-option="" value="R1">Résident R1</option><option data-status-option="" value="R2">Résident R2</option><option data-status-option="" value="R3">Résident R3</option><option data-status-option="" value="R4">Résident R4</option><option data-status-option="" value="ASSISTANT">Assistant</option><option data-status-option="" value="PROFESSEUR">Professeur</option></select></label><button class="ps59-btn" data-i18n="save_continue" id="onboardingSave">Enregistrer et continuer</button><div class="ps59-auth-message" id="onboardingMessage"></div></div></section><div class="ps61-app">
-<header class="ps61-top">
-<a class="ps61-brand" href="index.html">Psy<span>Lab</span></a>
-<nav class="ps61-nav">
-<a class="active" data-i18n="home" href="index.html">Accueil</a>
-<a data-i18n="labs" href="labs.html">Labs</a>
-<a data-i18n="maintenance" href="maintenance.html">Maintien</a>
-<a class="coat" data-i18n="coat" href="competition.html">La Blouse</a>
-<a data-i18n="profile" href="profile.html">Profil</a>
-</nav>
-<div class="ps61-search">⌕ <input data-i18n-placeholder="search" placeholder="Rechercher un contenu, un Lab, une notion…"/></div>
-<div class="ps61-controls">
-<button aria-label="Thème" class="ps61-iconbtn" data-theme-toggle=""><span data-theme-icon="">☀</span></button>
-<div class="ps61-lang"><button data-lang-fr="">FR</button><button data-lang-en="">EN</button></div>
-<a class="ps61-user" href="profile.html"><span class="avatar" id="topAvatar">R</span><span><b id="userName">Résident</b><small id="userSub"></small></span></a>
-</div>
+<section class="ps60-onboarding" hidden id="professionalOnboarding"><div class="ps60-onboarding-card"><a class="ps59-brand" href="index.html">Psy<span>Lab</span></a><h2 data-i18n="complete_profile">Compléter votre profil</h2><p data-i18n="complete_profile_sub">Une dernière étape avant d’entrer dans PsyLab.</p><label><span data-i18n="pseudo">Pseudonyme public</span><input id="onboardingPseudo" maxlength="32"></label><label><span data-i18n="status">Statut professionnel</span><select id="onboardingStatus"><option value="">—</option><option data-status-option value="EXTERNE">Externe</option><option data-status-option value="INTERNE">Interne</option><option data-status-option value="R1">Résident R1</option><option data-status-option value="R2">Résident R2</option><option data-status-option value="R3">Résident R3</option><option data-status-option value="R4">Résident R4</option><option data-status-option value="ASSISTANT">Assistant</option><option data-status-option value="PROFESSEUR">Professeur</option></select></label><button class="ps59-btn" data-i18n="save_continue" id="onboardingSave">Enregistrer et continuer</button><div class="ps59-auth-message" id="onboardingMessage"></div></div></section>
+
+<div class="ps66-app">
+<header class="ps66-topbar">
+  <a class="ps66-brand" href="index.html">Psy<span>Lab</span></a>
+  <nav class="ps66-nav"><a class="active" href="index.html" data-i18n="home">Accueil</a><a href="labs.html" data-i18n="labs">Labs</a><a href="maintenance.html" data-i18n="maintenance">Maintien</a><a class="coat" href="competition.html" data-i18n="coat">La Blouse</a><a href="profile.html" data-i18n="profile">Profil</a></nav>
+  <div class="ps66-top-actions"><button class="ps66-iconbtn" data-theme-toggle aria-label="Thème"><span data-theme-icon>☀</span></button><div class="ps66-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div><a class="ps66-user" href="profile.html"><span class="avatar" id="topAvatar">R</span><span><b id="userName">Résident</b><small id="userSub"></small></span></a></div>
 </header>
-<main class="ps61-main">
-<section class="ps61-hero">
-<article class="ps61-welcome">
-<h1 id="greeting">Bonjour, <span>Résident</span> 👋</h1>
-<div class="ps61-meta" id="userMeta"></div>
-<div class="ps61-quote"><blockquote id="quoteText"></blockquote><cite id="quoteAuthor"></cite></div>
-</article>
-<article class="ps61-home-coat">
-<div class="ps61-countdown" id="countdown">—</div>
-<div class="ps61-coat-copy">
-<div class="ps61-kicker"><span data-copy="fr">TOUT LE MONDE VEUT</span><span data-copy="en">EVERYONE WANTS</span></div>
-<h2><span data-copy="fr">LA BLOUSE</span><span data-copy="en">THE WHITE COAT</span></h2>
-<p><span data-copy="fr">Un défi clinique hebdomadaire.<br/>Une seule blouse.</span><span data-copy="en">A weekly clinical challenge.<br/>One white coat.</span></p>
-<a class="ps61-gold-btn" href="competition.html"><span data-copy="fr">Je veux la blouse</span><span data-copy="en">I want the coat</span><span>→</span></a>
-</div>
-<div class="ps61-holderbar"><span class="crown">♛</span><div><small data-i18n="current_holder">Titulaire actuel</small><b id="holderName">À prendre</b><small id="holderMeta"></small></div><div class="case"><small data-i18n="week_case">Cas de la semaine</small><b id="weekCase">L’épisode oublié</b><small id="participantCount"></small></div></div>
-</article>
-</section>
-<section class="ps61-section">
-<div class="ps61-section-head"><h2 data-i18n="my_labs">Mes Labs</h2><a href="labs.html"><span data-i18n="see_all">Voir tous les Labs</span> →</a></div>
-<div class="ps61-labs" id="labsGrid"></div>
-</section>
-<section class="ps61-bottom">
-<article class="ps61-feature" id="maintenanceCard"><div class="ps61-feature-icon">⌑</div><div><h3 data-i18n="maintenance">Maintien</h3><p id="maintenanceCopy"><span data-copy="fr">Se débloque après avoir terminé un Lab. Révisez ensuite vos acquis à distance grâce à la répétition espacée.</span><span data-copy="en">Unlocks after completing a Lab, then revisits what you learned through spaced review.</span></p></div><span class="ps61-arrow" id="maintenanceArrow">🔒</span></article>
-<article class="ps61-feature ps61-axone"><div class="ps61-feature-icon"><img alt="Dr Axone" src="assets/axone-avatar.png"/></div><div><h3>Dr Axone</h3><p><span data-copy="fr">Dans les Labs, Dr Axone explique les réponses et les erreurs.</span><span data-copy="en">Inside the Labs, Dr Axone explains answers and mistakes.</span></p></div><span class="ps61-arrow">→</span></article>
-</section>
+<main class="ps66-home">
+  <section class="ps66-welcome-row">
+    <div><p class="ps66-overline"><span data-copy="fr">VOTRE ESPACE</span><span data-copy="en">YOUR SPACE</span></p><h1 id="greeting">Bonjour, <span>Résident</span>.</h1><p id="userMeta" class="ps66-user-meta"></p></div>
+    <blockquote class="ps66-daily-quote"><p id="quoteText"></p><cite id="quoteAuthor"></cite></blockquote>
+  </section>
+
+  <section class="ps66-resume" id="resumeCard">
+    <div class="ps66-resume-index"><small><span data-copy="fr">REPRENDRE</span><span data-copy="en">RESUME</span></small><strong id="resumePct">0%</strong></div>
+    <div class="ps66-resume-main"><span class="ps66-lab-kicker">BipolarLab</span><h2><span data-copy="fr">Reprendre votre parcours clinique</span><span data-copy="en">Resume your clinical path</span></h2><p id="resumeDetail"><span data-copy="fr">Niveau 1 · Psychopathologie descriptive</span><span data-copy="en">Level 1 · Descriptive psychopathology</span></p><div class="ps66-progress"><i id="resumeBar"></i></div></div>
+    <a class="ps66-btn teal" id="resumeLink" href="courses/bipolar/index.html"><span data-copy="fr">Continuer</span><span data-copy="en">Continue</span> <b>→</b></a>
+  </section>
+
+  <section class="ps66-home-grid">
+    <article class="ps66-coat-teaser">
+      <div class="ps66-coat-copy"><small><span data-copy="fr">CETTE SEMAINE DANS</span><span data-copy="en">THIS WEEK IN</span></small><h2><span data-copy="fr">La Blouse</span><span data-copy="en">The White Coat</span></h2><h3 id="weekCase">Le Faux Évident</h3><p><span data-copy="fr">Deux défis. Deux façons de progresser : raisonner en clinique et restituer vos cours.</span><span data-copy="en">Two challenges. Two ways to improve: reason clinically and retrieve what you learned.</span></p><div class="ps66-coat-badges"><span>🥼 <span data-copy="fr">Challenge clinique</span><span data-copy="en">Clinical challenge</span></span><span>▤ <span data-copy="fr">Page Blanche</span><span data-copy="en">Blank Page</span></span></div><a href="competition.html" class="ps66-btn gold"><span data-copy="fr">Entrer dans La Blouse</span><span data-copy="en">Enter The White Coat</span> <b>→</b></a></div>
+      <div class="ps66-coat-visual"><img src="assets/blouse-v61.jpg" alt=""><span id="countdown">—</span></div>
+      <div class="ps66-coat-foot"><div><small data-i18n="current_holder">Titulaire actuel</small><b id="holderName">À prendre</b><span id="holderMeta"></span></div><div><small data-copy="fr">CHALLENGERS</small><small data-copy="en">CHALLENGERS</small><b id="participantCount">0</b></div></div>
+    </article>
+
+    <article class="ps66-maintenance" id="maintenanceCard"><div class="ps66-feature-icon">↻</div><div><small><span data-copy="fr">MÉMOIRE À LONG TERME</span><span data-copy="en">LONG-TERM RETENTION</span></small><h3 data-i18n="maintenance">Maintien</h3><p id="maintenanceCopy"><span data-copy="fr">Se débloque après la fin de votre premier Lab.</span><span data-copy="en">Unlocks after completing your first Lab.</span></p></div><span class="ps66-feature-arrow" id="maintenanceArrow">🔒</span></article>
+  </section>
+
+  <section class="ps66-section">
+    <div class="ps66-section-head"><div><p class="ps66-overline"><span data-copy="fr">PARCOURS</span><span data-copy="en">PATHS</span></p><h2 data-i18n="my_labs">Mes Labs</h2></div><a href="labs.html"><span data-i18n="see_all">Voir tous les Labs</span> →</a></div>
+    <div class="ps66-labs-preview" id="labsGrid"></div>
+  </section>
 </main>
-<nav class="ps61-mobile-nav">
-<a class="active" href="index.html"><b>⌂</b><span data-i18n="home">Accueil</span></a>
-<a href="labs.html"><b>△</b><span data-i18n="labs">Labs</span></a>
-<a href="maintenance.html"><b>♧</b><span data-i18n="maintenance">Maintien</span></a>
-<a href="competition.html"><b>♛</b><span data-i18n="coat">Blouse</span></a>
-<a href="profile.html"><b>○</b><span data-i18n="profile">Profil</span></a>
-</nav>
-<button hidden="" id="logoutBtn"></button>
+<nav class="ps66-mobile-nav"><a class="active" href="index.html"><b>⌂</b><span data-i18n="home">Accueil</span></a><a href="labs.html"><b>△</b><span data-i18n="labs">Labs</span></a><a href="maintenance.html"><b>↻</b><span data-i18n="maintenance">Maintien</span></a><a href="competition.html"><b>♛</b><span data-i18n="coat">Blouse</span></a><a href="profile.html"><b>○</b><span data-i18n="profile">Profil</span></a></nav>
+<button hidden id="logoutBtn"></button>
 </div>
-<script src="psylab-config.js"></script><script src="course-catalog.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="learning-engine.js"></script><script src="v60-ui.js"></script><script src="auth-v60.js"></script><script src="platform-v61.js"></script></body></html>
+<script src="psylab-config.js"></script><script src="course-catalog.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="v60-ui.js"></script><script src="auth-v66.js"></script><script src="platform-v66.js"></script>
+</body></html>
