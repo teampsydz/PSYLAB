@@ -453,3 +453,50 @@
     background-position:58% center!important;
   }
 }
+
+/* V79.4 — exact scene framing from the validated desktop/mobile mockup.
+   The hero and Vestiaire now use dedicated scene assets with no text baked in.
+   Images are rendered at 100% of their slot: no cover-cropping. */
+@media (min-width:861px){
+  .ps77-hero{
+    aspect-ratio:971 / 221!important;
+    background-image:url('assets/v794/hero-desktop.jpg')!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+  }
+  .ps77-hero::after{
+    background:linear-gradient(90deg,rgba(20,5,4,.30) 0%,rgba(20,5,4,.18) 34%,rgba(20,5,4,.05) 54%,rgba(20,5,4,0) 70%)!important;
+  }
+  .ps77-vestiaire{
+    aspect-ratio:971 / 229!important;
+    background-image:url('assets/v794/vestiaire-desktop.jpg')!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+  }
+  .ps77-vestiaire::before{
+    background:linear-gradient(90deg,rgba(15,3,3,.30) 0%,rgba(15,3,3,.18) 30%,rgba(15,3,3,.05) 43%,rgba(15,3,3,0) 55%)!important;
+  }
+}
+
+@media (max-width:860px){
+  .ps77-hero{
+    background-image:url('assets/v794/hero-mobile.jpg')!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+  }
+  .ps77-hero::after{
+    background:linear-gradient(90deg,rgba(20,5,4,.46) 0%,rgba(20,5,4,.28) 58%,rgba(20,5,4,.05) 82%,rgba(20,5,4,0) 100%)!important;
+  }
+  .ps77-vestiaire{
+    background-image:url('assets/v794/vestiaire-mobile.jpg')!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+  }
+  .ps77-vestiaire::before{
+    background:linear-gradient(90deg,rgba(14,3,3,.52) 0%,rgba(14,3,3,.35) 55%,rgba(14,3,3,.08) 82%,rgba(14,3,3,0) 100%)!important;
+  }
+}
