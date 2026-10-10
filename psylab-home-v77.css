@@ -281,3 +281,63 @@
   .ps77-maint-icon{width:20px;height:20px;stroke-width:2}
   .ps77-vestiaire-title{gap:8px}
 }
+
+/* V79 — exact visual pass based on the validated PC/mobile mockup */
+:root{--ps77-max:1240px}
+
+@media(min-width:861px){
+  .ps77-topbar{height:68px;padding-inline:max(24px,calc((100vw - var(--ps77-max))/2));grid-template-columns:minmax(205px,1fr) auto minmax(108px,1fr)}
+  .ps77-brand svg{width:31px;height:31px}.ps77-brand b{font-size:1.66rem}.ps77-brand small{font-size:.40rem;margin-top:4px}
+  .ps77-nav{gap:24px}.ps77-nav a{font-size:.78rem}
+  .ps77-actions .ps-user{width:35px;height:35px}
+
+  .ps77-section,.ps77-hero{width:min(var(--ps77-max),calc(100% - 42px))}
+  .ps77-hero{aspect-ratio:4.55/1;margin-top:16px;background-image:url('assets/v79/hero-exact.jpg');background-position:center;background-size:cover}
+  .ps77-hero-copy{padding:30px 34px 28px}
+  .ps77-hero-copy h1{font-size:3.35rem}
+  .ps77-hero-question{font-size:2.12rem}
+  .ps77-hero-copy i{margin:12px 0 11px;width:44px}
+  .ps77-hero-note{font-size:.93rem;line-height:1.36}
+
+  .ps77-labs-section{padding:14px 0 14px}
+  .ps77-section-head{margin-bottom:9px}
+  .ps77-section-head h2{font-size:1.82rem}
+  .ps77-section-icon{width:27px;height:27px}
+  .ps77-labs{gap:14px}
+  .ps77-lab{border-radius:8px;box-shadow:0 4px 12px rgba(72,42,25,.055)}
+  .ps77-lab-visual{aspect-ratio:2.45/1}
+  .ps77-lab-body{padding:8px 12px 11px}
+  .ps77-lab h3{font-size:1.36rem}
+  .ps77-lab p{font-size:.71rem;min-height:32px;margin:2px 0 8px}
+  .ps77-lab-progress{margin-bottom:8px}.ps77-lab-progress .ps-progress{height:6px}
+  .ps77-lab .ps77-lab-cta{height:34px;font-size:.71rem}
+
+  .ps77-vestiaire-section{padding-bottom:11px}
+  .ps77-vestiaire{aspect-ratio:4.62/1;background-image:url('assets/v79/vestiaire-exact.jpg');background-position:center;background-size:cover;border-radius:10px}
+  .ps77-vestiaire::before{background:linear-gradient(90deg,rgba(18,4,3,.92) 0%,rgba(28,7,5,.80) 39%,rgba(31,11,7,.20) 66%,rgba(22,7,4,0) 100%)}
+  .ps77-vestiaire::after{display:none}
+  .ps77-vestiaire-copy{padding:25px 30px}
+  .ps77-trophy-icon{width:35px;height:35px}
+  .ps77-vestiaire h2{font-size:3.05rem}
+  .ps77-vestiaire h3{font-size:1.38rem;margin-top:7px}
+  .ps77-vestiaire p{font-size:.88rem;margin-bottom:12px}
+  .ps77-vestiaire-cta{min-width:210px;height:36px}
+
+  .ps77-maintenance{min-height:62px;padding:10px 19px 11px;margin-bottom:14px}
+  .ps77-maint-title h2{font-size:1.48rem}.ps77-maint-icon{width:22px;height:22px}.ps77-maintenance p{font-size:.64rem}
+}
+
+@media(min-width:861px) and (max-width:1300px){
+  :root{--ps77-max:1080px}
+  .ps77-hero-copy h1{font-size:3rem}.ps77-hero-question{font-size:1.92rem}
+  .ps77-lab h3{font-size:1.22rem}.ps77-lab p{font-size:.66rem}
+  .ps77-vestiaire h2{font-size:2.75rem}.ps77-vestiaire h3{font-size:1.2rem}
+}
+
+@media(max-width:860px){
+  .ps77-hero{background-image:url('assets/v79/hero-exact.jpg');background-position:64% center;min-height:172px}
+  .ps77-lab{grid-template-columns:92px 1fr}
+  .ps77-lab-visual{aspect-ratio:auto}
+  .ps77-vestiaire{background-image:url('assets/v79/vestiaire-exact.jpg');background-position:58% center;min-height:164px}
+  .ps77-vestiaire h2{font-size:1.88rem}.ps77-vestiaire h3{font-size:.94rem}
+}

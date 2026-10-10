@@ -1,14 +1,6 @@
-PsyLab — correction icônes V78.2
+PsyLab — Accueil connecté fidèle à la maquette validée (PC + mobile)
 
-Remplacer à la racine du projet :
-- index.html
-- psylab-home-v77.css
+Copier le contenu de ce dossier à la racine de PSYLAB-main et accepter le remplacement.
+Le fichier psylab-config.js n'est ni inclus ni modifié.
 
-Corrections :
-- icône Accueil : SVG explicite homogène (desktop + mobile)
-- icône Vos Labs : SVG explicite, suppression du pictogramme CSS déformé
-- icône Le Vestiaire : trophée SVG explicite, suppression du rendu emoji/glyphe
-- icône Maintien harmonisée dans le même système
-
-Aucun changement de logique applicative.
-psylab-config.js n'est ni inclus ni modifié.
+Modifie uniquement l'Accueil connecté et ses visuels.
