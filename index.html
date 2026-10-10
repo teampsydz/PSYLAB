@@ -7,68 +7,58 @@
 <title>PsyLab</title>
 <script>(function(){const l=String(localStorage.getItem('psylab_lang_v59')||'fr').toLowerCase();document.documentElement.lang=l.startsWith('en')?'en':'fr';if(new URLSearchParams(location.search).get('preview')==='1')document.documentElement.classList.add('ps-preview')})()</script>
 <link rel="stylesheet" href="psylab-ui.css">
-<link rel="stylesheet" href="psylab-auth-v75.css">
+<link rel="stylesheet" href="psylab-auth-v76.css">
 </head>
 <body class="ps59-auth-pending">
-<section class="ps-auth ps66-auth ps-auth-v75" id="authGate" aria-label="Connexion PsyLab">
-  <div class="ps-auth-window">
-    <aside class="ps-auth-visual" aria-label="Univers d’étude PsyLab">
-      <div class="ps-auth-visual-bottom">
-        <span class="ps-auth-visual-mark">PsyLab</span>
-        <span class="ps-auth-visual-sub"><span data-copy="fr">Des savoirs d’aujourd’hui pour votre pratique de demain.</span><span data-copy="en">Today’s knowledge for tomorrow’s practice.</span></span>
+<section class="ps-auth ps66-auth ps-auth-v76" id="authGate" aria-label="Connexion PsyLab">
+  <div class="ps-auth-v76-shell">
+    <div class="ps-auth-v76-visual" aria-hidden="true"></div>
+
+    <section class="ps-auth-v76-side">
+      <div class="ps-auth-v76-top">
+        <a class="ps-auth-v76-logo" href="index.html" aria-label="PsyLab">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M24 11c-2-6-11-6-13 1-5 1-6 8-2 11-3 4 0 10 5 10 1 5 8 6 10 1z"></path>
+            <path d="M24 11c2-6 11-6 13 1 5 1 6 8 2 11 3 4 0 10-5 10-1 5-8 6-10 1z"></path>
+            <path d="M17 15c3 1 4 3 4 6M31 15c-3 1-4 3-4 6M15 26c3-1 5 0 6 3M33 26c-3-1-5 0-6 3M24 12v24"></path>
+          </svg>
+          <span>PsyLab</span>
+        </a>
+        <div class="ps-auth-tools"><div class="ps-lang ps66-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div></div>
       </div>
-    </aside>
 
-    <main class="ps-auth-content">
-      <div class="ps-auth-content-inner">
-        <header class="ps-auth-topline">
-          <a class="ps-auth-wordmark" href="index.html" aria-label="PsyLab">Psy<span>Lab</span></a>
-          <div class="ps-auth-lang ps-lang ps66-lang" aria-label="Langue"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div>
-        </header>
+      <div class="ps-auth-v76-intro">
+        <div class="ps-auth-v76-tagline"><span data-copy="fr">APPRENDRE · S’ENTRAÎNER · PROGRESSER</span><span data-copy="en">LEARN · PRACTISE · PROGRESS</span></div>
+        <h1><span data-copy="fr">Penser clinique,<br>un pas plus loin.</span><span data-copy="en">Think clinically,<br>one step further.</span></h1>
+      </div>
 
-        <section class="ps-auth-manifesto">
-          <p class="ps-auth-kicker"><span data-copy="fr">APPRENDRE · S’ENTRAÎNER · PROGRESSER</span><span data-copy="en">LEARN · PRACTISE · PROGRESS</span></p>
-          <h1><span data-copy="fr">Avancer ensemble<br>vers une psychiatrie<br><em>plus humaine.</em></span><span data-copy="en">Move forward together<br>toward a more<br><em>human psychiatry.</em></span></h1>
-          <p><span data-copy="fr">Des contenus cliniques, des repères concrets et des outils pensés pour les résidents en psychiatrie&nbsp;: apprendre, raisonner et progresser à son rythme.</span><span data-copy="en">Clinical content, practical landmarks and tools designed for psychiatry residents: learn, reason and progress at your own pace.</span></p>
-        </section>
+      <div class="ps-auth-v76-mobile-visual" aria-hidden="true"></div>
 
+      <div class="ps-auth-v76-card">
         <div class="ps-auth-tabs ps66-auth-tabs" role="tablist" aria-label="Connexion ou inscription">
           <button class="active" data-auth-tab="login" data-i18n="signin">Connexion</button>
           <button data-auth-tab="signup" data-i18n="signup">Inscription</button>
         </div>
 
         <div class="ps-auth-pane ps66-auth-pane active" data-auth-pane="login">
-          <div class="ps-auth-pane-heading ps-auth-pane-heading-login">
-            <h2><span data-copy="fr">Bon retour sur PsyLab&nbsp;!</span><span data-copy="en">Welcome back to PsyLab!</span></h2>
-            <p><span data-copy="fr">Reprenez là où vous vous êtes arrêté.</span><span data-copy="en">Pick up where you left off.</span></p>
-          </div>
-          <label><span data-i18n="email">Adresse e-mail</span><span class="ps-auth-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><input autocomplete="email" id="loginEmail" type="email" placeholder="votre.email@exemple.com"></span></label>
-          <label><span data-i18n="password">Mot de passe</span><span class="ps-auth-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><input autocomplete="current-password" id="loginPassword" type="password" placeholder="Votre mot de passe"></span></label>
+          <label><span data-i18n="email">Adresse e-mail</span><span class="ps-input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><input autocomplete="email" id="loginEmail" type="email" placeholder="Votre email"></span></label>
+          <label><span data-i18n="password">Mot de passe</span><span class="ps-input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><input autocomplete="current-password" id="loginPassword" type="password" placeholder="Votre mot de passe"></span></label>
           <button class="ps-auth-primary" id="loginBtn" data-i18n="signin"><span data-copy="fr">Se connecter</span><span data-copy="en">Sign in</span><b>→</b></button>
           <div class="ps-social ps66-social-block" data-social-block="login"><div class="ps-or"><span data-copy="fr">ou</span><span data-copy="en">or</span></div><button data-oauth="google" type="button"><b>G</b><span data-i18n="google">Continuer avec Google</span></button><button data-oauth="apple" type="button"><b></b><span data-i18n="apple">Continuer avec Apple</span></button></div>
-          <div class="ps-auth-switch"><div><strong><span data-copy="fr">Pas encore de compte&nbsp;?</span><span data-copy="en">No account yet?</span></strong><small><span data-copy="fr">Créez votre espace PsyLab en quelques secondes.</span><span data-copy="en">Create your PsyLab space in a few seconds.</span></small></div><button type="button" data-jump-auth="signup"><span data-copy="fr">Créer un compte</span><span data-copy="en">Create an account</span> →</button></div>
+          <div class="ps-auth-switch"><span data-copy="fr">Pas encore de compte ?</span><span data-copy="en">No account yet?</span><button type="button" data-jump-auth="signup"><span data-copy="fr">Créer un compte</span><span data-copy="en">Create an account</span> →</button></div>
         </div>
 
         <div class="ps-auth-pane ps66-auth-pane" data-auth-pane="signup">
-          <div class="ps-auth-pane-heading">
-            <h2><span data-copy="fr">Créer votre espace.</span><span data-copy="en">Create your space.</span></h2>
-            <p><span data-copy="fr">Retrouvez vos Labs, vos challenges du Vestiaire et votre progression au même endroit.</span><span data-copy="en">Keep your Labs, Vestiaire challenges and progress in one place.</span></p>
-          </div>
-          <label><span data-i18n="email">Adresse e-mail</span><span class="ps-auth-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><input autocomplete="email" id="signupEmail" type="email" placeholder="votre.email@exemple.com"></span></label>
-          <label><span data-i18n="password">Mot de passe</span><span class="ps-auth-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><input autocomplete="new-password" id="signupPassword" type="password" placeholder="8 caractères minimum"></span></label>
-          <ul class="ps-auth-benefits">
-            <li><span>✓</span><span data-copy="fr">Vos Labs et votre progression</span><span data-copy="en">Your Labs and progress</span></li>
-            <li><span>✓</span><span data-copy="fr">Le Vestiaire et ses challenges hebdomadaires</span><span data-copy="en">The Vestiaire and its weekly challenges</span></li>
-          </ul>
+          <label><span data-i18n="email">Adresse e-mail</span><span class="ps-input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg><input autocomplete="email" id="signupEmail" type="email" placeholder="Votre email"></span></label>
+          <label><span data-i18n="password">Mot de passe</span><span class="ps-input-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="10" width="14" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><input autocomplete="new-password" id="signupPassword" type="password" placeholder="8 caractères minimum"></span></label>
           <button class="ps-auth-primary" id="signupBtn" data-i18n="create_space"><span data-copy="fr">Créer mon compte</span><span data-copy="en">Create my account</span><b>→</b></button>
           <div class="ps-social ps66-social-block" data-social-block="signup"><div class="ps-or"><span data-copy="fr">ou</span><span data-copy="en">or</span></div><button data-oauth="google" type="button"><b>G</b><span data-i18n="google">Continuer avec Google</span></button><button data-oauth="apple" type="button"><b></b><span data-i18n="apple">Continuer avec Apple</span></button></div>
-          <div class="ps-auth-switch"><div><strong><span data-copy="fr">Déjà inscrit&nbsp;?</span><span data-copy="en">Already registered?</span></strong><small><span data-copy="fr">Retrouvez directement votre espace.</span><span data-copy="en">Go straight back to your space.</span></small></div><button type="button" data-jump-auth="login"><span data-copy="fr">Se connecter</span><span data-copy="en">Sign in</span> →</button></div>
+          <div class="ps-auth-switch"><span data-copy="fr">Déjà inscrit ?</span><span data-copy="en">Already registered?</span><button type="button" data-jump-auth="login"><span data-copy="fr">Se connecter</span><span data-copy="en">Sign in</span> →</button></div>
         </div>
 
         <div class="ps59-auth-message" id="authMessage" aria-live="polite"></div>
-        <div class="ps-auth-community"><span class="ps-auth-community-icon">◎</span><span><span data-copy="fr">Pensé pour apprendre, s’entraîner et progresser en psychiatrie.</span><span data-copy="en">Designed to learn, practise and progress in psychiatry.</span></span></div>
       </div>
-    </main>
+    </section>
   </div>
 </section>
 <section class="ps60-onboarding" hidden id="professionalOnboarding"><div class="ps60-onboarding-card"><a class="ps59-brand" href="index.html">Psy<span>Lab</span></a><h2 data-i18n="complete_profile">Compléter votre profil</h2><p data-i18n="complete_profile_sub">Une dernière étape avant d’entrer dans PsyLab.</p><label><span data-i18n="pseudo">Pseudonyme public</span><input id="onboardingPseudo" maxlength="32"></label><label><span data-i18n="status">Statut professionnel</span><select id="onboardingStatus"><option value="">—</option><option data-status-option value="EXTERNE">Externe</option><option data-status-option value="INTERNE">Interne</option><option data-status-option value="R1">Résident R1</option><option data-status-option value="R2">Résident R2</option><option data-status-option value="R3">Résident R3</option><option data-status-option value="R4">Résident R4</option><option data-status-option value="ASSISTANT">Assistant</option><option data-status-option value="PROFESSEUR">Professeur</option></select></label><button class="ps59-btn" data-i18n="save_continue" id="onboardingSave">Enregistrer et continuer</button><div class="ps59-auth-message" id="onboardingMessage"></div></div></section>

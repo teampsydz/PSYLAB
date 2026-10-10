@@ -1,0 +1,253 @@
+/* PsyLab Auth V76 — faithful to the validated reference */
+.ps-auth-v76{
+  --v76-wine:#6b0f1f;
+  --v76-rust:#c35a3f;
+  --v76-ink:#2a1715;
+  --v76-muted:#806f65;
+  --v76-paper:#f8f4ec;
+  --v76-card:#fbf7f0;
+  --v76-line:#ded2c5;
+  --v76-shadow:0 18px 50px rgba(82,53,32,.12);
+  background:var(--v76-paper)!important;
+  color:var(--v76-ink);
+  overflow:auto;
+}
+.ps-auth-v76 .ps-auth-v76-shell{
+  min-height:100dvh;
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(430px,.78fr);
+  background:var(--v76-paper);
+}
+.ps-auth-v76 .ps-auth-v76-visual{
+  min-height:100dvh;
+  background:
+    linear-gradient(180deg,rgba(36,19,11,.02),rgba(36,19,11,.10)),
+    url('assets/auth-study-v76.jpg') center center/cover no-repeat;
+}
+.ps-auth-v76 .ps-auth-v76-side{
+  position:relative;
+  min-height:100dvh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:54px clamp(42px,5vw,86px);
+  background:linear-gradient(180deg,#fbf8f2 0%,#f8f4ec 100%);
+  box-shadow:-18px 0 44px rgba(65,38,24,.05);
+}
+.ps-auth-v76 .ps-auth-v76-top{
+  position:absolute;
+  top:34px;
+  left:clamp(42px,5vw,86px);
+  right:clamp(42px,5vw,86px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.ps-auth-v76 .ps-auth-v76-logo{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--v76-wine);
+  text-decoration:none;
+  font-family:var(--serif,Georgia,serif);
+  font-size:clamp(1.65rem,2vw,2.1rem);
+  font-weight:700;
+  letter-spacing:-.045em;
+}
+.ps-auth-v76 .ps-auth-v76-logo svg{width:36px;height:36px;stroke:currentColor;stroke-width:1.65;fill:none;flex:none}
+.ps-auth-v76 .ps-auth-v76-top .ps-auth-tools{position:static!important}
+.ps-auth-v76 .ps-auth-v76-top .ps-lang{display:flex!important;gap:3px;border:0!important;padding:0!important}
+.ps-auth-v76 .ps-auth-v76-top .ps-lang button{min-width:34px;padding:6px 8px;border:0;border-radius:999px;background:transparent;color:#8f7c71;font-size:.67rem;font-weight:750}
+.ps-auth-v76 .ps-auth-v76-top .ps-lang button.active{background:#efe4d8;color:var(--v76-wine)}
+.ps-auth-v76 .ps-auth-v76-intro{
+  width:min(520px,100%);
+  margin:32px auto 28px;
+  text-align:center;
+}
+.ps-auth-v76 .ps-auth-v76-tagline{
+  margin-bottom:20px;
+  color:#9a765f;
+  font-size:.67rem;
+  font-weight:700;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+}
+.ps-auth-v76 .ps-auth-v76-intro::after{
+  content:"";
+  display:block;
+  width:34px;
+  height:2px;
+  margin:20px auto 0;
+  background:var(--v76-wine);
+  opacity:.78;
+}
+.ps-auth-v76 .ps-auth-v76-intro h1{
+  margin:0;
+  font-family:var(--serif,Georgia,serif);
+  color:#321c1a;
+  font-size:clamp(2.55rem,4vw,4.35rem);
+  line-height:.99;
+  font-weight:500;
+  letter-spacing:-.045em;
+}
+.ps-auth-v76 .ps-auth-v76-mobile-visual{display:none}
+.ps-auth-v76 .ps-auth-v76-card{
+  width:min(530px,100%);
+  margin:0 auto;
+  padding:24px 28px 22px;
+  border:1px solid rgba(196,178,161,.55);
+  border-radius:18px;
+  background:rgba(255,253,248,.88);
+  box-shadow:var(--v76-shadow);
+  backdrop-filter:blur(10px);
+}
+.ps-auth-v76 .ps-auth-tabs{
+  display:flex;
+  gap:0;
+  margin:0 0 22px;
+  border-bottom:1px solid var(--v76-line);
+}
+.ps-auth-v76 .ps-auth-tabs button{
+  flex:1;
+  padding:8px 10px 12px;
+  border:0;
+  border-bottom:2px solid transparent;
+  background:transparent;
+  color:#8e8178;
+  font-size:.82rem;
+  font-weight:650;
+}
+.ps-auth-v76 .ps-auth-tabs button.active{color:var(--v76-wine);border-bottom-color:var(--v76-wine)}
+.ps-auth-v76 .ps-auth-pane{display:none}
+.ps-auth-v76 .ps-auth-pane.active{display:block}
+.ps-auth-v76 .ps-auth-pane>label{display:block;margin:0 0 12px}
+.ps-auth-v76 .ps-auth-pane>label>span:first-child{display:none}
+.ps-auth-v76 .ps-input-wrap{position:relative;display:block}
+.ps-auth-v76 .ps-input-wrap svg{
+  position:absolute;
+  left:14px;
+  top:50%;
+  width:17px;
+  height:17px;
+  transform:translateY(-50%);
+  color:#876f62;
+  stroke-width:1.55;
+  pointer-events:none;
+}
+.ps-auth-v76 .ps-input-wrap input{
+  width:100%;
+  height:48px;
+  padding:0 14px 0 42px;
+  border:1px solid var(--v76-line);
+  border-radius:12px;
+  background:rgba(255,255,255,.62);
+  color:#35231f;
+  outline:none;
+  font-size:.78rem;
+  transition:border-color .15s ease,box-shadow .15s ease,background .15s ease;
+}
+.ps-auth-v76 .ps-input-wrap input::placeholder{color:#9a8c82}
+.ps-auth-v76 .ps-input-wrap input:focus{border-color:#aa5b4a;background:#fff;box-shadow:0 0 0 4px rgba(170,91,74,.08)}
+.ps-auth-v76 .ps-auth-primary{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  width:100%;
+  height:48px;
+  margin-top:8px;
+  border:0;
+  border-radius:12px;
+  background:linear-gradient(90deg,#7b1024,#9c1730);
+  color:white;
+  font-size:.78rem;
+  font-weight:760;
+  box-shadow:0 9px 22px rgba(107,15,31,.18);
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.ps-auth-v76 .ps-auth-primary:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(107,15,31,.23)}
+.ps-auth-v76 .ps-auth-primary b{font-size:1rem;font-weight:500}
+.ps-auth-v76 .ps-social{display:grid;gap:8px;margin-top:16px}
+.ps-auth-v76 .ps-social[hidden]{display:none!important}
+.ps-auth-v76 .ps-or{display:flex;align-items:center;gap:12px;margin:3px 0 2px;color:#9a8b82;font-size:.66rem}
+.ps-auth-v76 .ps-or::before,.ps-auth-v76 .ps-or::after{content:"";height:1px;flex:1;background:var(--v76-line)}
+.ps-auth-v76 .ps-social button{
+  height:44px;
+  border:1px solid var(--v76-line);
+  border-radius:12px;
+  background:rgba(255,255,255,.62);
+  color:#382722;
+  font-size:.75rem;
+  font-weight:630;
+}
+.ps-auth-v76 .ps-social button b{margin-right:8px;font-size:1rem}
+.ps-auth-v76 .ps-auth-switch{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  margin:16px 0 0;
+  padding:0;
+  background:transparent;
+  color:#8f7d73;
+  font-size:.66rem;
+}
+.ps-auth-v76 .ps-auth-switch button{padding:0;border:0;background:transparent;color:var(--v76-wine);font-size:.66rem;font-weight:800}
+.ps-auth-v76 .ps-auth-privacy{display:none}
+.ps-auth-v76 .ps59-auth-message{min-height:16px;margin:10px 0 0;text-align:center;font-size:.7rem}
+.ps-auth-v76 .ps59-auth-message.bad{color:#a32635}.ps-auth-v76 .ps59-auth-message.good{color:#38704d}
+
+@media (max-width:1100px){
+  .ps-auth-v76 .ps-auth-v76-shell{grid-template-columns:minmax(0,.9fr) minmax(410px,1.1fr)}
+  .ps-auth-v76 .ps-auth-v76-side{padding-left:42px;padding-right:42px}
+  .ps-auth-v76 .ps-auth-v76-top{left:42px;right:42px}
+  .ps-auth-v76 .ps-auth-v76-intro h1{font-size:clamp(2.45rem,4.8vw,3.35rem)}
+}
+
+@media (max-width:760px){
+  .ps-auth-v76{background:#f8f4ec!important}
+  .ps-auth-v76 .ps-auth-v76-shell{display:block;min-height:100dvh}
+  .ps-auth-v76 .ps-auth-v76-visual{display:none}
+  .ps-auth-v76 .ps-auth-v76-side{
+    min-height:100dvh;
+    display:block;
+    padding:22px 14px 34px;
+    box-shadow:none;
+    background:#f8f4ec;
+  }
+  .ps-auth-v76 .ps-auth-v76-top{
+    position:relative;
+    inset:auto;
+    margin:0 4px 12px;
+  }
+  .ps-auth-v76 .ps-auth-v76-logo{font-size:1.35rem;gap:7px}
+  .ps-auth-v76 .ps-auth-v76-logo svg{width:28px;height:28px}
+  .ps-auth-v76 .ps-auth-v76-intro{margin:12px auto 14px;text-align:left;padding:0 4px}
+  .ps-auth-v76 .ps-auth-v76-tagline{font-size:.52rem;letter-spacing:.18em;margin-bottom:10px}
+  .ps-auth-v76 .ps-auth-v76-intro h1{font-size:2.35rem;line-height:.98}
+  .ps-auth-v76 .ps-auth-v76-intro::after{margin:13px 0 0;width:32px}
+  .ps-auth-v76 .ps-auth-v76-mobile-visual{
+    display:block;
+    height:210px;
+    margin:0 -14px 0;
+    background:url('assets/auth-study-v76-mobile.jpg') center/cover no-repeat;
+  }
+  .ps-auth-v76 .ps-auth-v76-card{
+    width:calc(100% + 0px);
+    margin:-12px auto 0;
+    padding:20px 16px 18px;
+    border-radius:18px;
+    background:#fffaf4;
+    box-shadow:0 18px 38px rgba(76,47,29,.13);
+  }
+  .ps-auth-v76 .ps-auth-tabs{margin-bottom:18px}
+  .ps-auth-v76 .ps-auth-tabs button{font-size:.78rem}
+  .ps-auth-v76 .ps-input-wrap input{height:47px}
+}
+
+@media (max-width:390px){
+  .ps-auth-v76 .ps-auth-v76-intro h1{font-size:2.12rem}
+  .ps-auth-v76 .ps-auth-v76-mobile-visual{height:185px}
+  .ps-auth-v76 .ps-auth-v76-card{padding:18px 14px 16px}
+}
