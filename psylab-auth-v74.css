@@ -1,0 +1,130 @@
+/* PsyLab Auth V74 — warm, motivating landing for residents. Auth logic unchanged. */
+.ps-auth-v74{
+  --auth-cream:#fffaf1;
+  --auth-cream-2:#f8ead8;
+  --auth-burgundy:#7d1229;
+  --auth-rust:#b45134;
+  --auth-amber:#e1a24a;
+  --auth-ink:#2b1d18;
+  --auth-muted:#775f53;
+  background:
+    radial-gradient(circle at 5% 5%,rgba(255,255,255,.92),transparent 28%),
+    linear-gradient(135deg,#f5e0c7 0%,#f8ead8 48%,#efd5bd 100%);
+}
+.ps-auth-v74 .ps-auth-shell{
+  min-height:100vh;
+  grid-template-columns:minmax(0,1.15fr) minmax(430px,.85fr);
+  background:transparent;
+}
+.ps-auth-v74 .ps-auth-scene{
+  position:relative;
+  min-height:100vh;
+  padding:42px clamp(34px,5.4vw,86px) 38px;
+  border-right:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  isolation:isolate;
+  background:
+    linear-gradient(90deg,rgba(255,249,239,.98) 0%,rgba(255,249,239,.91) 33%,rgba(255,249,239,.38) 63%,rgba(255,249,239,.06) 100%),
+    linear-gradient(180deg,rgba(225,162,74,.06),rgba(89,33,22,.13)),
+    url('assets/v71/home_hero.jpg') 68% center/cover no-repeat;
+}
+.ps-auth-v74 .ps-auth-scene::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(circle at 23% 19%,rgba(255,255,255,.65),transparent 27%),
+    linear-gradient(180deg,transparent 64%,rgba(98,46,24,.18) 100%);
+}
+.ps-auth-v74 .ps-auth-scene::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:24%;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,transparent,rgba(75,33,18,.17));
+}
+.ps-auth-v74 .ps-auth-brand{
+  color:#301d17;font-size:2rem;letter-spacing:-.055em;text-shadow:0 1px rgba(255,255,255,.5)
+}
+.ps-auth-v74 .ps-auth-brand span{color:var(--auth-burgundy)}
+.ps-auth-v74 .ps-auth-copy{max-width:660px;margin:auto 0;padding:9vh 0 6vh}
+.ps-auth-v74 .ps-auth-kicker{
+  margin:0 0 18px;color:#8d4a39;font-size:.7rem;font-weight:850;letter-spacing:.19em;text-transform:uppercase
+}
+.ps-auth-v74 .ps-auth-copy h1{
+  margin:0;color:#53101d;font-family:var(--serif);font-size:clamp(3.6rem,5.7vw,6.25rem);font-weight:500;line-height:.89;letter-spacing:-.058em;text-shadow:0 2px 0 rgba(255,255,255,.55)
+}
+.ps-auth-v74 .ps-auth-copy h1 em{color:var(--auth-rust);font-style:normal}
+.ps-auth-v74 .ps-auth-lead{
+  max-width:540px;margin:24px 0 0;color:#58463e;font-family:var(--serif);font-size:1.08rem;line-height:1.65
+}
+.ps-auth-v74 .ps-auth-note{
+  position:absolute;right:7.5%;top:23%;z-index:2;display:flex;align-items:flex-start;gap:9px;transform:rotate(-3deg);
+  padding:14px 16px;border:1px solid rgba(194,136,72,.42);border-radius:9px;background:rgba(255,241,206,.86);box-shadow:0 14px 30px rgba(79,45,24,.13);backdrop-filter:blur(5px);color:#793423
+}
+.ps-auth-v74 .ps-auth-note span{font-size:1.35rem;line-height:1}
+.ps-auth-v74 .ps-auth-note strong{font-family:var(--serif);font-size:.9rem;line-height:1.25;font-weight:600}
+.ps-auth-v74 .ps-auth-features{
+  position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;width:min(720px,100%);
+  padding:10px;border:1px solid rgba(255,245,231,.48);border-radius:17px;background:rgba(89,46,28,.56);box-shadow:0 14px 36px rgba(52,29,19,.16);backdrop-filter:blur(10px);color:#fff9ef
+}
+.ps-auth-v74 .ps-auth-features>div{display:flex;align-items:center;gap:9px;min-height:48px;padding:7px 10px;border-right:1px solid rgba(255,255,255,.17);font-size:.68rem;line-height:1.22}
+.ps-auth-v74 .ps-auth-features>div:last-child{border-right:0}
+.ps-auth-v74 .ps-auth-features svg{width:21px;height:21px;flex:0 0 auto;stroke-width:1.65;color:#f5bf71}
+.ps-auth-v74 .ps-auth-panel{
+  min-height:100vh;padding:26px clamp(28px,4.3vw,64px) 38px;justify-content:center;
+  background:
+    radial-gradient(circle at 95% 0%,rgba(225,162,74,.11),transparent 25%),
+    linear-gradient(180deg,#fffaf2 0%,#fff8ee 100%);
+  box-shadow:-28px 0 64px rgba(79,43,24,.08)
+}
+.ps-auth-v74 .ps-auth-panel-top{position:absolute;top:24px;left:clamp(28px,4.3vw,64px);right:clamp(28px,4.3vw,64px);display:flex;align-items:center;justify-content:space-between}
+.ps-auth-v74 .ps-auth-panel-brand{display:none;font-family:var(--serif);font-weight:700;font-size:1.5rem;letter-spacing:-.045em}.ps-auth-v74 .ps-auth-panel-brand span{color:var(--auth-burgundy)}
+.ps-auth-v74 .ps-auth-tools{position:static}
+.ps-auth-v74 .ps-lang{border-left:0;padding-left:0;gap:2px}.ps-auth-v74 .ps-lang button{padding:5px 6px;border-radius:999px}.ps-auth-v74 .ps-lang button.active{background:#f2ddca}
+.ps-auth-v74 .ps-auth-card{width:min(525px,100%);margin:auto;padding:28px 30px 22px;border:1px solid rgba(203,177,151,.62);border-radius:24px;background:rgba(255,253,248,.86);box-shadow:0 24px 60px rgba(83,44,24,.12);backdrop-filter:blur(10px)}
+.ps-auth-v74 .ps-auth-tabs{gap:0;margin:0 0 28px;border-bottom:1px solid #e6d7ca}.ps-auth-v74 .ps-auth-tabs button{flex:1;padding:9px 8px 12px;font-family:var(--serif);font-size:.98rem;font-weight:650;color:#8a7569}.ps-auth-v74 .ps-auth-tabs button.active{color:var(--auth-burgundy);border-bottom-width:3px}
+.ps-auth-v74 .ps-auth-heading{margin-bottom:23px}.ps-auth-v74 .ps-auth-mini{margin:0 0 7px;color:#a76142;font-size:.58rem;font-weight:850;letter-spacing:.16em}.ps-auth-v74 .ps-auth-heading h2{margin:0 0 9px;color:#351f1b;font-size:2.45rem;line-height:1.02;letter-spacing:-.045em}.ps-auth-v74 .ps-auth-heading p{max-width:430px;color:#6e5a50;font-size:.82rem;line-height:1.55}
+.ps-auth-v74 .ps-auth-pane>label{gap:6px;margin-bottom:13px;color:#4a3730;font-size:.7rem;font-weight:750}
+.ps-auth-v74 .ps-input-wrap{position:relative;display:block}.ps-auth-v74 .ps-input-wrap svg{position:absolute;left:14px;top:50%;width:17px;height:17px;transform:translateY(-50%);color:#8e776b;stroke-width:1.55;pointer-events:none}.ps-auth-v74 .ps-auth-pane .ps-input-wrap input{height:49px;padding-left:42px;border-color:#dfcec0;border-radius:12px;background:#fffdfa;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}.ps-auth-v74 .ps-auth-pane .ps-input-wrap input:focus{border-color:#b55d49;box-shadow:0 0 0 4px rgba(181,93,73,.09)}
+.ps-auth-v74 .ps-auth-primary{display:flex;align-items:center;justify-content:center;gap:14px;height:51px;margin-top:8px;border-radius:13px;background:linear-gradient(135deg,#85152c,#a9273f);box-shadow:0 12px 27px rgba(125,18,41,.22);font-size:.78rem;letter-spacing:.01em}.ps-auth-v74 .ps-auth-primary b{font-size:1.05rem;font-weight:500}.ps-auth-v74 .ps-auth-primary:hover{transform:translateY(-1px);box-shadow:0 15px 32px rgba(125,18,41,.27)}
+.ps-auth-v74 .ps-social{margin-top:18px;gap:8px}.ps-auth-v74 .ps-social button{height:46px;border-color:#dfcec0;border-radius:12px;background:#fffdfa;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}.ps-auth-v74 .ps-social button:hover{transform:translateY(-1px);border-color:#c9aa91;box-shadow:0 7px 18px rgba(78,47,28,.07)}
+.ps-auth-v74 .ps-or{margin:5px 0 3px}
+.ps-auth-v74 .ps-auth-benefits{display:grid;gap:6px;margin:4px 0 14px;padding:0;list-style:none;color:#735b50;font-size:.68rem}.ps-auth-v74 .ps-auth-benefits li{display:flex;align-items:center;gap:8px}.ps-auth-v74 .ps-auth-benefits li>span:first-child{display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:#f4dfcd;color:#9b2a3d;font-size:.65rem;font-weight:900}
+.ps-auth-v74 .ps-auth-switch{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:18px;padding:13px 14px;border-radius:13px;background:#f8eee3;color:#715c51;font-size:.68rem}.ps-auth-v74 .ps-auth-switch button{border:0;background:transparent;color:#8b1930;font-size:.68rem;font-weight:800;white-space:nowrap}
+.ps-auth-v74 .ps-auth-privacy{text-align:center;margin:16px 0 0;color:#9a8376;font-size:.62rem}.ps-auth-v74 .ps59-auth-message{text-align:center}
+
+@media(max-width:1050px){
+  .ps-auth-v74 .ps-auth-shell{grid-template-columns:minmax(0,1fr) 430px}
+  .ps-auth-v74 .ps-auth-scene{padding-left:38px;padding-right:38px}
+  .ps-auth-v74 .ps-auth-copy h1{font-size:clamp(3.2rem,5.4vw,5rem)}
+  .ps-auth-v74 .ps-auth-note{display:none}
+  .ps-auth-v74 .ps-auth-features{grid-template-columns:repeat(2,minmax(0,1fr));max-width:520px}.ps-auth-v74 .ps-auth-features>div:nth-child(2){border-right:0}
+}
+@media(max-width:800px){
+  .ps-auth-v74{position:fixed;overflow:auto;background:#fff8ee}
+  .ps-auth-v74 .ps-auth-shell{display:block;min-height:100vh}
+  .ps-auth-v74 .ps-auth-scene{min-height:265px;padding:22px 21px 24px;justify-content:flex-start;border-bottom:0;background:
+    linear-gradient(180deg,rgba(255,249,239,.92) 0%,rgba(255,249,239,.62) 38%,rgba(255,249,239,.17) 100%),
+    linear-gradient(180deg,transparent,rgba(100,45,24,.10)),
+    url('assets/v71/home_hero.jpg') 65% center/cover no-repeat}
+  .ps-auth-v74 .ps-auth-brand{font-size:1.55rem}
+  .ps-auth-v74 .ps-auth-copy{margin:28px 0 0;padding:0;max-width:82%}
+  .ps-auth-v74 .ps-auth-kicker{margin-bottom:8px;font-size:.52rem;letter-spacing:.15em}
+  .ps-auth-v74 .ps-auth-copy h1{font-size:2.55rem;line-height:.93}
+  .ps-auth-v74 .ps-auth-copy h1 br:nth-of-type(2){display:none}
+  .ps-auth-v74 .ps-auth-lead{display:none}
+  .ps-auth-v74 .ps-auth-note,.ps-auth-v74 .ps-auth-features{display:none}
+  .ps-auth-v74 .ps-auth-panel{min-height:auto;margin-top:-12px;padding:0 14px 32px;background:transparent;box-shadow:none}
+  .ps-auth-v74 .ps-auth-panel-top{position:relative;top:auto;left:auto;right:auto;display:flex;justify-content:flex-end;height:30px;margin-bottom:4px}
+  .ps-auth-v74 .ps-auth-panel-brand{display:none}.ps-auth-v74 .ps-lang{display:flex}
+  .ps-auth-v74 .ps-auth-card{width:100%;padding:23px 19px 19px;border-radius:22px;background:#fffaf3;box-shadow:0 18px 40px rgba(88,49,27,.14)}
+  .ps-auth-v74 .ps-auth-tabs{margin-bottom:22px}.ps-auth-v74 .ps-auth-tabs button{font-size:.88rem}
+  .ps-auth-v74 .ps-auth-heading h2{font-size:2rem}.ps-auth-v74 .ps-auth-heading p{font-size:.75rem}
+  .ps-auth-v74 .ps-auth-pane .ps-input-wrap input{height:48px}
+  .ps-auth-v74 .ps-auth-switch{align-items:flex-start;flex-direction:column;gap:5px}.ps-auth-v74 .ps-auth-switch button{padding:0}
+}
+@media(max-width:430px){
+  .ps-auth-v74 .ps-auth-scene{min-height:235px}
+  .ps-auth-v74 .ps-auth-copy{max-width:90%;margin-top:24px}
+  .ps-auth-v74 .ps-auth-copy h1{font-size:2.25rem}
+  .ps-auth-v74 .ps-auth-card{padding:20px 16px 18px;border-radius:19px}
+  .ps-auth-v74 .ps-auth-heading h2{font-size:1.8rem}
+}
