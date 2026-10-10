@@ -220,3 +220,64 @@
   .ps77-labs{gap:10px}.ps77-lab h3{font-size:1.3rem}.ps77-lab p{font-size:.70rem}
   .ps77-vestiaire h2{font-size:3rem}
 }
+
+
+/* V78.2 — normalized icon system: explicit SVG only, no emoji/glyph fallbacks */
+.ps77-nav .ps77-nav-icon,
+.ps77-mobile-nav .ps77-nav-icon{
+  flex:0 0 auto;
+  display:block;
+  fill:none;
+  stroke:currentColor;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.ps77-nav .ps77-nav-icon{width:16px;height:16px;stroke-width:1.7}
+.ps77-mobile-nav .ps77-nav-icon{width:18px;height:18px;stroke-width:1.65}
+
+.ps77-section-head h2{align-items:center}
+.ps77-section-icon{
+  flex:0 0 auto;
+  width:30px;
+  height:30px;
+  display:block;
+  color:#7f1327;
+  stroke-width:2.1;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+/* disable all legacy pseudo-art for the section icon */
+.ps77-stack-icon{display:none!important}
+.ps77-stack-icon::before,.ps77-stack-icon::after{content:none!important;display:none!important}
+
+.ps77-vestiaire-title{display:flex;align-items:center;gap:13px}
+.ps77-trophy{display:none!important}
+.ps77-trophy::before,.ps77-trophy::after{content:none!important;display:none!important}
+.ps77-trophy-icon{
+  width:40px;
+  height:40px;
+  flex:0 0 auto;
+  display:block;
+  color:#e4ad58;
+  stroke-width:2.2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.ps77-maint-icon{
+  width:25px;
+  height:25px;
+  flex:0 0 auto;
+  display:block;
+  color:#761425;
+  stroke-width:2.1;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+@media(max-width:720px){
+  .ps77-section-icon{width:23px;height:23px;stroke-width:2}
+  .ps77-trophy-icon{width:25px;height:25px;stroke-width:2}
+  .ps77-maint-icon{width:20px;height:20px;stroke-width:2}
+  .ps77-vestiaire-title{gap:8px}
+}

@@ -1,21 +1,14 @@
-PSYLAB — REDESIGN À TESTER
+PsyLab — correction icônes V78.2
 
-Ce paquet contient uniquement les fichiers modifiés pour cette passe visuelle.
+Remplacer à la racine du projet :
+- index.html
+- psylab-home-v77.css
 
-À faire :
-1. Ouvrir votre dossier PSYLAB-main actuel.
-2. Copier les fichiers de ce paquet à la racine de PSYLAB-main.
-3. Accepter le remplacement des fichiers portant le même nom.
-4. Ne pas modifier psylab-config.js.
+Corrections :
+- icône Accueil : SVG explicite homogène (desktop + mobile)
+- icône Vos Labs : SVG explicite, suppression du pictogramme CSS déformé
+- icône Le Vestiaire : trophée SVG explicite, suppression du rendu emoji/glyphe
+- icône Maintien harmonisée dans le même système
 
-Ce qui change :
-- Accueil : citations de psychiatres intégrées et tournantes, Vestiaire plus vivant.
-- Vestiaire : bandeau d'édition en cours, rang personnel visible immédiatement,
-  compte à rebours, podium, classement plus dynamique, animations discrètes.
-- La Blouse reste le challenge clinique ; La Page Blanche reste le challenge théorique.
-- Aucune référence aux « internes » dans le Vestiaire.
-- Les données affichées en production restent issues du backend existant ; aucun faux score n'est généré.
-
-Pour une prévisualisation sans connexion :
-- index.html?preview=1
-- competition.html?preview=1
+Aucun changement de logique applicative.
+psylab-config.js n'est ni inclus ni modifié.
