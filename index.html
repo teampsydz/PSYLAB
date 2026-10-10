@@ -8,6 +8,7 @@
 <script>(function(){const l=String(localStorage.getItem('psylab_lang_v59')||'fr').toLowerCase();document.documentElement.lang=l.startsWith('en')?'en':'fr';if(new URLSearchParams(location.search).get('preview')==='1')document.documentElement.classList.add('ps-preview')})()</script>
 <link rel="stylesheet" href="psylab-ui.css">
 <link rel="stylesheet" href="psylab-auth-v76.css">
+<link rel="stylesheet" href="psylab-home-v77.css">
 </head>
 <body class="ps59-auth-pending">
 <section class="ps-auth ps66-auth ps-auth-v76" id="authGate" aria-label="Connexion PsyLab">
@@ -64,38 +65,68 @@
 <section class="ps60-onboarding" hidden id="professionalOnboarding"><div class="ps60-onboarding-card"><a class="ps59-brand" href="index.html">Psy<span>Lab</span></a><h2 data-i18n="complete_profile">Compléter votre profil</h2><p data-i18n="complete_profile_sub">Une dernière étape avant d’entrer dans PsyLab.</p><label><span data-i18n="pseudo">Pseudonyme public</span><input id="onboardingPseudo" maxlength="32"></label><label><span data-i18n="status">Statut professionnel</span><select id="onboardingStatus"><option value="">—</option><option data-status-option value="EXTERNE">Externe</option><option data-status-option value="INTERNE">Interne</option><option data-status-option value="R1">Résident R1</option><option data-status-option value="R2">Résident R2</option><option data-status-option value="R3">Résident R3</option><option data-status-option value="R4">Résident R4</option><option data-status-option value="ASSISTANT">Assistant</option><option data-status-option value="PROFESSEUR">Professeur</option></select></label><button class="ps59-btn" data-i18n="save_continue" id="onboardingSave">Enregistrer et continuer</button><div class="ps59-auth-message" id="onboardingMessage"></div></div></section>
 
 <div class="ps-app">
-<header class="ps-topbar">
-  <a class="ps-brand" href="index.html">Psy<span>Lab</span></a>
-  <nav class="ps-nav" aria-label="Navigation principale"><a class="active" href="index.html">Accueil</a><a href="labs.html">Labs</a><a href="maintenance.html">Maintien</a><a href="competition.html">Le Vestiaire</a><a href="profile.html">Profil</a></nav>
-  <div class="ps-actions"><div class="ps-search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><span>Rechercher…</span></div><div class="ps-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div><a class="ps-user" href="profile.html" aria-label="Profil"><span class="avatar" id="topAvatar">R</span></a></div>
+<header class="ps-topbar ps77-topbar">
+  <a class="ps77-brand" href="index.html" aria-label="PsyLab">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 11c-2-6-11-6-13 1-5 1-6 8-2 11-3 4 0 10 5 10 1 5 8 6 10 1z"></path><path d="M24 11c2-6 11-6 13 1 5 1 6 8 2 11 3 4 0 10-5 10-1 5-8 6-10 1z"></path><path d="M17 15c3 1 4 3 4 6M31 15c-3 1-4 3-4 6M15 26c3-1 5 0 6 3M33 26c-3-1-5 0-6 3M24 12v24"></path></svg>
+    <span><b>PsyLab</b><small>APPRENDRE · S’ENTRAÎNER · PROGRESSER</small></span>
+  </a>
+  <nav class="ps-nav ps77-nav" aria-label="Navigation principale">
+    <a class="active" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10v10h13V10"></path></svg><span>Accueil</span></a>
+    <a href="labs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3 3 8l9 5 9-5-9-5Z"></path><path d="m5 10 7 4 7-4v6l-7 4-7-4z"></path></svg><span>Labs</span></a>
+    <a href="maintenance.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 19V10M10 19V6M16 19v-8M22 19V3"></path></svg><span>Maintien</span></a>
+    <a href="competition.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 4h10v4a5 5 0 0 1-10 0z"></path><path d="M9 16h6M12 13v3M8 20h8"></path><path d="M7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"></path></svg><span>Le Vestiaire</span></a>
+    <a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></svg><span>Profil</span></a>
+  </nav>
+  <div class="ps-actions ps77-actions">
+    <button class="ps77-search" type="button" aria-label="Rechercher" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></button>
+    <div class="ps-lang"><button data-lang-fr>FR</button><button data-lang-en>EN</button></div>
+    <a class="ps-user" href="profile.html" aria-label="Profil"><span class="avatar" id="topAvatar">R</span></a>
+  </div>
 </header>
 
-<main class="ps-home ps-container">
-  <section class="ps-home-hero">
-    <div class="ps-home-copy">
-      <p class="ps-eyebrow"><span data-copy="fr">VOTRE ESPACE PSYLAB</span><span data-copy="en">YOUR PSYLAB SPACE</span></p>
+<main class="ps77-home">
+  <section class="ps77-hero">
+    <div class="ps77-hero-shade"></div>
+    <div class="ps77-hero-copy">
       <h1 id="greeting">Bonjour <span>Nadia</span>,</h1>
-      <p class="ps-home-sub"><span data-copy="fr">Une nouvelle étape vous attend.</span><span data-copy="en">Your next step is waiting.</span></p>
-      <p class="ps-home-note"><span data-copy="fr">Un module, un challenge, une notion mieux maîtrisée : avancez à votre rythme, mais avancez.</span><span data-copy="en">One module, one challenge, one idea mastered better: move at your pace, but keep moving.</span></p>
+      <p class="ps77-hero-question"><span data-copy="fr">On reprend là où vous en étiez&nbsp;?</span><span data-copy="en">Pick up where you left off?</span></p>
+      <i aria-hidden="true"></i>
+      <p class="ps77-hero-note"><span data-copy="fr">Des contenus cliniques, des cas concrets et des défis<br class="desktop-only"> pour continuer à progresser, à votre rythme.</span><span data-copy="en">Clinical content, concrete cases and challenges<br class="desktop-only"> to keep progressing at your own pace.</span></p>
       <span id="userMeta" hidden></span><span id="userName" hidden></span><span id="userSub" hidden></span>
     </div>
-    <div class="ps-home-art" aria-hidden="true"></div>
   </section>
 
-  <section class="ps-home-focus">
-    <article class="ps-resume" id="resumeCard"><div class="ps-resume-content"><small>LAB 01</small><h2>BipolarLab</h2><p><span data-copy="fr">Comprendre les troubles bipolaires pour une approche clinique nuancée.</span><span data-copy="en">Understand bipolar disorders through a nuanced clinical approach.</span></p><div class="ps-resume-actions"><a class="ps-btn" id="resumeLink" href="courses/bipolar/index.html"><span data-copy="fr">Continuer</span><span data-copy="en">Continue</span> <span class="ps-arrow">→</span></a><div class="ps-resume-progress"><div class="ps-progress"><i id="resumeBar" style="width:0%"></i></div><strong id="resumePct">0%</strong></div></div><span id="resumeDetail" hidden></span></div></article>
-    <a class="ps-vestiaire-teaser" href="competition.html"><div class="inner"><small><span data-copy="fr">CHALLENGES HEBDOMADAIRES</span><span data-copy="en">WEEKLY CHALLENGES</span></small><h2>Le Vestiaire</h2><p><span data-copy="fr">Les challenges de la semaine sont ouverts.</span><span data-copy="en">This week’s challenges are open.</span></p><div class="go"><span><b id="participantCount">—</b> <span data-copy="fr">participants</span><span data-copy="en">participants</span> · <span id="countdown">—</span></span><b>→</b></div></div><span id="weekCase" hidden>Le Faux Évident</span><span id="holderName" hidden></span><span id="holderMeta" hidden></span></a>
+  <section class="ps77-section ps77-labs-section">
+    <div class="ps77-section-head">
+      <h2><span class="ps77-stack-icon" aria-hidden="true">▰</span><span data-copy="fr">Vos Labs</span><span data-copy="en">Your Labs</span></h2>
+      <a href="labs.html"><span data-copy="fr">Voir tous les Labs</span><span data-copy="en">See all Labs</span> <b>→</b></a>
+    </div>
+    <div class="ps77-labs" id="labsGrid"></div>
   </section>
 
-  <section class="ps-home-lower">
-    <article class="ps-section-card"><div class="ps-section-head"><h2><span data-copy="fr">Vos Labs</span><span data-copy="en">Your Labs</span></h2><a href="labs.html"><span data-copy="fr">Voir tout</span><span data-copy="en">See all</span> →</a></div><div class="ps-labs-mini" id="labsGrid"></div></article>
-    <article class="ps-section-card ps-maint-mini" id="maintenanceCard"><div><div class="ps-section-head"><h2>Maintien</h2></div><span class="construction"><span data-copy="fr">EN CONSTRUCTION</span><span data-copy="en">IN DEVELOPMENT</span></span><p id="maintenanceCopy"><span data-copy="fr">Cet espace de consolidation sera ouvert dans une prochaine étape.</span><span data-copy="en">This consolidation space will open in a later stage.</span></p></div><a href="maintenance.html"><span data-copy="fr">Voir la page</span><span data-copy="en">Open page</span><span id="maintenanceArrow">→</span></a></article>
+  <section class="ps77-section ps77-vestiaire-section">
+    <a class="ps77-vestiaire" href="competition.html">
+      <div class="ps77-vestiaire-copy">
+        <div class="ps77-vestiaire-title"><span class="ps77-trophy" aria-hidden="true">🏆</span><h2>Le Vestiaire</h2></div>
+        <h3><span data-copy="fr">Relevez le défi, entrez dans la compétition.</span><span data-copy="en">Take the challenge. Enter the competition.</span></h3>
+        <p><span data-copy="fr">Deux challenges. Un classement. À vous de jouer.</span><span data-copy="en">Two challenges. One ranking. Your move.</span></p>
+        <span class="ps77-vestiaire-cta"><span data-copy="fr">Accéder au Vestiaire</span><span data-copy="en">Enter the Vestiaire</span> <b>→</b></span>
+      </div>
+      <div class="ps77-vestiaire-meta"><span><b id="participantCount">—</b> <span data-copy="fr">participants</span><span data-copy="en">participants</span></span><span id="countdown">—</span></div>
+      <span id="weekCase" hidden>Le Faux Évident</span><span id="holderName" hidden></span><span id="holderMeta" hidden></span>
+    </a>
   </section>
+
+  <section class="ps77-section ps77-maintenance" id="maintenanceCard">
+    <div class="ps77-maint-title"><span class="ps77-maint-icon" aria-hidden="true">▥</span><h2>Maintien</h2><span class="ps77-construction"><span data-copy="fr">En cours de construction</span><span data-copy="en">In development</span></span></div>
+    <p id="maintenanceCopy"><span data-copy="fr">Des ressources pour consolider vos acquis et entretenir vos compétences sur le long terme.</span><span data-copy="en">Resources to consolidate learning and maintain skills over time.</span></p>
+  </section>
+  <span id="resumePct" hidden>0%</span><span id="resumeBar" hidden></span><span id="resumeDetail" hidden></span>
 </main>
 
-<nav class="ps-mobile-nav" aria-label="Navigation mobile">
+<nav class="ps-mobile-nav ps77-mobile-nav" aria-label="Navigation mobile">
 <a class="active" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10v10h13V10"></path></svg><span>Accueil</span></a>
-<a href="labs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 0 4 22z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5A2.5 2.5 0 0 1 20 22z"></path></svg><span>Labs</span></a>
+<a href="labs.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3 3 8l9 5 9-5-9-5Z"></path><path d="m5 10 7 4 7-4v6l-7 4-7-4z"></path></svg><span>Labs</span></a>
 <a href="maintenance.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 18V9M10 18V5M16 18v-7M22 18V2"></path></svg><span>Maintien</span></a>
 <a href="competition.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M7 4h10v4a5 5 0 0 1-10 0z"></path><path d="M9 16h6M12 13v3M8 20h8"></path><path d="M7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4"></path></svg><span>Vestiaire</span></a>
 <a href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 21a7.5 7.5 0 0 1 15 0"></path></svg><span>Profil</span></a>
