@@ -341,3 +341,115 @@
   .ps77-vestiaire{background-image:url('assets/v79/vestiaire-exact.jpg');background-position:58% center;min-height:164px}
   .ps77-vestiaire h2{font-size:1.88rem}.ps77-vestiaire h3{font-size:.94rem}
 }
+
+
+/* V79.3 — visual asset calibration: no baked UI chrome, full icons, dedicated mobile crops */
+.ps77-nav .ps77-nav-home,
+.ps77-mobile-nav .ps77-nav-home,
+.ps77-nav .ps77-nav-trophy,
+.ps77-mobile-nav .ps77-nav-trophy{
+  fill:currentColor!important;
+  stroke:none!important;
+  overflow:visible;
+}
+
+.ps77-section-icon.ps77-labs-icon{
+  fill:currentColor!important;
+  stroke:none!important;
+  overflow:visible;
+}
+
+.ps77-trophy-icon{
+  fill:#e4ad58!important;
+  stroke:none!important;
+  overflow:visible;
+  padding:1px;
+  box-sizing:border-box;
+}
+
+/* Lab illustrations are now clean assets.  Match the source ratio so the artwork
+   is shown in full instead of being cropped by object-fit: cover. */
+.ps77-lab-visual{
+  position:relative;
+  aspect-ratio:1092 / 350!important;
+  height:auto!important;
+  overflow:hidden;
+  background:#241512;
+}
+.ps77-lab-visual picture{
+  display:block;
+  width:100%;
+  height:100%;
+}
+.ps77-lab-visual picture img,
+.ps77-lab-visual>img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:fill!important;
+  object-position:center!important;
+}
+
+/* The bookmark is real UI now, not baked into the illustration. */
+.ps77-bookmark-icon{
+  position:absolute;
+  z-index:2;
+  top:10px;
+  right:10px;
+  width:20px;
+  height:24px;
+  fill:rgba(18,17,16,.28);
+  stroke:#fff;
+  stroke-width:1.8;
+  stroke-linejoin:round;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.28));
+  overflow:visible;
+}
+
+/* Keep the large editorial scenes at their native proportions. */
+@media(min-width:861px){
+  .ps77-hero{
+    aspect-ratio:1600 / 340!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+  }
+  .ps77-vestiaire{
+    aspect-ratio:1600 / 350!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+  }
+}
+
+/* Dedicated mobile thumbnails are taken from the validated mobile composition.
+   They fill their slot without asking the desktop panorama to crop itself. */
+@media(max-width:860px){
+  .ps77-lab{
+    grid-template-columns:94px minmax(0,1fr)!important;
+    align-items:stretch;
+  }
+  .ps77-lab-visual{
+    width:94px;
+    height:63px!important;
+    aspect-ratio:auto!important;
+    align-self:start;
+    border-radius:7px 0 0 7px;
+  }
+  .ps77-lab-visual picture,
+  .ps77-lab-visual picture img{
+    width:100%;
+    height:100%;
+  }
+  .ps77-lab-visual picture img{
+    object-fit:cover!important;
+  }
+  .ps77-bookmark-icon{display:none!important}
+
+  .ps77-hero{
+    background-size:cover!important;
+    background-position:64% center!important;
+  }
+  .ps77-vestiaire{
+    background-size:cover!important;
+    background-position:58% center!important;
+  }
+}
