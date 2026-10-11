@@ -1,8 +1,9 @@
-PsyLab — Correctif Le Vestiaire V80.1
+PsyLab — Correctif mobile Le Vestiaire V80.2
 
-Remplacez uniquement psylab-vestiaire-v80.css à la racine du projet.
-Le correctif aligne les zones cliquables exactement sur les deux boutons visibles :
-- Je veux la Blouse
-- Retourner la feuille
+Remplacer à la racine du projet :
+- psylab-vestiaire-v80.css
+- assets/v80/vestiaire-mobile-head.jpg
+- assets/v80/vestiaire-mobile-blouse.jpg
+- assets/v80/vestiaire-mobile-page.jpg
 
-Aucun autre fichier n'est modifié.
+Correction : crops mobiles dédiés, plus verticaux et centrés, sans toucher à la version PC ni à psylab-config.js.

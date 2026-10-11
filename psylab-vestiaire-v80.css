@@ -44,14 +44,17 @@ body.ps-vestiaire-v80{margin:0;min-height:100vh;color:#fff;overflow-x:hidden}
   .ps-v80-nav,.ps-v80-search{display:none!important}.ps-v80-actions{gap:8px}.ps-v80-avatar{width:39px;height:39px}.ps-v80-menu{display:block}
   .ps-v80-desktop{display:none}
   .ps-v80-mobile{display:block;width:100%;max-width:520px;margin:0 auto;background:#07090b;padding-bottom:max(18px,env(safe-area-inset-bottom))}
+  .ps-v80-mobile-head{aspect-ratio:970/320;object-fit:cover;object-position:center center}
+  .ps-v80-mobile-panel{margin:0;background:#07090b}
+  .ps-v80-mobile-panel>img{object-fit:cover;object-position:center center}
   .ps-v80-mobile>img,.ps-v80-mobile-panel>img{width:100%;height:auto;display:block}
   .ps-v80-mobile-head{border-bottom:1px solid rgba(255,255,255,.08)}
   .ps-v80-mobile-panel{position:relative;overflow:hidden;border-top:1px solid rgba(255,255,255,.10)}
   .ps-v80-mobile-hotspot{position:absolute;display:block;z-index:5;border-radius:12px;cursor:pointer}
-  .ps-v80-mobile-hotspot.blouse{left:30.2%;top:69.1%;width:49.0%;height:11.4%}
-  .ps-v80-mobile-hotspot.page{left:28.0%;top:75.0%;width:45.0%;height:10.3%}
+  .ps-v80-mobile-hotspot.blouse{left:26.1%;top:68.5%;width:58.7%;height:10.3%}
+  .ps-v80-mobile-hotspot.page{left:21.4%;top:74.0%;width:55.4%;height:9.8%}
   .ps-v80-mobile-hotspot:focus-visible{outline:3px solid #fff;outline-offset:-3px}
-  .ps-v80-mobile-panel.page{border-top:10px solid #07090b}
+  .ps-v80-mobile-panel.page{border-top:12px solid #07090b}
 }
 
 @media(max-width:380px){.ps-v80-brand{font-size:1.35rem}.ps-v80-brand svg{width:28px;height:28px}.ps-v80-topbar{padding-inline:12px!important}}
