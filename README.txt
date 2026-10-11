@@ -1,6 +1,8 @@
-PsyLab — Accueil connecté fidèle à la maquette validée (PC + mobile)
+PsyLab — Correctif Le Vestiaire V80.1
 
-Copier le contenu de ce dossier à la racine de PSYLAB-main et accepter le remplacement.
-Le fichier psylab-config.js n'est ni inclus ni modifié.
+Remplacez uniquement psylab-vestiaire-v80.css à la racine du projet.
+Le correctif aligne les zones cliquables exactement sur les deux boutons visibles :
+- Je veux la Blouse
+- Retourner la feuille
 
-Modifie uniquement l'Accueil connecté et ses visuels.
+Aucun autre fichier n'est modifié.
