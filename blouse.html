@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0808">
+  <title>Tout le monde veut la Blouse · PsyLab</title>
+  <script>(function(){const l=String(localStorage.getItem('psylab_lang_v59')||'fr').toLowerCase();document.documentElement.lang=l.startsWith('en')?'en':'fr';})()</script>
+  <link rel="stylesheet" href="psylab-ui.css">
+  <link rel="stylesheet" href="psylab-blouse-entry-v81.css">
+</head>
+<body class="ps-blouse-v81">
+<div class="ps-v81-app">
+  <header class="ps-v81-topbar">
+    <a class="ps-v81-brand" href="index.html" aria-label="PsyLab — Accueil">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 7c-4-5-12-2-12 4-5 0-7 6-4 9-4 3-2 10 3 11-1 6 7 10 12 5V12c0-2 0-4 1-5Zm0 0c4-5 12-2 12 4 5 0 7 6 4 9 4 3 2 10-3 11 1 6-7 10-12 5V12c0-2 0-4-1-5Z"/><path d="M17 15c3 0 5 2 7 5M31 15c-3 0-5 2-7 5M15 26c4 0 6 2 9 5M33 26c-4 0-6 2-9 5"/></svg>
+      <span>PsyLab<small>APPRENDRE · S’ENTRAÎNER · PROGRESSER</small></span>
+    </a>
+    <nav class="ps-v81-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="labs.html">Labs</a>
+      <a href="maintenance.html">Maintien</a>
+      <a class="active" href="competition.html">Le Vestiaire</a>
+      <a href="profile.html">Profil</a>
+    </nav>
+    <div class="ps-v81-actions">
+      <span class="ps-v81-search" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></span>
+      <a class="ps-v81-avatar" href="profile.html"><span data-user-avatar>N</span></a>
+      <details class="ps-v81-menu">
+        <summary aria-label="Ouvrir le menu"><span></span><span></span><span></span></summary>
+        <nav>
+          <a href="index.html">Accueil</a><a href="labs.html">Labs</a><a href="maintenance.html">Maintien</a><a class="active" href="competition.html">Le Vestiaire</a><a href="profile.html">Profil</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main class="ps-v81-main">
+    <section class="ps-v81-hero" aria-labelledby="blouseTitle">
+      <div class="ps-v81-copy">
+        <span class="ps-v81-kicker" id="editionLabel">ÉDITION 1</span>
+        <h1 id="blouseTitle"><span>TOUT LE MONDE</span><span>VEUT</span><em>LA BLOUSE</em></h1>
+        <p class="ps-v81-question">Qui portera la Blouse cette semaine&nbsp;?</p>
+        <div class="ps-v81-stats" aria-label="Informations sur l'édition en cours">
+          <div class="ps-v81-stat">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4v2a4 4 0 0 0 4 4M17 6h3v2a4 4 0 0 1-4 4M12 14v4M8 20h8"/></svg>
+            <span><b>Une seule</b> tentative classée</span>
+          </div>
+          <div class="ps-v81-stat">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3.5 19c.4-4 2.6-6 5.5-6s5.2 2 5.5 6M14.5 14c3.2 0 5 1.8 5.5 5"/></svg>
+            <span><b id="participantCount">—</b> <span id="participantWord">participants</span></span>
+          </div>
+          <div class="ps-v81-stat">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
+            <span>Fin dans <b id="countdown">—</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="ps-v81-stage-art" aria-hidden="true"></div>
+    </section>
+
+    <section class="ps-v81-holder" id="holderPanel" hidden aria-live="polite">
+      <div class="ps-v81-holder-avatar" id="holderAvatar">—</div>
+      <div class="ps-v81-holder-copy">
+        <span>TITULAIRE DE LA BLOUSE</span>
+        <h2><span id="holderName">—</span> <small id="holderEdition">— Édition 1</small></h2>
+        <p>Qui lui prendra la Blouse la semaine prochaine&nbsp;?</p>
+      </div>
+    </section>
+
+    <section class="ps-v81-first" id="firstEditionPanel" hidden>
+      <span id="noHolderEdition">ÉDITION 1</span>
+      <strong>La Blouse est à prendre.</strong>
+    </section>
+
+    <section class="ps-v81-actions-row">
+      <a class="ps-v81-primary" id="openCase" href="blouse-challenge.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7h6l2 2H20v10H3.5V7Z"/></svg>
+        <span id="openCaseLabel">Commencer l’épreuve</span><b>→</b>
+      </a>
+      <button class="ps-v81-secondary" id="showRanking" type="button">Voir le classement</button>
+      <a class="ps-v81-back" href="competition.html">Retour au Vestiaire</a>
+    </section>
+
+    <p class="ps-v81-status" id="pageStatus" role="status" aria-live="polite"></p>
+  </main>
+
+  <dialog class="ps-v81-ranking" id="rankingDialog" aria-labelledby="rankingTitle">
+    <div class="ps-v81-ranking-head">
+      <div><span>TOUT LE MONDE VEUT LA BLOUSE</span><h2 id="rankingTitle">Classement de l’édition</h2></div>
+      <button type="button" id="closeRanking" aria-label="Fermer">×</button>
+    </div>
+    <div class="ps-v81-ranking-list" id="rankingList"></div>
+  </dialog>
+</div>
+<script src="psylab-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="v60-ui.js"></script>
+<script src="shell-v71.js"></script>
+<script src="blouse-entry-v81.js"></script>
+</body>
+</html>
